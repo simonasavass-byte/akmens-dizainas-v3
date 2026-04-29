@@ -2,41 +2,34 @@
 
 ## Current task
 
-Set up and validate the shared ChatGPT + Codex workflow files.
-
-## Goal
-
-Confirm that Codex can use the repository context files as its source of truth before making future website changes.
+Implement favicon from existing source file.
 
 ## Instructions for Codex
 
-1. Read:
-   - AGENTS.md
-   - docs/AI_CONTEXT.md
-   - docs/AI_TASKS.md
-   - docs/AI_CHANGELOG.md
-2. Do not change the website design or production code for this first test.
-3. Inspect the repository structure enough to understand where the main app files live.
-4. Run available checks if practical:
-   - npm run lint
-   - npm test
-   - npm run build
-5. Update docs/AI_CHANGELOG.md with:
-   - confirmation that the context files were read
-   - short repository structure notes
-   - checks run and results
-   - any open questions or risks
+1. Use the file:
+   - public/favicon-source.svg
+
+2. Generate full favicon set in public/:
+   - favicon.ico
+   - favicon-16x16.png
+   - favicon-32x32.png
+   - apple-touch-icon.png
+   - android-chrome-192x192.png
+   - android-chrome-512x512.png
+
+3. Use only the symbol, keep it centered, with padding, readable at small sizes.
+
+4. Integrate favicon into project head/metadata correctly.
+
+5. Do not modify anything else.
+
+6. Update docs/AI_CHANGELOG.md with summary.
 
 ## Constraints
 
-- Do not redesign anything.
-- Do not edit website UI components.
-- Do not change copy, layout, styling, assets, routes, dependencies, or configuration unless required only to complete validation.
-- Keep this as a workflow validation task.
-
-## Deliverable
-
-A short update in docs/AI_CHANGELOG.md confirming whether the shared workflow setup is usable.
+- No redesign
+- No layout/content changes
+- Only favicon-related work
 
 ## Priority
 
