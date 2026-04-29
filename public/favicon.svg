@@ -1,6 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Akmens Darbai favicon">
-  <rect width="64" height="64" rx="14" fill="#111111"/>
-  <path d="M24 15c-6.8 0-12.3 5.5-12.3 12.3 0 9.8 11.2 16.8 18.3 22.7 7.1-5.9 18.3-12.9 18.3-22.7C48.3 20.5 42.8 15 36 15c-2.4 0-4.8.7-6.8 2-2-1.3-4.4-2-6.8-2Z" fill="#ff5b3a"/>
-  <path d="M30.2 19.6c-4.6 0-8.4 3.8-8.4 8.4 0 7 7.8 12 12.8 16.2 5-4.2 12.8-9.2 12.8-16.2 0-4.6-3.8-8.4-8.4-8.4-1.7 0-3.3.5-4.6 1.4-1.4-.9-3-1.4-4.2-1.4Z" fill="#7a4dff"/>
-  <circle cx="19" cy="17" r="3.5" fill="#ffb278"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Akmens Dizainas stone flame favicon">
+  <defs>
+    <linearGradient id="stone" x1="128" y1="96" x2="384" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f2f2ee" />
+      <stop offset="0.45" stop-color="#d5d2ca" />
+      <stop offset="1" stop-color="#aaa59b" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(44 44) scale(0.828125)">
+    <path d="M256 70C339 154 271 217 247 279C237 305 249 330 274 337C303 345 329 322 329 291C329 247 352 217 389 188C378 259 427 322 374 388H138C79 318 162 244 205 178C231 139 241 100 256 70Z" fill="url(#stone)" />
+    <path d="M256 70C339 154 271 217 247 279C237 305 249 330 274 337C303 345 329 322 329 291C329 247 352 217 389 188C378 259 427 322 374 388H138C79 318 162 244 205 178C231 139 241 100 256 70Z" fill="none" stroke="#ffffff" stroke-opacity="0.72" stroke-width="9" />
+    <path d="M256 70C339 154 271 217 247 279C237 305 249 330 274 337C303 345 329 322 329 291C329 247 352 217 389 188C378 259 427 322 374 388H138C79 318 162 244 205 178C231 139 241 100 256 70Z" fill="none" stroke="#1e1e1e" stroke-opacity="0.26" stroke-width="6" />
+    <path d="M139 371H373V410H402V448H110V410H139V371Z" fill="url(#stone)" />
+    <path d="M139 371H373V410H402V448H110V410H139V371Z" fill="none" stroke="#ffffff" stroke-opacity="0.72" stroke-width="9" />
+    <path d="M139 371H373V410H402V448H110V410H139V371Z" fill="none" stroke="#1e1e1e" stroke-opacity="0.26" stroke-width="6" />
+  </g>
 </svg>
