@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Akmens Dizainas stone flame favicon source">
+  <defs>
+    <linearGradient id="stone" x1="128" y1="96" x2="384" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f2f2ee"/>
+      <stop offset="0.45" stop-color="#d5d2ca"/>
+      <stop offset="1" stop-color="#aaa59b"/>
+    </linearGradient>
+    <filter id="stoneTexture" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="8" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0.35  0 0 0 0 0.35  0 0 0 0 0.35  0 0 0 0.18 0" result="texture"/>
+      <feBlend in="SourceGraphic" in2="texture" mode="multiply"/>
+    </filter>
+    <filter id="smallShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="7" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g filter="url(#smallShadow)">
+    <path d="M256 70C339 154 271 217 247 279C237 305 249 330 274 337C303 345 329 322 329 291C329 247 352 217 389 188C378 259 427 322 374 388H138C79 318 162 244 205 178C231 139 241 100 256 70Z" fill="url(#stone)" filter="url(#stoneTexture)"/>
+    <path d="M256 70C339 154 271 217 247 279C237 305 249 330 274 337C303 345 329 322 329 291C329 247 352 217 389 188C378 259 427 322 374 388H138C79 318 162 244 205 178C231 139 241 100 256 70Z" fill="none" stroke="#ffffff" stroke-opacity="0.62" stroke-width="8"/>
+    <path d="M256 70C339 154 271 217 247 279C237 305 249 330 274 337C303 345 329 322 329 291C329 247 352 217 389 188C378 259 427 322 374 388H138C79 318 162 244 205 178C231 139 241 100 256 70Z" fill="none" stroke="#1e1e1e" stroke-opacity="0.35" stroke-width="5"/>
+    <path d="M139 371H373V410H402V448H110V410H139V371Z" fill="url(#stone)" filter="url(#stoneTexture)"/>
+    <path d="M139 371H373V410H402V448H110V410H139V371Z" fill="none" stroke="#ffffff" stroke-opacity="0.62" stroke-width="8"/>
+    <path d="M139 371H373V410H402V448H110V410H139V371Z" fill="none" stroke="#1e1e1e" stroke-opacity="0.35" stroke-width="5"/>
+  </g>
+</svg>
