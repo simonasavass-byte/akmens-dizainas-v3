@@ -1,4 +1,4 @@
-# Akmens Dizainas
+#  Akmens Dizainas
 
 Independent Vite + React website ready for GitHub and Vercel deployment.
 
