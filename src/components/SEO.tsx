@@ -16,6 +16,16 @@ function setMeta(name: string, content: string) {
   el.setAttribute("content", content);
 }
 
+function setMetaProperty(property: string, content: string) {
+  let el = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement | null;
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute("property", property);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("content", content);
+}
+
 function setLink(rel: string, href: string) {
   let el = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement | null;
   if (!el) {
@@ -30,6 +40,10 @@ export default function SEO({ title, description, canonical }: Props) {
   useEffect(() => {
     document.title = title;
     setMeta("description", description);
+    setMeta("twitter:title", title);
+    setMeta("twitter:description", description);
+    setMetaProperty("og:title", title);
+    setMetaProperty("og:description", description);
     const url =
       canonical ??
       (typeof window !== "undefined" ? window.location.origin + window.location.pathname : "");

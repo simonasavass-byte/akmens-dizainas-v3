@@ -16,7 +16,7 @@ const App = () => (
         <Route path="/" element={<Index />} />
         <Route path="/paslaugos" element={<Paslaugos />} />
         {services.map((s) => (
-          <Route key={s.slug} path={`/${s.slug}`} element={<ServicePage />} />
+          <Route key={s.slug} path={`/${s.slug}`} element={<ServicePage slug={s.slug} />} />
         ))}
         <Route path="/galerija" element={<Galerija />} />
         <Route path="/medziagos" element={<Medziagos />} />

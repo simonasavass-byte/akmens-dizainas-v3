@@ -5,8 +5,9 @@ import CtaBlock from "@/components/site/CtaBlock";
 import RelatedServices from "@/components/site/RelatedServices";
 import { getService } from "@/lib/services";
 
-export default function ServicePage() {
-  const { slug } = useParams();
+export default function ServicePage({ slug: routeSlug }: { slug?: string }) {
+  const params = useParams();
+  const slug = routeSlug ?? params.slug;
   const service = slug ? getService(slug) : undefined;
 
   if (!service) return <Navigate to="/paslaugos" replace />;

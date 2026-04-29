@@ -50,6 +50,17 @@ export default function SiteHeader() {
                 className="relative"
                 onMouseEnter={() => setMenuOpen(true)}
                 onMouseLeave={() => setMenuOpen(false)}
+                onFocusCapture={() => setMenuOpen(true)}
+                onBlurCapture={(event) => {
+                  if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                    setMenuOpen(false);
+                  }
+                }}
+                onKeyDown={(event) => {
+                  if (event.key === "Escape") {
+                    setMenuOpen(false);
+                  }
+                }}
               >
                 <NavLink
                   to={l.to}
@@ -128,8 +139,9 @@ export default function SiteHeader() {
 
         <button
           className="lg:hidden p-2 -mr-2"
-          aria-label="Atidaryti meniu"
+          aria-label={open ? "Uždaryti meniu" : "Atidaryti meniu"}
           aria-expanded={open}
+          aria-controls="mobile-navigation"
           onClick={() => setOpen((o) => !o)}
         >
           <span className="sr-only">Meniu</span>
@@ -141,6 +153,7 @@ export default function SiteHeader() {
 
       {/* Mobile panel */}
       <div
+        id="mobile-navigation"
         className={`lg:hidden overflow-hidden transition-[max-height] duration-500 bg-background border-b border-border ${
           open ? "max-h-[90vh]" : "max-h-0"
         }`}
