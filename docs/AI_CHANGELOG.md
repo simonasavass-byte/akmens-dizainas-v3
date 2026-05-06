@@ -52,6 +52,62 @@ Open questions / next steps:
 
 ---
 
+### 2026-05-06
+What changed:
+- Audited the current website image system against the new source pool in `incoming-images/`
+- Reviewed current image imports/usages, crop containers, and replacement constraints without changing website code
+- Built a slot-by-slot replacement recommendation so the next implementation pass can swap AI/placeholder imagery with real images safely
+
+Files changed:
+- docs/AI_CHANGELOG.md
+
+Notes:
+- The incoming source pool is present and usable. Strong folders are `incoming-images/hero/`, `incoming-images/site/heroes/`, `incoming-images/site/cards/`, `incoming-images/site/process/`, `incoming-images/gallery/`, and `incoming-images/about/`
+- The current site structure is image-replacement friendly because most placements already use fixed aspect wrappers plus `object-cover`
+- Keep content images as imported assets in `src/assets/`; continue using `public/` only for global assets like `og-image.jpg`, robots, and favicons
+- Current image slot review and replacement plan:
+- `src/components/site/Hero.tsx` replacing `src/assets/hero-monument.jpg`: use `incoming-images/hero/akmensdarbai-hero.webp`; strongest overall image, premium tone, calm light, clear monument silhouette, safe for the existing wide hero crop; format `webp`; export around `1920x1080` to `2560x1440`; final filename `hero-monument-real.webp`
+- `src/components/site/Materials.tsx` and `src/pages/Medziagos.tsx` replacing `src/assets/materials.jpg`: no strong true replacement exists yet; avoid the tiny `incoming-images/home/stones/*` graphics because they are too small and feel illustrative rather than premium/real; next step is to request a proper real landscape photo of stone samples/material swatches; if forced, use a new dedicated shoot/export rather than repurposing a memorial photo
+- `src/components/site/Trust.tsx` replacing `src/assets/heritage-bw.jpg`: use `incoming-images/about/intro.png`; strong archival workshop image, supports credibility/history, works well in a portrait crop; export as `jpg` or `webp` around `1200x1500`; final filename `about-history-archive.webp`
+- `src/components/site/Trust.tsx` replacing `src/assets/heritage-modern.jpg`: use `incoming-images/about/values.png`; grounded human gesture, calmer and more emotional than the current AI-style image, safe in portrait crop; export around `1200x1500`; final filename `about-values-tulips.webp`
+- `src/components/site/Gallery.tsx` and `src/pages/Galerija.tsx` replacing `src/assets/gallery-1.jpg`: use `incoming-images/gallery/gallery-5.webp`; strongest portrait-oriented real photo, reads clearly in `4:5` and `5:6`; export around `1200x1500`; final filename `gallery-real-01.webp`
+- replacing `src/assets/gallery-2.jpg`: use `incoming-images/gallery/gallery-1.webp`; strong polished black memorial composition, premium finish, okay with moderate portrait crop; export around `1200x1500`; final filename `gallery-real-02.webp`
+- replacing `src/assets/gallery-3.jpg`: use `incoming-images/gallery/gallery-2.webp`; clean modern slab composition, good surface detail, safe crop; export around `1200x1500`; final filename `gallery-real-03.webp`
+- replacing `src/assets/gallery-4.jpg`: use `incoming-images/gallery/gallery-3.webp`; flowing light/dark stone contrast, strong craftsmanship signal, safe crop; export around `1200x1500`; final filename `gallery-real-04.webp`
+- optional extra gallery inventory: `incoming-images/gallery/gallery-4.webp` and `incoming-images/gallery/gallery-6.webp` are strong reserve images for later expansion or service pages; `gallery-6.webp` is especially useful for wide hero/detail contexts
+- service image system note: service assets are currently centralized in `src/lib/services.ts` and reused by cards (`4:5`), related services (`4:5`), and detail heroes (`16:9` / `16:8`). This is the hardest part of the replacement because one image currently has to survive both portrait and wide crops
+- replacing `src/assets/service-paminklai.jpg`: use `incoming-images/site/cards/paminklu-gamyba.png`; strong premium close-up and best fit for the brand tone, but it should be manually re-cropped/exported from source for both portrait card and wide hero use; export at least `1600x2000` for card and `1920x1080` for hero if separate variants are allowed later; working final filename `service-paminklu-gamyba-real.webp`
+- replacing `src/assets/service-projektavimas.jpg`: best fit is `incoming-images/site/heroes/lotus-grave.webp`; it shows a complete designed memorial composition and tolerates both portrait and wide crops better than the schematic render; avoid using `incoming-images/site/details/projektavimas.png` as the main service image because it feels synthetic/render-like; final filename `service-kapavieciu-projektavimas-real.webp`
+- replacing `src/assets/service-dengimas.jpg`: use `incoming-images/site/heroes/completed-wide.webp`; polished slab surface and paved surroundings communicate covering/material finish well; manual portrait crop will be needed for card use; final filename `service-kapu-dengimas-real.webp`
+- replacing `src/assets/service-restauravimas.jpg`: use `incoming-images/site/heroes/restored-grave.jpeg`; real restored site, readable before/after implication, safest thematic match; card crop is okay, hero crop acceptable; final filename `service-restauravimas-real.webp`
+- replacing `src/assets/service-graviravimas.jpg`: use `incoming-images/site/process/craft-process.png`; clear real craft/process shot and much more credible than the current AI-looking gold-letter image; export from source to preserve hand/tool area in both crops; final filename `service-graviravimas-real.webp`
+- replacing `src/assets/service-autoriniai.jpg`: use `incoming-images/site/details/authorial-detail.png`; strongest sculptural/detail image in the set, premium and distinctive, but should be manually framed for both card and hero placements; final filename `service-autoriniai-real.webp`
+- replacing `src/assets/service-didmenine.jpg`: no ideal dedicated wholesale image exists; temporary best fit is `incoming-images/gallery/gallery-6.webp` because it shows broader inventory/context, but this slot still needs a better real partner/trade-oriented image later; final filename `service-didmenine-real.webp`
+- weak/problematic images to avoid:
+- `incoming-images/home/stones/stone-*.png` and `strip-*.png` are too small and read as design fragments, not premium site photography
+- `incoming-images/site/details/projektavimas.png` looks more like a synthetic planning render than a grounded real photograph; keep only as a secondary support visual if ever needed, not as the main service image
+- `incoming-images/about/history.png` is interesting archival material but weaker than `about/intro.png` for the current Trust layout because it is flatter and less immediately legible at small size
+- strongest images to prioritize first:
+- `incoming-images/hero/akmensdarbai-hero.webp`
+- `incoming-images/site/heroes/completed-wide.webp`
+- `incoming-images/site/heroes/restored-grave.jpeg`
+- `incoming-images/site/process/craft-process.png`
+- `incoming-images/site/cards/paminklu-gamyba.png`
+- `incoming-images/gallery/gallery-5.webp`
+- missing images:
+- a true high-quality real materials/stones landscape image for the materials section
+- a stronger dedicated wholesale / stock / partner-oriented image for `didmeninė prekyba`
+- Next implementation step:
+- prepare the chosen source files as final exports in `src/assets/` with crop-safe filenames
+- if we want the best result for service pages, split the current single service image concept into separate `card` and `hero` exports rather than forcing one crop to do both jobs
+- swap assets one section at a time and visually verify desktop/mobile crops after each batch
+
+Open questions / next steps:
+- Decide whether the next implementation pass should keep the current one-image-per-service structure or upgrade to separate card/hero variants for better art direction
+- Confirm whether the user can provide a real stone/materials photo and a better didmeninė/wholesale image before replacement work starts
+
+---
+
 ### 2026-04-29
 What changed:
 - Added shared AI workflow files (AGENTS.md, AI_CONTEXT.md, AI_TASKS.md, AI_CHANGELOG.md)
