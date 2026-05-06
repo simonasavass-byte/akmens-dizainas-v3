@@ -17,6 +17,41 @@ Open questions / next steps:
 
 ---
 
+### 2026-05-04
+What changed:
+- Created an external Meta-ad asset set based on the user's Canva concept `4 klaidos renkantis paminklą`
+- Built a first single-frame static concept in `output/meta-ad/`
+- Reworked the concept into a six-frame vertical sequence for video assembly: intro, four mistake slides, and CTA close
+- Exported a GIF preview to review the sequence flow without relying on Canva
+
+Files changed:
+- output/meta-ad/render_meta_ad.py
+- output/meta-ad/akmens-darbai-4-klaidos-spec.md
+- output/meta-ad/akmens-darbai-4-klaidos-meta-story.png
+- output/meta-ad/akmens-darbai-4-klaidos-meta-story-v2.png
+- output/meta-ad/render_meta_ad_sequence.py
+- output/meta-ad/sequence-spec.md
+- output/meta-ad/sequence/01-intro.png
+- output/meta-ad/sequence/01-intro-v2.png
+- output/meta-ad/sequence/02-klaida-01.png
+- output/meta-ad/sequence/03-klaida-02.png
+- output/meta-ad/sequence/04-klaida-03.png
+- output/meta-ad/sequence/05-klaida-04.png
+- output/meta-ad/sequence/06-cta.png
+- output/meta-ad/sequence/akmens-darbai-4-klaidos-preview.gif
+- docs/AI_CHANGELOG.md
+
+Notes:
+- This work followed the user request in chat, which differs from the favicon-only task still written in `docs/AI_TASKS.md`
+- The local environment does not include `ffmpeg`, so the sequence was exported as individual PNG frames plus a GIF preview instead of a true MP4
+- The sequence is intended to be imported into Canva or another editor as six pages and exported as video there
+
+Open questions / next steps:
+- Decide whether to shorten the copy further for colder Meta traffic
+- If needed, create a second, more aggressive version for `1080x1350` feed placements
+
+---
+
 ### 2026-04-29
 What changed:
 - Added shared AI workflow files (AGENTS.md, AI_CONTEXT.md, AI_TASKS.md, AI_CHANGELOG.md)
