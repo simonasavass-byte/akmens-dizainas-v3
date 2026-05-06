@@ -54,6 +54,68 @@ Open questions / next steps:
 
 ### 2026-05-06
 What changed:
+- Pulled the latest `main` and completed an expert visual QA / art-direction evaluation after the real-image replacement pass
+- Reviewed the current website visually in the in-app browser and compared the implemented production assets directly to judge consistency, tone, crop quality, and section strength
+- Did not modify website code, because no single crop issue was severe enough to justify a speculative tweak during an evaluation-only pass
+
+Files changed:
+- docs/AI_CHANGELOG.md
+
+Notes:
+- Overall verdict:
+- The original-image pass is directionally successful. The site still feels calm, credible, and appropriate for memorial / cemetery stonework work, and it is materially stronger than the earlier AI-looking state
+- The images are consistent enough to keep moving with the current set, but they are not yet fully unified at an art-direction level
+- The current image system does not need a global filter or CSS micro-grain treatment right now
+- Strongest sections after the replacement:
+- `/` homepage hero: the real hero still feels premium and composed, and it supports the typography well
+- `/paminklu-gamyba`: the hero crop works naturally on mobile and keeps the site’s calm, premium tone
+- `/kapu-dengimas-plokstemis`: strong documentary credibility and a good match between the service promise and the image content
+- `/kapavieciu-restauravimas`: one of the most trustworthy pages after the replacement; the hero feels real, respectful, and appropriately restrained
+- `/paminklu-graviravimas`: strong craft signal, good human presence, and one of the most convincing service images in the set
+- Trust/about imagery on the homepage: the archival workshop photo plus the tulip image feel authentic and respectful rather than decorative
+- Weakest sections after the replacement:
+- `/medziagos`: `src/assets/materials.jpg` is now the clearest visual mismatch on the site. It reads more like a polished product mockup/render than the rest of the documentary cemetery/stonework imagery
+- `/didmenine-prekyba-paminklais`: the image is real, but it feels less premium and less intentional than the stronger service pages; the blurred foreground monument on the left is a little distracting
+- `/kapavieciu-projektavimas`: this page is acceptable, but compared with the best pages it feels more documentary/overcast and less art-directed; not broken, just a bit less elevated
+- `/galerija`: overall improved, but the first gallery image remains a touch brighter and more flare-heavy than the calmer, darker memorial imagery elsewhere
+- Crop / position observations:
+- Mobile-width in-app browser review did not reveal any catastrophic crop failures on `/`, `/paslaugos`, `/paminklu-gamyba`, `/kapavieciu-projektavimas`, `/kapu-dengimas-plokstemis`, `/kapavieciu-restauravimas`, `/paminklu-graviravimas`, `/autoriniai-paminklai`, `/didmenine-prekyba-paminklais`, `/galerija`, `/medziagos`, and `/kontaktai`
+- The service card / service hero split was a good decision. It reduces obvious crop compromises and generally holds together well on the reviewed mobile-width layout
+- No image demanded an immediate object-position fix strongly enough to justify touching production code during this pass
+- Historical authenticity:
+- The archival workshop image still feels documentary and respectful
+- The about/trust pairing works because one image carries heritage and the other carries human care without slipping into sentimentality
+- Consistency verdict:
+- The site is visually consistent enough as-is to continue working on content and replacement assets
+- The inconsistency is not general color drift across every image; it is more concentrated in one or two outlier assets
+- Because of that, a global visual treatment would be too blunt
+- Shared image treatment recommendation:
+- Do not add CSS micro-grain
+- Do not add a site-wide filter pass
+- If a unifying treatment is explored later, it should be a very light asset-prep normalization only, focused on a few outliers rather than the whole library
+- The most that may be worth testing later is a very subtle warm-neutral / contrast normalization on selected images, but only after the remaining wrong image is replaced
+- `materials.jpg` verdict:
+- It should remain temporary only
+- It is now the one image that most visibly breaks the site’s authenticity and should be replaced before launch if possible
+- Route note:
+- `docs/AI_TASKS.md` listed shorthand paths like `/restauravimas`, `/graviravimas`, and `/didmenine-prekyba`, but the live service routes currently reviewed are `/kapavieciu-restauravimas`, `/paminklu-graviravimas`, and `/didmenine-prekyba-paminklais`
+- Exact recommended next task:
+- Replace `src/assets/materials.jpg` with a real materials / granite-samples photo that matches the documentary tone of the rest of the site
+- After that, do one small follow-up visual polish pass focused only on whether `/didmenine-prekyba-paminklais` and `/kapavieciu-projektavimas` still need better source images or tiny crop tuning
+- Validation performed:
+- Local dev server reviewed in the in-app browser at mobile-width
+- Pages checked: `/`, `/paslaugos`, `/paminklu-gamyba`, `/kapavieciu-projektavimas`, `/kapu-dengimas-plokstemis`, `/kapavieciu-restauravimas`, `/paminklu-graviravimas`, `/autoriniai-paminklai`, `/didmenine-prekyba-paminklais`, `/galerija`, `/medziagos`, `/kontaktai`
+- Direct asset review also performed on key implemented production images in `src/assets/` to judge consistency beyond what the animated browser viewport shows
+- No code changes were made, so lint/test/build were not rerun for this evaluation-only pass
+
+Open questions / next steps:
+- Can the user provide one strong real photo of granite slabs / sample stones / showroom materials to replace `src/assets/materials.jpg`?
+- After that single replacement, reassess whether `/didmenine-prekyba-paminklais` still needs a stronger source image or whether it becomes acceptable in the final overall mix
+
+---
+
+### 2026-05-06
+What changed:
 - Pulled the latest `main` and completed the first real-image replacement pass using only files from `incoming-images/`
 - Replaced the homepage hero, Trust section images, homepage gallery images, gallery page image set, and all service imagery that previously looked AI-generated or placeholder-like
 - Added separate service detail hero image support so wide service-page crops can use better-suited real photos without breaking the existing portrait service cards
