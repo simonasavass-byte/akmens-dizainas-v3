@@ -54,6 +54,117 @@ Open questions / next steps:
 
 ### 2026-05-06
 What changed:
+- Pulled the latest `main` and completed the first real-image replacement pass using only files from `incoming-images/`
+- Replaced the homepage hero, Trust section images, homepage gallery images, gallery page image set, and all service imagery that previously looked AI-generated or placeholder-like
+- Added separate service detail hero image support so wide service-page crops can use better-suited real photos without breaking the existing portrait service cards
+- Kept the current layout, typography, spacing, color palette, routing, and component structure unchanged
+- Left the materials image unchanged because the current `incoming-images/` set still does not contain a strong real materials/stones photo
+
+Files changed:
+- src/components/site/Hero.tsx
+- src/components/site/Trust.tsx
+- src/components/site/Gallery.tsx
+- src/pages/Galerija.tsx
+- src/lib/services.ts
+- src/pages/ServicePage.tsx
+- src/assets/home-hero-original.webp
+- src/assets/about-history-archive.jpg
+- src/assets/about-values-tulips.jpg
+- src/assets/gallery-memorial-01.webp
+- src/assets/gallery-memorial-02.webp
+- src/assets/gallery-memorial-03.webp
+- src/assets/gallery-memorial-04.webp
+- src/assets/service-paminklai-card.jpg
+- src/assets/service-paminklai-hero.webp
+- src/assets/service-projektavimas-card.jpg
+- src/assets/service-projektavimas-hero.webp
+- src/assets/service-dengimas-card.jpg
+- src/assets/service-dengimas-hero.webp
+- src/assets/service-restauravimas-card.jpg
+- src/assets/service-restauravimas-hero.jpg
+- src/assets/service-graviravimas-original.jpg
+- src/assets/service-autoriniai-original.jpg
+- src/assets/service-didmenine-original.jpg
+- docs/AI_CHANGELOG.md
+
+Notes:
+- Replacement mapping:
+- `src/components/site/Hero.tsx`
+- old slot `src/assets/hero-monument.jpg`
+- new source `incoming-images/hero/akmensdarbai-hero.webp`
+- final asset `src/assets/home-hero-original.webp`
+- `src/components/site/Trust.tsx`
+- old slot `src/assets/heritage-bw.jpg`
+- new source `incoming-images/about/intro.png`
+- final asset `src/assets/about-history-archive.jpg`
+- old slot `src/assets/heritage-modern.jpg`
+- new source `incoming-images/about/values.png`
+- final asset `src/assets/about-values-tulips.jpg`
+- `src/components/site/Gallery.tsx` and `src/pages/Galerija.tsx`
+- old slot `src/assets/gallery-1.jpg`
+- new source `incoming-images/gallery/gallery-5.webp`
+- final asset `src/assets/gallery-memorial-01.webp`
+- old slot `src/assets/gallery-2.jpg`
+- new source `incoming-images/gallery/gallery-1.webp`
+- final asset `src/assets/gallery-memorial-02.webp`
+- old slot `src/assets/gallery-3.jpg`
+- new source `incoming-images/gallery/gallery-2.webp`
+- final asset `src/assets/gallery-memorial-03.webp`
+- old slot `src/assets/gallery-4.jpg`
+- new source `incoming-images/gallery/gallery-3.webp`
+- final asset `src/assets/gallery-memorial-04.webp`
+- `src/lib/services.ts` / service cards
+- old slot `src/assets/service-paminklai.jpg`
+- new source `incoming-images/site/cards/paminklu-gamyba.png`
+- final asset `src/assets/service-paminklai-card.jpg`
+- new detail hero source `incoming-images/hero/akmensdarbai-hero.webp`
+- final detail hero asset `src/assets/service-paminklai-hero.webp`
+- old slot `src/assets/service-projektavimas.jpg`
+- new card source `incoming-images/site/cards/kapavieciu-projektavimas.png`
+- final card asset `src/assets/service-projektavimas-card.jpg`
+- new detail hero source `incoming-images/site/heroes/lotus-grave.webp`
+- final detail hero asset `src/assets/service-projektavimas-hero.webp`
+- old slot `src/assets/service-dengimas.jpg`
+- new card source `incoming-images/site/cards/kapu-dengimas.png`
+- final card asset `src/assets/service-dengimas-card.jpg`
+- new detail hero source `incoming-images/site/heroes/completed-wide.webp`
+- final detail hero asset `src/assets/service-dengimas-hero.webp`
+- old slot `src/assets/service-restauravimas.jpg`
+- new card source `incoming-images/site/cards/restauravimas.png`
+- final card asset `src/assets/service-restauravimas-card.jpg`
+- new detail hero source `incoming-images/site/heroes/restored-grave.jpeg`
+- final detail hero asset `src/assets/service-restauravimas-hero.jpg`
+- old slot `src/assets/service-graviravimas.jpg`
+- new source `incoming-images/site/process/craft-process.png`
+- final asset `src/assets/service-graviravimas-original.jpg`
+- old slot `src/assets/service-autoriniai.jpg`
+- new source `incoming-images/site/details/authorial-detail.png`
+- final asset `src/assets/service-autoriniai-original.jpg`
+- old slot `src/assets/service-didmenine.jpg`
+- new source `incoming-images/site/cards/didmenine.png`
+- final asset `src/assets/service-didmenine-original.jpg`
+- Historical authenticity was preserved: the Trust archival image now uses the real workshop/history photo from `incoming-images/about/intro.png`
+- Decorative `incoming-images/home/stones/stone-*` and `incoming-images/home/stones/strip-*` were not used for replacements and remain excluded from content-image use
+- `src/assets/materials.jpg` was intentionally left unchanged in `src/components/site/Materials.tsx` and `src/pages/Medziagos.tsx` because no current `incoming-images/` file is a strong, believable real materials photo for that wide section
+- Weak/problematic source intentionally not used as primary imagery: `incoming-images/site/details/projektavimas.png`, because it still reads too synthetic/render-like next to the stronger real photos
+- Alt text was updated where the new real imagery changed the subject significantly
+- Validation performed:
+- `npm run lint` passed
+- `npm test` passed
+- `npm run build` passed
+- Build still reports the pre-existing non-blocking warnings about outdated Browserslist data and the ambiguous Tailwind class `duration-[1200ms]`
+- Live visual validation was done in the in-app browser on the local dev server for mobile-width checks on `/`, `/paslaugos`, `/paminklu-gamyba`, `/kapu-dengimas-plokstemis`, and `/galerija`
+- Desktop/tablet crop risk remains low because the replacement pass kept the existing aspect-ratio wrappers and `object-cover` behavior intact, and the most crop-sensitive area was improved by splitting service card and service hero imagery instead of forcing one image to serve both roles
+
+Open questions / next steps:
+- A proper real materials/stones image is still needed to replace `src/assets/materials.jpg`
+- `service-projektavimas-hero.webp` is visually strong but still the heaviest new image asset; if performance tuning becomes a priority, this hero should be the first candidate for a lighter export pass
+- A true wide-screen human visual pass in a resizable browser would still be useful before final launch, especially for the new service detail hero crops on large monitors
+
+---
+
+### 2026-05-06
+What changed:
 - Audited the current website image system against the new source pool in `incoming-images/`
 - Reviewed current image imports/usages, crop containers, and replacement constraints without changing website code
 - Built a slot-by-slot replacement recommendation so the next implementation pass can swap AI/placeholder imagery with real images safely

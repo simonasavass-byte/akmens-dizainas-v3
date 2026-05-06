@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import heroImg from "@/assets/hero-monument.jpg";
+import heroImg from "@/assets/home-hero-original.webp";
 
 export default function Hero() {
   return (
@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="aspect-[16/10] md:aspect-[16/8] overflow-hidden bg-muted">
             <img
               src={heroImg}
-              alt="Granitinis paminklas su širdies formos pjūviu ramioje kapinių aplinkoje"
+              alt="Tamsaus granito paminklas ir sutvarkyta kapavietė ramioje kapinių aplinkoje"
               width={1600}
               height={1280}
               fetchPriority="high"

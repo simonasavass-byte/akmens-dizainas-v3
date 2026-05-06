@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import bw from "@/assets/heritage-bw.jpg";
-import modern from "@/assets/heritage-modern.jpg";
+import bw from "@/assets/about-history-archive.jpg";
+import modern from "@/assets/about-values-tulips.jpg";
 
 const stats = [
   { n: "20+", l: "metų patirties" },
@@ -52,7 +52,7 @@ export default function Trust() {
               <div className="aspect-[4/5] overflow-hidden bg-muted">
                 <img
                   src={bw}
-                  alt="Archyvinė nuotrauka: meistras dirba akmens dirbtuvėse"
+                  alt="Archyvinė nuotrauka: ankstyvosios akmens dirbtuvės ir jose dirbantis meistras"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover"
@@ -66,7 +66,7 @@ export default function Trust() {
               <div className="aspect-[4/5] overflow-hidden bg-muted">
                 <img
                   src={modern}
-                  alt="Šiuolaikinis meistras dirba su poliruoto granito plokšte"
+                  alt="Gėlės ant prižiūrėtos kapavietės šalia tamsaus granito paminklo"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover"

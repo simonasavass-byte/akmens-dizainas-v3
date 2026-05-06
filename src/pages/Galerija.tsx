@@ -1,17 +1,17 @@
 import SEO from "@/components/SEO";
 import PageHero from "@/components/site/PageHero";
 import CtaBlock from "@/components/site/CtaBlock";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import paminklai from "@/assets/service-paminklai.jpg";
-import dengimas from "@/assets/service-dengimas.jpg";
-import restauravimas from "@/assets/service-restauravimas.jpg";
-import autoriniai from "@/assets/service-autoriniai.jpg";
+import g1 from "@/assets/gallery-memorial-01.webp";
+import g2 from "@/assets/gallery-memorial-02.webp";
+import g3 from "@/assets/gallery-memorial-03.webp";
+import g4 from "@/assets/gallery-memorial-04.webp";
+import paminklai from "@/assets/service-paminklai-card.jpg";
+import dengimas from "@/assets/service-dengimas-card.jpg";
+import restauravimas from "@/assets/service-restauravimas-card.jpg";
+import autoriniai from "@/assets/service-autoriniai-original.jpg";
 
 const works = [
-  { img: g1, title: "Vientisas paminklas su medžio motyvu", meta: "Vilnius · 2024" },
+  { img: g1, title: "Vientisas juodo granito paminklas", meta: "Vilnius · 2024" },
   { img: g2, title: "Šeimos paminklas, dvigubas", meta: "Elektrėnai · 2024" },
   { img: paminklai, title: "Klasikinis kryžius", meta: "Vilnius · 2024" },
   { img: g3, title: "Minimalus horizontalus sprendimas", meta: "Vilnius · 2023" },

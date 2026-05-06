@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
+import g1 from "@/assets/gallery-memorial-01.webp";
+import g2 from "@/assets/gallery-memorial-02.webp";
+import g3 from "@/assets/gallery-memorial-03.webp";
+import g4 from "@/assets/gallery-memorial-04.webp";
 
 const works = [
-  { img: g1, title: "Vientisas paminklas su medžio motyvu", meta: "Vilnius · 2024", span: "md:col-span-5" },
+  { img: g1, title: "Vientisas juodo granito paminklas", meta: "Vilnius · 2024", span: "md:col-span-5" },
   { img: g2, title: "Šeimos paminklas, dvigubas", meta: "Elektrėnai · 2024", span: "md:col-span-7" },
   { img: g3, title: "Minimalus horizontalus sprendimas", meta: "Vilnius · 2023", span: "md:col-span-7" },
   { img: g4, title: "Klasikinis kryžius su pilna danga", meta: "Trakų r. · 2023", span: "md:col-span-5" },

@@ -1,10 +1,14 @@
-import paminklai from "@/assets/service-paminklai.jpg";
-import dengimas from "@/assets/service-dengimas.jpg";
-import projektavimas from "@/assets/service-projektavimas.jpg";
-import restauravimas from "@/assets/service-restauravimas.jpg";
-import graviravimas from "@/assets/service-graviravimas.jpg";
-import autoriniai from "@/assets/service-autoriniai.jpg";
-import didmenine from "@/assets/service-didmenine.jpg";
+import paminklai from "@/assets/service-paminklai-card.jpg";
+import paminklaiHero from "@/assets/service-paminklai-hero.webp";
+import dengimas from "@/assets/service-dengimas-card.jpg";
+import dengimasHero from "@/assets/service-dengimas-hero.webp";
+import projektavimas from "@/assets/service-projektavimas-card.jpg";
+import projektavimasHero from "@/assets/service-projektavimas-hero.webp";
+import restauravimas from "@/assets/service-restauravimas-card.jpg";
+import restauravimasHero from "@/assets/service-restauravimas-hero.jpg";
+import graviravimas from "@/assets/service-graviravimas-original.jpg";
+import autoriniai from "@/assets/service-autoriniai-original.jpg";
+import didmenine from "@/assets/service-didmenine-original.jpg";
 
 export type Service = {
   slug: string;
@@ -22,6 +26,7 @@ export type Service = {
   whenRelevant: string[]; // when it makes sense
   process: { step: string; text: string }[];
   img: string;
+  heroImg?: string;
   alt: string;
 };
 
@@ -63,7 +68,8 @@ export const services: Service[] = [
       { step: "Montavimas", text: "Atvežame ir įrengiame kapavietėje. Po darbų sutvarkome aplinką." },
     ],
     img: paminklai,
-    alt: "Aukštas granitinis paminklas su kryžiumi ramioje kapinaitėje",
+    heroImg: paminklaiHero,
+    alt: "Juodo granito paminklo detalė su švelniai išlenkta viršūne",
   },
   {
     slug: "kapavieciu-projektavimas",
@@ -102,7 +108,8 @@ export const services: Service[] = [
       { step: "Įgyvendinimas", text: "Pagaminame ir sumontuojame pagal projektą." },
     ],
     img: projektavimas,
-    alt: "Kapavietės projekto vizualizacija su brėžiniais ir granito pavyzdžiais",
+    heroImg: projektavimasHero,
+    alt: "Juodo ir pilko granito paminklo detalė su reljefine šakele ir kryžiumi",
   },
   {
     slug: "kapu-dengimas-plokstemis",
@@ -141,7 +148,8 @@ export const services: Service[] = [
       { step: "Montavimas", text: "Sumontuojame, užtaisome siūles, sutvarkome aplinką." },
     ],
     img: dengimas,
-    alt: "Kapavietė pilnai uždengta tamsaus granito plokštėmis",
+    heroImg: dengimasHero,
+    alt: "Kapavietės danga su tamsaus granito plokštėmis ir šviesia skalda",
   },
   {
     slug: "kapavieciu-restauravimas",
@@ -180,7 +188,8 @@ export const services: Service[] = [
       { step: "Užbaigimas", text: "Grąžiname į vietą, sutvarkome aplinką." },
     ],
     img: restauravimas,
-    alt: "Meistras restauruoja seną akmeninę angelo skulptūrą",
+    heroImg: restauravimasHero,
+    alt: "Atnaujinta kapavietė su restauruotu paminklu ir kryžiumi",
   },
   {
     slug: "paminklu-graviravimas",
@@ -219,7 +228,7 @@ export const services: Service[] = [
       { step: "Apdaila", text: "Auksuojame arba dažome, jei reikia." },
     ],
     img: graviravimas,
-    alt: "Auksinės raidės įgraviruotos į poliruotą tamsų granitą",
+    alt: "Meistro rankos prie graviravimo darbo akmens dirbtuvėse",
   },
   {
     slug: "autoriniai-paminklai",
@@ -258,7 +267,7 @@ export const services: Service[] = [
       { step: "Gamyba", text: "Realizuojame studijoje ir montuojame vietoje." },
     ],
     img: autoriniai,
-    alt: "Modernus skulptūrinis paminklas iš poliruoto granito ir natūralaus akmens",
+    alt: "Autorinio paminklo skulptūrinė detalė iš tamsaus granito",
   },
   {
     slug: "didmenine-prekyba-paminklais",
@@ -297,7 +306,7 @@ export const services: Service[] = [
       { step: "Tiekimas", text: "Pagaminame ir pristatome arba paruošiame atsiimti." },
     ],
     img: didmenine,
-    alt: "Plati paminklų asortimento ekspozicija dirbtuvėje",
+    alt: "Sutvarkytų kapaviečių ekspozicija su skirtingais paminklais ir dangomis",
   },
 ];
 
