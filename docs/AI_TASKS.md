@@ -2,34 +2,81 @@
 
 ## Current task
 
-Implement favicon from existing source file.
+Create a professional image audit and replacement plan before changing website images.
+
+## Context
+
+The current Akmens Dizainas website is mostly built and working. The design direction should be preserved. The main remaining issue is image quality and image selection: many current website images are AI-generated or placeholders, while the user has original/real images organized in folders.
+
+The task is not to redesign the website. The task is to inspect image usage and prepare a clear replacement plan so the real images can be placed correctly in the next step.
+
+## Image source location
+
+Use this folder in the working tree:
+
+- incoming-images/
+
+The current source image folder structure is:
+
+- incoming-images/about/
+- incoming-images/brand/
+- incoming-images/gallery/
+- incoming-images/hero/
+- incoming-images/home/
+- incoming-images/site/
+
+Do not expect or require any other folders for this audit. Work only with the folders that currently exist.
+
+If `incoming-images/` is missing, stop and update `docs/AI_CHANGELOG.md` saying the image folder is missing. Do not guess image choices from existing placeholder images only.
 
 ## Instructions for Codex
 
-1. Use the file:
-   - public/favicon-source.svg
+Inspect the current website implementation and image usage as a senior web designer / art director.
 
-2. Generate full favicon set in public/:
-   - favicon.ico
-   - favicon-16x16.png
-   - favicon-32x32.png
-   - apple-touch-icon.png
-   - android-chrome-192x192.png
-   - android-chrome-512x512.png
+Review:
 
-3. Use only the symbol, keep it centered, with padding, readable at small sizes.
+- current image imports and where each image appears
+- desktop layout
+- tablet layout
+- mobile layout
+- crop behavior and aspect ratios
+- image hierarchy
+- whether each image slot needs landscape, portrait, square, detail, process, material, or hero imagery
+- which original images from `incoming-images/` best fit each current website image slot
 
-4. Integrate favicon into project head/metadata correctly.
+For each website image slot, produce a replacement recommendation:
 
-5. Do not modify anything else.
+- current file / import being replaced
+- current usage location/component/page
+- recommended original source image filename
+- why that image fits the slot
+- crop/aspect-ratio risk
+- whether the image can be used as-is or should be manually cropped/exported first
+- recommended final filename
+- recommended format: jpg, webp, png, or svg
+- approximate recommended dimensions
 
-6. Update docs/AI_CHANGELOG.md with summary.
+Important design criteria:
 
-## Constraints
+- Preserve the existing design direction
+- Keep the site premium, calm, trustworthy, and appropriate for cemetery stonework / memorial services
+- Prefer real, grounded, high-quality images over generic or AI-looking visuals
+- Avoid images that feel too busy, low quality, badly cropped, overly bright, or too casual for a premium website
+- Keep visual logic close to the current website structure
+- Do not redesign the website
+- Do not replace images in this task unless explicitly instructed later
+- Do not change layout, typography, colors, content, routing, or unrelated files
 
-- No redesign
-- No layout/content changes
-- Only favicon-related work
+## Deliverable
+
+Update `docs/AI_CHANGELOG.md` with a clear image replacement plan, including:
+
+- image slots reviewed
+- recommended image mapping
+- strongest images to use
+- weak/problematic images to avoid
+- missing images, if any
+- next steps for actual replacement
 
 ## Priority
 
