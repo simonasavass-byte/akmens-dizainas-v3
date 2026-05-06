@@ -12,24 +12,22 @@ The task is not to redesign the website. The task is to inspect image usage and 
 
 ## Image source location
 
-Use the folder below if it exists in the working tree:
+Use this folder in the working tree:
 
 - incoming-images/
 
-Expected subfolders may include:
+The current source image folder structure is:
 
-- about
-- brand
-- cards
-- details
-- gallery
-- hero
-- home
-- process
-- site
-- stones
+- incoming-images/about/
+- incoming-images/brand/
+- incoming-images/gallery/
+- incoming-images/hero/
+- incoming-images/home/
+- incoming-images/site/
 
-If `incoming-images/` is missing, stop and update `docs/AI_CHANGELOG.md` saying the image folder is missing and list the expected folder structure. Do not guess image choices from existing placeholder images only.
+Do not expect or require any other folders for this audit. Work only with the folders that currently exist.
+
+If `incoming-images/` is missing, stop and update `docs/AI_CHANGELOG.md` saying the image folder is missing. Do not guess image choices from existing placeholder images only.
 
 ## Instructions for Codex
 
