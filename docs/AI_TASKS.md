@@ -2,119 +2,104 @@
 
 ## Current task
 
-Perform an expert visual QA / art-direction evaluation after the real-image replacement pass.
+Create image-generation briefs for the missing / weak website image slots.
 
 ## Goal
 
-Evaluate the current Akmens Dizainas v3 website as a senior web designer / art director after the authentic original images have been implemented.
+Use the current Akmens Dizainas v3 website, the previous real-image replacement pass, and the expert visual QA notes in `docs/AI_CHANGELOG.md` to define exactly which missing or weak images should be generated next.
 
-This is primarily an evaluation task. Do not redesign the site and do not make a new image replacement pass yet.
+This task is not to generate images and not to replace images in the website. The goal is to produce precise, art-directed prompts/specs that ChatGPT/image generation can use in a later step.
 
 ## Context
 
-The website has already received a first original-images-only replacement pass. The main question now is whether the new real images work well together visually across the whole website.
+The website has already received a first authentic original-image replacement pass. A later expert visual QA pass found that the real-image direction is successful overall and that a global micro-grain / site-wide filter is not recommended.
 
-The user is concerned that the real photos come from different sources and may feel visually inconsistent. We need to evaluate whether the site needs a subtle shared image treatment, such as very light tone normalization or micro-grain, but we should not apply it until the need is clearly justified.
+The main current visual gap is `src/assets/materials.jpg`, which still reads like a polished mockup/render and should remain temporary only. The QA also identified weaker, non-critical areas: `/didmenine-prekyba-paminklais`, `/kapavieciu-projektavimas`, and possibly the first gallery image if it feels too bright / flare-heavy.
+
+The next decision should be based on precise generation briefs, not vague image generation.
 
 ## Instructions for Codex
 
-Act as a senior web designer, art director, and careful QA reviewer.
+Act as a senior web designer, art director, and prompt strategist.
 
 1. Pull latest changes.
-2. Run the local dev server if needed.
-3. Review the website in the in-app browser and scroll through the key pages.
-4. Evaluate the current visual result after the real-image replacement pass.
+2. Read `docs/AI_CHANGELOG.md`, especially the latest real-image replacement and visual QA entries.
+3. Review the current website in the in-app browser if useful.
+4. Identify the exact missing / weak image slots that could benefit from generated or enhanced-support images.
+5. Do not change website code.
+6. Do not replace any website images.
+7. Do not generate images.
+8. Write detailed image generation briefs that ChatGPT can later use to generate images.
 
-Review these pages at minimum:
+## Required output in `docs/AI_CHANGELOG.md`
 
-- `/`
-- `/paslaugos`
-- `/paminklu-gamyba`
+Add a new entry with:
+
+### 1. Prioritized image needs
+
+List only the slots that genuinely need new generated/support imagery, ranked by priority.
+
+At minimum evaluate:
+
+- `materials.jpg` / `/medziagos`
+- `/didmenine-prekyba-paminklais`
 - `/kapavieciu-projektavimas`
-- `/kapu-dengimas-plokstemis`
-- `/restauravimas`
-- `/graviravimas`
-- `/autoriniai-paminklai`
-- `/didmenine-prekyba`
-- `/galerija`
-- `/medziagos`
-- `/kontaktai`
+- first gallery image if it still feels too bright / flare-heavy
 
-Evaluate:
+### 2. For each recommended generated image, define:
 
-- whether the new real images fit the current design direction
-- whether the site still feels premium, calm, trustworthy, and appropriate for memorial / cemetery stonework
-- whether any images feel too casual, noisy, bright, dark, low-quality, or off-brand
-- whether the real images feel visually inconsistent across sections
-- whether any section became weaker after image replacement
-- whether any image crop is awkward on mobile, tablet, or desktop-like widths
-- whether service card images and service detail hero images work well as separate art-directed crops
-- whether historical / archive imagery feels authentic and respectfully presented
-- whether `materials.jpg` being left unchanged now feels acceptable or visibly inconsistent
-- whether a subtle shared image treatment is recommended
+- target page / component
+- current image problem
+- intended emotional tone
+- exact subject matter
+- composition
+- crop/aspect ratio requirements
+- lighting
+- color palette
+- level of realism
+- what to avoid
+- recommended output dimensions
+- whether it should look like a real photo, documentary photo, editorial product/material photo, or subtle atmospheric support image
 
-## Image treatment evaluation
+### 3. Produce copy-ready prompts
 
-Evaluate whether the real images need a unifying visual treatment.
+For each recommended generated image, write a clean final prompt in English that can be copied directly into an image generator.
 
-Possible treatment options to consider, but do not apply yet unless it is a tiny, clearly safe proof-of-concept:
+The prompts should aim for:
 
-- very subtle warm-neutral tone normalization
-- very light desaturation
-- very gentle contrast normalization
-- very subtle CSS-based micro-grain overlay
-- small object-position fixes where a crop is clearly bad
+- realistic, premium, calm, Lithuanian memorial / stonework context
+- no fake historical people
+- no fake company founder / family / archival imagery
+- no visible readable names or dates on gravestones
+- no unrealistic cemetery scenes
+- no overly glossy stock-photo feeling
+- no AI-looking symmetry or fantasy styling
+- no dramatic cinematic overprocessing
 
-Important:
+### 4. Decide which images should NOT be generated
 
-- Do not apply strong filters.
-- Do not make the site look vintage, dirty, overly stylized, or Instagram-filtered.
-- Do not reduce image clarity too much.
-- Do not destructively edit original/historical images.
-- Preserve authenticity.
+Explicitly state if any weak slot should remain real-only or should be solved by sourcing a better real photo instead of generation.
 
-## Implementation scope
+## Important constraints
 
-This is an evaluation pass.
-
-Allowed:
-
-- update `docs/AI_CHANGELOG.md`
-- make only a tiny obvious image-related fix if it is clearly necessary and safe, such as an `object-position` adjustment
-
-Not allowed unless separately approved later:
-
-- redesign layout
-- change typography
-- change color palette
-- rewrite copy
-- replace another full batch of images
-- add a global image filter/treatment without documenting why
-- generate new images
+- Historical / archival images must remain real. Do not propose generated replacements for any founder, family, workshop history, or authentic company heritage imagery.
+- Generated imagery may be used only as supporting material where authenticity is not tied to a specific real person or historical claim.
+- Prefer real images when the image represents actual completed work, actual people, or real company history.
+- The `materials` slot is the safest candidate for generated support imagery because it can be an editorial material/stones still life rather than a fake client project.
 
 ## Deliverable
 
-Update `docs/AI_CHANGELOG.md` with a clear expert visual QA report including:
+Update `docs/AI_CHANGELOG.md` with:
 
-- overall verdict
-- strongest sections after image replacement
-- weakest sections after image replacement
-- specific images or pages that need crop/position fixes
-- whether images feel consistent enough as-is
-- whether subtle shared image treatment / micro-grain is recommended
-- whether `materials.jpg` should remain temporary or must be replaced before launch
-- exact recommended next task
-- validation performed, including pages and viewport types checked
+- prioritized missing/weak image list
+- generation briefs
+- copy-ready prompts
+- images that should remain real-only
+- exact recommended next step for ChatGPT/image generation
 
 ## Validation
 
-If any code was changed, run standard checks:
-
-- lint, if available
-- tests, if available
-- production build
-
-If no code was changed, document that this was an evaluation-only pass.
+No code changes are expected. If no code is changed, document that this was a planning-only pass.
 
 ## Priority
 
