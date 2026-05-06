@@ -2,149 +2,119 @@
 
 ## Current task
 
-Create the first website image replacement version using only authentic original images.
+Perform an expert visual QA / art-direction evaluation after the real-image replacement pass.
 
 ## Goal
 
-Replace the current AI-looking / placeholder website images with the best available real image candidates from `incoming-images/`, while preserving the existing Akmens Dizainas v3 design direction.
+Evaluate the current Akmens Dizainas v3 website as a senior web designer / art director after the authentic original images have been implemented.
 
-This is the **original-images-only version**. Do not use newly generated images and do not create fake historical, company, cemetery, stonework, or process imagery.
+This is primarily an evaluation task. Do not redesign the site and do not make a new image replacement pass yet.
 
 ## Context
 
-The current Akmens Dizainas website is mostly built and working. The favicon is implemented. Previous technical/responsive fixes have already been completed. The main remaining issue is image quality and authenticity.
+The website has already received a first original-images-only replacement pass. The main question now is whether the new real images work well together visually across the whole website.
 
-Many current website images look AI-generated or placeholder-like. The user has added original real image candidates locally under `incoming-images/`.
-
-The priority for this version is authenticity, trust, and a grounded Lithuanian memorial / cemetery stonework feeling.
-
-## Image source location
-
-Use only this folder in the working tree:
-
-- `incoming-images/`
-
-The current source image folder structure is:
-
-- `incoming-images/about/`
-- `incoming-images/brand/`
-- `incoming-images/gallery/`
-- `incoming-images/hero/`
-- `incoming-images/home/`
-- `incoming-images/site/`
-
-Do not expect or require any other incoming image folders for this task.
-
-If `incoming-images/` is missing, stop and update `docs/AI_CHANGELOG.md` saying the image folder is missing. Do not guess image choices from existing placeholder images only.
-
-## Important exclusions
-
-Do not use existing decorative `stones/stone-*` or `stones/strip-*` PNG assets as real image replacements.
-
-Those assets look like generated decorative UI objects and should not be treated as authentic company / stonework / cemetery photos.
-
-They may only remain if they are already used as small decorative UI assets and still work visually. If they are currently used in the site, inspect them and decide whether to keep, reduce, replace, or remove them, then document that decision in `docs/AI_CHANGELOG.md`.
-
-## Historical image rule
-
-There is at least one old / historical photo showing the real person who started the memorial / stonework business.
-
-Historical images like this must be preserved as real images. They may be cleaned, cropped, resized, contrast-corrected, or gently improved, but they must not be replaced with generated fake historical imagery.
-
-If the historical image is used, keep it documentary and authentic. Avoid overprocessing.
+The user is concerned that the real photos come from different sources and may feel visually inconsistent. We need to evaluate whether the site needs a subtle shared image treatment, such as very light tone normalization or micro-grain, but we should not apply it until the need is clearly justified.
 
 ## Instructions for Codex
 
-Act as a senior web designer / art director and careful implementation engineer.
+Act as a senior web designer, art director, and careful QA reviewer.
 
 1. Pull latest changes.
-2. Inspect current website image usage, imports, public assets, and components.
-3. Inspect all available images in the six `incoming-images/` folders.
-4. Choose the strongest real original image for each website image slot.
-5. Replace current AI-looking / placeholder images with real original images where the replacement clearly improves the site.
-6. Preserve current layout, typography, spacing, colors, routing, copy, and component structure unless a tiny image-related adjustment is required to prevent broken crops.
-7. Do not redesign the website.
-8. Do not introduce generated images.
-9. Do not replace authentic historical / company images with fake imagery.
-10. Optimize images for web use where appropriate.
+2. Run the local dev server if needed.
+3. Review the website in the in-app browser and scroll through the key pages.
+4. Evaluate the current visual result after the real-image replacement pass.
 
-## Image handling requirements
+Review these pages at minimum:
 
-For copied / exported final assets:
+- `/`
+- `/paslaugos`
+- `/paminklu-gamyba`
+- `/kapavieciu-projektavimas`
+- `/kapu-dengimas-plokstemis`
+- `/restauravimas`
+- `/graviravimas`
+- `/autoriniai-paminklai`
+- `/didmenine-prekyba`
+- `/galerija`
+- `/medziagos`
+- `/kontaktai`
 
-- Put production-ready final assets in the existing project image/public asset structure, following the current repo conventions.
-- Use clear final filenames, for example `home-hero-original.webp`, `about-history-original.webp`, `gallery-memorial-01.webp`, etc.
-- Prefer `.webp` or optimized `.jpg` for photos.
-- Use `.png` only when transparency is genuinely needed.
-- Keep file sizes reasonable.
-- Do not commit unnecessarily huge source files if optimized versions are enough.
-- Preserve meaningful alt text or improve alt text where images are replaced.
+Evaluate:
 
-## Crop and visual quality requirements
+- whether the new real images fit the current design direction
+- whether the site still feels premium, calm, trustworthy, and appropriate for memorial / cemetery stonework
+- whether any images feel too casual, noisy, bright, dark, low-quality, or off-brand
+- whether the real images feel visually inconsistent across sections
+- whether any section became weaker after image replacement
+- whether any image crop is awkward on mobile, tablet, or desktop-like widths
+- whether service card images and service detail hero images work well as separate art-directed crops
+- whether historical / archive imagery feels authentic and respectfully presented
+- whether `materials.jpg` being left unchanged now feels acceptable or visibly inconsistent
+- whether a subtle shared image treatment is recommended
 
-For every replacement, verify desktop, tablet, and mobile crop behavior.
+## Image treatment evaluation
 
-Avoid:
+Evaluate whether the real images need a unifying visual treatment.
 
-- faces or important memorial details cut awkwardly
-- text on stones being cropped badly
-- overly bright / washed-out images
-- overly dark images with lost detail
-- images that look too casual or low quality for a premium memorial service site
-- images that create generic stock-photo feeling
-- fake-looking overprocessing
+Possible treatment options to consider, but do not apply yet unless it is a tiny, clearly safe proof-of-concept:
 
-Prefer:
+- very subtle warm-neutral tone normalization
+- very light desaturation
+- very gentle contrast normalization
+- very subtle CSS-based micro-grain overlay
+- small object-position fixes where a crop is clearly bad
 
-- calm, grounded real photos
-- real cemetery / memorial / stonework context
-- detail images with stone texture, engraving, craft, hands, or material
-- authentic historical / company images for history/about sections
-- consistent warm-neutral tone that fits the existing website design
+Important:
+
+- Do not apply strong filters.
+- Do not make the site look vintage, dirty, overly stylized, or Instagram-filtered.
+- Do not reduce image clarity too much.
+- Do not destructively edit original/historical images.
+- Preserve authenticity.
 
 ## Implementation scope
 
+This is an evaluation pass.
+
 Allowed:
 
-- update image imports / paths
-- add optimized final image assets
-- adjust image `object-position` or equivalent only where needed for crop quality
-- update alt text for replaced images
 - update `docs/AI_CHANGELOG.md`
+- make only a tiny obvious image-related fix if it is clearly necessary and safe, such as an `object-position` adjustment
 
-Not allowed:
+Not allowed unless separately approved later:
 
 - redesign layout
-- change typography system
+- change typography
 - change color palette
-- rewrite content
-- change routing or unrelated logic
-- introduce generated images
-- remove important historical authenticity
+- rewrite copy
+- replace another full batch of images
+- add a global image filter/treatment without documenting why
+- generate new images
 
 ## Deliverable
 
-After implementation, update `docs/AI_CHANGELOG.md` with:
+Update `docs/AI_CHANGELOG.md` with a clear expert visual QA report including:
 
-- summary of replaced images
-- mapping from old/current image slot to new original image
-- source folder / source filename used
-- final filename / path used in the site
-- any images intentionally left unchanged and why
-- any weak/problematic original images not used
-- any missing image needs for a later hybrid/generated-support version
-- notes about decorative `stone-*` / `strip-*` assets if they are still used
-- validation performed: lint/test/build and responsive visual check notes
+- overall verdict
+- strongest sections after image replacement
+- weakest sections after image replacement
+- specific images or pages that need crop/position fixes
+- whether images feel consistent enough as-is
+- whether subtle shared image treatment / micro-grain is recommended
+- whether `materials.jpg` should remain temporary or must be replaced before launch
+- exact recommended next task
+- validation performed, including pages and viewport types checked
 
 ## Validation
 
-Run the project’s standard checks, at minimum:
+If any code was changed, run standard checks:
 
 - lint, if available
 - tests, if available
 - production build
 
-If any check fails, document exactly what failed and why in `docs/AI_CHANGELOG.md`.
+If no code was changed, document that this was an evaluation-only pass.
 
 ## Priority
 
