@@ -54,6 +54,114 @@ Open questions / next steps:
 
 ### 2026-05-06
 What changed:
+- Pulled the latest `main` and completed a planning-only pass to define image-generation briefs for the remaining weak or missing image slots
+- Used the previous real-image replacement notes plus the visual QA findings to rank which slots genuinely need generated/support imagery and which should stay real-only
+- Wrote copy-ready English prompts for later ChatGPT / image-generation use without modifying website code or replacing any live assets
+
+Files changed:
+- docs/AI_CHANGELOG.md
+
+Notes:
+- Prioritized image needs:
+- Priority 1: `src/assets/materials.jpg` used on `/medziagos` and the homepage materials section
+- Priority 2: `/didmenine-prekyba-paminklais`
+- Priority 3: `/kapavieciu-projektavimas`
+- Priority 4: first gallery image only as an optional fallback if later wide-screen review still confirms that it feels too bright / flare-heavy
+- Recommendation summary:
+- `materials.jpg` is the strongest candidate for generated support imagery and is the only slot that clearly deserves generation planning right now
+- `/didmenine-prekyba-paminklais` and `/kapavieciu-projektavimas` may benefit from generated support imagery, but they are weaker secondary priorities rather than urgent blockers
+- The first gallery image should not be replaced by default; only consider a generated substitute if a later final review still finds the brightness too distracting
+- Images that should remain real-only:
+- Homepage hero and all completed-work hero images that represent actual memorial projects should remain real-first whenever possible
+- Historical / archival imagery must remain real-only
+- Trust/about workshop heritage imagery must remain real-only
+- Gallery imagery should remain real-first because it implies actual completed work
+
+- Generation briefs:
+- 1. Materials image brief
+- target page / component: `/medziagos`, `src/components/site/Materials.tsx`, `src/pages/Medziagos.tsx`
+- current image problem: current asset reads like a polished showroom mockup/render and breaks the otherwise documentary, real-world tone of the site
+- intended emotional tone: calm, premium, tactile, trustworthy, grounded, understated
+- exact subject matter: three to five real granite slabs or thick sample blocks arranged as a refined editorial still life, showing distinct black, warm gray, and deep red stone options; could include one additional neutral gray sample if it helps composition
+- composition: straight-on or slightly elevated editorial product photograph; clean spacing between samples; enough negative space around the stones so it crops safely in wide formats; no hands, no people, no cemetery monuments, no showroom branding
+- crop/aspect ratio requirements: must survive `16:9` and `16:8` wide crops, with the sample group centered and not too close to the frame edges
+- lighting: soft directional daylight or very soft studio-natural light, with believable shadows and subtle specular highlights on polished stone
+- color palette: warm-neutral background, dark charcoal black, soft mineral gray, deep burgundy-red stone tones; restrained, not overly saturated
+- level of realism: highly realistic editorial product/material photo
+- avoid: CGI feel, perfect symmetry, floating objects, hyper-glossy luxury-ad look, fake marble veining, excessive reflections, purple/blue casts, overly dramatic cinematic contrast
+- recommended output dimensions: at least `2560x1440`, ideally `3000x1688` or larger
+- image type: editorial product/material photo
+- final prompt:
+- `A highly realistic editorial photograph of premium granite material samples for a Lithuanian memorial stonework website: three to five thick polished granite slabs arranged as a calm still life on a warm neutral surface, showing distinct black granite, soft warm gray granite, and deep dark red granite, with subtle natural shadows, soft daylight or daylight-like studio lighting, tactile stone texture, believable weight and thickness, refined negative space, understated premium mood, no branding, no people, no cemetery monuments, no readable text, no CGI look, no perfect symmetry, no glossy luxury advertising style, no dramatic overprocessing, realistic stone color and surface detail, composed to crop safely in a wide 16:9 website banner.` 
+
+- 2. Didmenine prekyba image brief
+- target page / component: `/didmenine-prekyba-paminklais`, service hero or future card/hero refinement
+- current image problem: current real image is credible but feels less premium and less intentional than the stronger service pages; the blurred dark foreground monument creates a slightly awkward frame edge
+- intended emotional tone: professional, stable, orderly, businesslike, calm, credible
+- exact subject matter: a broader memorial inventory / trade-supply view showing multiple finished granite monuments or stone elements arranged in a neat cemetery or yard context, without focusing on one emotional family grave; the emphasis should be availability, range, and reliable supply rather than ceremony
+- composition: wide horizontal composition with clear sightlines across several granite memorial products; foreground should be clean and not blocked by a blurry dark object; one strong central path or horizontal layered arrangement would help
+- crop/aspect ratio requirements: must survive `16:9` / `16:8` service hero crops and potentially a `4:5` card crop if adapted later
+- lighting: bright but soft daylight, lightly overcast or late-morning light; enough contrast for polished stone to read without harsh glare
+- color palette: black and gray granite, muted greenery, pale sky, restrained floral accents only
+- level of realism: realistic documentary-commercial photo, not sentimental, not stocky
+- avoid: visible readable gravestone names/dates, exaggerated symmetry, funeral drama, extreme shallow depth of field, blurry black object blocking one side, fake luxury cemetery fantasy
+- recommended output dimensions: at least `2560x1440`
+- image type: realistic documentary-commercial support photo
+- final prompt:
+- `A highly realistic documentary-style photograph for a memorial stone supplier website, showing a neat professional selection of finished granite memorials and stone elements in an orderly outdoor cemetery or stonework yard context, calm businesslike atmosphere, multiple black and gray granite monuments visible, clear sightlines, clean foreground, subtle floral accents only, soft daylight or bright overcast light, premium but understated tone, no readable gravestone names or dates, no dramatic mourners, no fake luxury staging, no blurry object blocking the frame, no AI symmetry, composed to work as a wide 16:9 service hero image for wholesale memorial stone supply.` 
+
+- 3. Kapavieciu projektavimas image brief
+- target page / component: `/kapavieciu-projektavimas`, service hero refinement if later needed
+- current image problem: current real image is acceptable and credible, but slightly flatter and less elevated than the strongest service pages
+- intended emotional tone: thoughtful, composed, design-led, measured, premium, calm
+- exact subject matter: a real-looking completed memorial layout seen from a slightly elevated viewpoint, where the whole composition of monument, border, surface treatment, and surrounding space is readable at once
+- composition: structured but natural, with the grave layout clearly legible; one complete designed memorial composition centered or slightly off-center, background cemetery context present but secondary
+- crop/aspect ratio requirements: should hold in `16:9` / `16:8` while keeping the whole designed composition visible; safe center-weighted framing
+- lighting: soft overcast or diffused daylight; no harsh sun flare
+- color palette: black granite, gray stone, muted greens, restrained sky tones
+- level of realism: realistic documentary/editorial photo
+- avoid: render-like visualization, aerial drone look, overly casual snapshot feel, visible readable names/dates, cluttered tools, harsh HDR
+- recommended output dimensions: at least `2560x1440`
+- image type: realistic documentary/editorial project photo
+- final prompt:
+- `A highly realistic editorial-documentary photograph of a thoughtfully designed memorial grave layout in a Lithuanian cemetery, viewed from a slightly elevated human height so the full composition is readable: monument, stone borders, surface treatment, and surrounding space working together as one calm design, black and gray granite, muted greenery, soft diffused daylight, premium but restrained mood, no readable gravestone names or dates, no render look, no drone view, no clutter, no theatrical mourning scene, composed to crop safely for a wide 16:9 memorial design service page.` 
+
+- 4. Optional gallery replacement brief
+- target page / component: first gallery slot on `/galerija` and homepage gallery only if later review still finds the current image too bright / flare-heavy
+- current image problem: current image is real and strong, but may feel slightly brighter and more flare-heavy than the darker, calmer surrounding imagery
+- intended emotional tone: serene, premium, polished, quietly impressive
+- exact subject matter: a finished black-granite memorial with clean foreground surface treatment and balanced cemetery surroundings, photographed in soft light without obvious lens flare
+- composition: portrait-friendly with one dominant monument and clearly readable foreground craftsmanship
+- crop/aspect ratio requirements: must survive `4:5` and `5:6` portrait crops
+- lighting: soft morning or light overcast, no blown highlights, no strong flare streaks
+- color palette: dark polished granite, soft green background, restrained white/gray ground materials
+- level of realism: realistic documentary gallery photo
+- avoid: dramatic sun flare, excessive haze, visible readable names/dates, fake cinematic grading, overly empty background
+- recommended output dimensions: at least `1600x2000`
+- image type: realistic documentary gallery photo
+- final prompt:
+- `A highly realistic portrait-oriented photograph of a finished premium black granite memorial in a calm Lithuanian cemetery setting, with polished stone detail, clean ground treatment, balanced greenery in the background, soft natural daylight, no harsh lens flare, no blown highlights, no readable gravestone names or dates, no staged mourners, no CGI symmetry, no dramatic cinematic grading, premium quiet mood, composed to crop safely for 4:5 and 5:6 memorial gallery use.` 
+
+- Which weak slots should NOT be generated:
+- Historical workshop/about imagery should not be generated under any circumstance
+- Existing real homepage hero and the strongest real service images should not be replaced by generated imagery because they currently add trust
+- Most gallery imagery should remain real-only because it implies actual completed memorial work
+- If the user can source a true real materials photo, that is still preferable to generation; generation is recommended here only because the slot is an editorial materials still life rather than a claimed real client project
+
+- Exact recommended next step for ChatGPT / image generation:
+- First generate 2 to 3 materials-image candidates using the materials brief
+- If none feel strong enough, then generate 1 didmenine candidate and 1 projektavimas candidate as secondary support options
+- Do not generate historical, founder, workshop, or gallery work replacements unless a later review explicitly decides that a real slot must be supplemented
+- This was a planning-only pass; no website code was changed and no images were generated
+
+Open questions / next steps:
+- Decide whether to try a real sourced materials photo first or go straight to image generation for the materials slot
+- If generation is used, review multiple candidates side by side against the live site before replacing any asset
+
+---
+
+### 2026-05-06
+What changed:
 - Pulled the latest `main` and completed an expert visual QA / art-direction evaluation after the real-image replacement pass
 - Reviewed the current website visually in the in-app browser and compared the implemented production assets directly to judge consistency, tone, crop quality, and section strength
 - Did not modify website code, because no single crop issue was severe enough to justify a speculative tweak during an evaluation-only pass
