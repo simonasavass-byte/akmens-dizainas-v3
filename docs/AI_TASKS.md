@@ -2,15 +2,17 @@
 
 ## Current task
 
-Perform a final visual QA and image-caption/content consistency pass after the materials image replacement.
+Create a full website copy audit against the original Akmens Darbai website before rewriting text.
 
 ## Goal
 
-Review the current Akmens Darbai website after the real-image replacement pass and the new materials image implementation.
+Audit all current visible and SEO copy in the Akmens Darbai v3 website and compare it against the original website:
 
-This is primarily a QA / review task. Do not redesign by default.
+- `https://akmensdarbai.lt/`
 
-The user specifically wants to verify whether the images have correct text/captions/descriptions near or below them, because screenshots cannot be manually reviewed in ChatGPT right now.
+The user noticed invented-sounding and AI-like wording in the new website. The goal is to identify exactly what should be rewritten, what should come from the original website, and what needs human Lithuanian copy refinement.
+
+This is primarily a planning/audit task. Do not rewrite the whole website yet.
 
 ## Context
 
@@ -22,115 +24,146 @@ The website has already gone through:
 - SEO helper improvement
 - navigation/accessibility improvement
 - first real original-image replacement pass
-- visual QA after real-image replacement
-- generated materials image candidate handoff
-- materials image implementation using `src/assets/materials-editorial-granite.webp`
+- generated materials image replacement
+- final image/caption visual QA
 
-The materials image now appears to work well visually. The active version should remain the clean no-logo version unless a clear issue is found.
+The next issue is copy quality and factual grounding.
 
-The current task is to check final image fit, captions/text around images, alt text, and any remaining weak visual areas before launch/polish.
+Some current text may be:
 
-## Important design rules
+- invented
+- too generic
+- too AI-like
+- too polished/corporate
+- unsupported by the original company website
+- semantically inconsistent with the real Akmens Darbai business
 
-- Do not redesign the website.
-- Do not change layout, typography, spacing, colors, routing, or unrelated logic unless there is a clearly broken issue.
-- Do not add global grain/filter/color treatment.
-- Preserve the calm, premium, trustworthy Lithuanian memorial / stonework direction.
-- Historical/founder/company archive photos must remain real and must not be replaced.
-- Generated imagery should remain limited to the materials slot unless a later approved task says otherwise.
+The user wants copy that sounds human, grounded, Lithuanian, and appropriate for a real cemetery/stonework company.
+
+## Important rules
+
 - Company name is `Akmens Darbai`, not `Akmens Dizainas`.
+- Do not invent company history, numbers, promises, guarantees, or capabilities.
+- Preserve a calm, premium, trustworthy tone, but make it human and grounded.
+- Prefer real, specific, simple Lithuanian over generic AI-style marketing language.
+- Do not over-polish into corporate language.
+- Do not redesign layout or typography.
+- Do not rewrite the website yet unless there is a clearly wrong company name, typo, or obviously false text.
 
-## Review scope
+## Source copy extraction
 
-Review at minimum:
+Extract/capture copy from the original website:
 
-- `/`
-- `/medziagos`
-- `/galerija`
-- `/paslaugos`
-- `/paminklu-gamyba`
-- `/kapavieciu-projektavimas`
-- `/kapu-dengimas-plokstemis`
-- `/kapavieciu-restauravimas`
-- `/paminklu-graviravimas`
-- `/autoriniai-paminklai`
-- `/didmenine-prekyba-paminklais`
-- `/kontaktai`
+- `https://akmensdarbai.lt/`
 
-Check desktop/tablet/mobile where practical.
+If the site can be accessed locally/from the environment, scrape or manually extract the relevant visible copy from its pages.
 
-## Image and caption/content QA
+At minimum try to capture:
 
-For every visible image slot or image-driven card/section, check:
+- homepage copy
+- services copy
+- materials/stone/granite copy if present
+- gallery/project copy if present
+- contact/footer copy
+- any company/about/history wording
+- SEO-relevant titles/descriptions if discoverable
 
-- Does the nearby heading/caption/label match the actual image?
-- Does the service card image match the service title?
-- Does the service detail hero image match the service page topic?
-- Do gallery captions, labels, or surrounding copy imply something inaccurate?
-- Does the materials image still match the text about granite and supplier materials?
-- Do alt texts describe the actual visible image, not the old placeholder image?
-- Are any images misleading, e.g. appearing like a completed real client project when they are generated/support imagery?
-- Are any images visually strong but semantically mismatched?
-- Are there any remaining `Akmens Dizainas` strings or wrong-company-name text in image-related content, alt text, metadata, docs shown in the website, or visible UI?
+If some original pages are inaccessible, document that clearly instead of guessing.
 
-If a caption/alt text is clearly wrong, make a small safe correction.
+## Current website copy extraction
 
-If an image looks visually acceptable but the caption is questionable, document the concern in `docs/AI_CHANGELOG.md` and only change it if the correction is obvious and low-risk.
+Extract all current copy from the new repo implementation, including:
 
-## Final visual QA
+- page headings
+- section headings
+- paragraphs
+- buttons/CTAs
+- navigation labels
+- service titles
+- service descriptions
+- image captions/labels
+- alt text
+- SEO/meta titles
+- SEO/meta descriptions
+- footer/header text
+- any structured content arrays or content constants
 
-Also check:
+Save this into:
 
-- `/medziagos` with the new materials image
-- homepage materials section with the new materials image
-- whether `/didmenine-prekyba-paminklais` still feels like an outlier
-- whether `/kapavieciu-projektavimas` still feels like an outlier
-- whether the first gallery image is still too bright / flare-heavy
-- whether any crop fails on mobile
-- whether any image feels too fake, too glossy, too casual, or too far from the rest of the site
+- `docs/copy-audit/current-site-copy.md`
 
-## Allowed changes
+## Original website copy output
 
-Allowed only if needed:
+Save extracted original website copy into:
 
-- fix incorrect captions/labels/nearby image text
-- fix incorrect image alt text
-- fix wrong company name if found
-- tiny image `object-position` adjustment if a crop is clearly broken
-- update `docs/AI_CHANGELOG.md`
+- `docs/copy-audit/original-site-copy.md`
 
-Not allowed:
+If extraction is incomplete, include an `Extraction limitations` section.
 
-- replacing images unless there is a clearly broken or clearly mismatched asset and the fix is obvious
-- redesigning sections
-- changing content strategy broadly
-- changing typography/colors/layout
-- adding generated images to new slots
-- changing unrelated files
+## Copy audit output
+
+Create:
+
+- `docs/copy-audit/copy-audit.md`
+
+In this audit, identify:
+
+1. Copy that sounds AI-generated
+2. Copy that may be invented or unsupported
+3. Copy that is too generic/marketing-like
+4. Copy that may not match the real Akmens Darbai business
+5. Copy that should be replaced with original website wording
+6. Copy that should be rewritten in simpler, more human Lithuanian
+7. SEO text that is useful but should be made more grounded
+8. Any mismatches between current image/topic and current text
+9. Any remaining wrong-company-name instances
+
+For each issue, include:
+
+- page/component/file location if known
+- current text
+- original/source text if available
+- problem type
+- recommended rewrite direction
+- confidence level: high / medium / low
+
+## Recommended rewrite plan
+
+At the end of `copy-audit.md`, create a prioritized rewrite plan:
+
+- Priority 1: factual/wrong/invented copy
+- Priority 2: AI-like visible homepage/service copy
+- Priority 3: SEO/meta copy refinements
+- Priority 4: minor tone polish
+
+Do not perform the rewrite in this task unless the correction is tiny and obvious.
 
 ## Deliverable
 
-Update `docs/AI_CHANGELOG.md` with:
+Create/update:
 
-- pages reviewed
-- image/caption/alt-text consistency findings
-- any small fixes made
-- any remaining visual risks before launch
-- whether `/didmenine-prekyba-paminklais` still needs future work
-- whether `/kapavieciu-projektavimas` still needs future work
-- whether the first gallery image should remain or be reconsidered later
-- final verdict on the new materials image
-- validation results
+- `docs/copy-audit/current-site-copy.md`
+- `docs/copy-audit/original-site-copy.md`
+- `docs/copy-audit/copy-audit.md`
+- `docs/AI_CHANGELOG.md`
+
+In `docs/AI_CHANGELOG.md`, summarize:
+
+- original website extraction status
+- current website copy extraction status
+- main copy risks found
+- whether any code/content changes were made
+- recommended next task for actual copy rewrite
 
 ## Validation
 
-If code/content changes are made, run:
+If this is docs-only, no lint/test/build is required.
+
+If any website code/content is changed, run:
 
 - lint
 - tests if available
 - production build
-
-If no code/content changes are made, document that this was a review-only pass and explain why checks were or were not run.
 
 ## Priority
 
