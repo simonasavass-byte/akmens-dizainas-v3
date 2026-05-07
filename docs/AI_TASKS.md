@@ -2,166 +2,115 @@
 
 ## Current task
 
-Create a visual handoff package for ChatGPT image generation.
+Create a test implementation of the selected generated materials image candidate.
 
 ## Goal
 
-Prepare all visual context needed for ChatGPT to generate the next missing/support image candidates accurately, starting with the weak `materials.jpg` / `/medziagos` slot.
+Test how the selected generated materials image behaves inside the real Akmens Dizainas v3 website.
 
-This is a handoff-only task. Do not generate images. Do not replace website images. Do not change website code.
+This is a controlled review pass, not a final permanent redesign.
+
+The selected candidate should replace the current `src/assets/materials.jpg` only for review/testing purposes so the user can evaluate:
+
+- realism
+- trust feeling
+- premium tone
+- crop quality
+- consistency with the existing real-image website direction
+- whether optional logo overlay improves or weakens the result
 
 ## Context
 
-The Akmens Dizainas v3 website has already received a first authentic original-image replacement pass. The real-image direction is successful overall and should be preserved.
+The first authentic real-image replacement pass was successful overall.
 
-A later expert visual QA found that the main remaining visual mismatch is `src/assets/materials.jpg`, used on `/medziagos` and in the homepage materials section. It currently reads like a polished mockup/render and breaks the otherwise documentary, real-world tone.
+The main remaining visual mismatch identified during expert QA was the current `materials.jpg` image used on `/medziagos` and in the homepage materials section.
 
-Secondary, non-urgent possible weak areas are `/didmenine-prekyba-paminklais`, `/kapavieciu-projektavimas`, and possibly the first gallery image if it still feels too bright / flare-heavy. However, the first generation attempt should likely start with materials only.
+ChatGPT generated several replacement candidates.
 
-Historical, founder, workshop, family, archival, and real completed-work imagery must remain real-only and must not be replaced with generated fake imagery.
+The currently selected candidate is the grounded editorial granite-sample composition without fake branding.
+
+Historical/company/founder/workshop imagery must remain real-only.
+
+This task only affects the materials image slot.
+
+## Important rules
+
+- Do not redesign the website.
+- Do not modify unrelated pages.
+- Do not replace any other images.
+- Do not change typography.
+- Do not change layout.
+- Do not add global filters or grain.
+- Keep the current calm Lithuanian memorial/stonework tone.
+- Preserve the existing responsive behavior.
+
+## Candidate image handoff
+
+The selected image candidate is provided as base64:
+
+- `docs/image-generation/generated-candidates/materials-selected-candidate.webp.base64.txt`
+
+Decode this file into a real image asset.
+
+Recommended output:
+
+- `src/assets/materials-editorial-granite.webp`
 
 ## Instructions for Codex
 
-Act as a senior web designer, art director, implementation engineer, and visual handoff assistant.
-
 1. Pull latest changes.
-2. Read `docs/AI_CHANGELOG.md`, especially the latest real-image replacement, visual QA, and image-generation brief entries.
-3. Inspect the current website and current image assets.
-4. Create a visual handoff package in the repo so ChatGPT can review the visual context through GitHub without the user manually uploading screenshots.
-5. Do not change website code.
-6. Do not replace images.
-7. Do not generate images.
-8. Do not redesign anything.
+2. Decode the provided base64 candidate image into a production-ready `.webp` asset.
+3. Add the decoded image into the existing project asset structure.
+4. Replace only the current materials image usage with the selected candidate.
+5. Preserve existing responsive crop behavior unless tiny object-position adjustments are needed.
+6. Review `/medziagos` and homepage materials section on desktop/tablet/mobile.
+7. If needed, make minimal safe crop/object-position adjustments only.
 
-## Create this folder structure
+## Optional logo overlay experiment
 
-Create:
+After the clean no-logo version works:
 
-- `docs/image-generation/`
-- `docs/image-generation/screenshots/`
-- `docs/image-generation/references/`
+Create ONE optional secondary experiment version using the REAL existing Akmens darbai SVG logo.
 
-## Required file: `docs/image-generation/materials-brief.md`
+Rules:
 
-Create a clear, self-contained brief for ChatGPT image generation.
+- Use the real SVG logo only.
+- Do not recreate the logo with AI.
+- Keep the overlay subtle.
+- The logo should feel etched/engraved or lightly printed on the upper-right dark stone sample.
+- Very low contrast.
+- Small scale.
+- Premium and believable.
+- If it looks fake, forced, commercial, or reduces realism, discard the overlay version and keep the clean version only.
 
-Include:
+Do not replace the clean version automatically if the overlay version is worse.
 
-- target image slot: `src/assets/materials.jpg`
-- all pages/components where it is used
-- current problem with the image
-- why this slot is safe for generated support imagery
-- exact recommended replacement subject
-- required aspect ratio and recommended dimensions
-- crop requirements for desktop/tablet/mobile
-- tone reference notes from the current real-image website direction
-- what must remain real-only and not generated
-- final copy-ready image generation prompt in English
-- negative prompt / avoid list
-- recommended final filename and format
-- exact next step after ChatGPT generates candidate images
+## Deliverables
 
-Also include short secondary notes for:
+Update:
 
-- `/didmenine-prekyba-paminklais`
-- `/kapavieciu-projektavimas`
-- first gallery image, only if still relevant
+- the actual materials image implementation
+- optional overlay experiment version if successful
+- `docs/AI_CHANGELOG.md`
 
-These secondary notes should remain lower priority than materials.
+In `docs/AI_CHANGELOG.md` include:
 
-## Required screenshots
-
-Add screenshots exported from the local running site into:
-
-- `docs/image-generation/screenshots/`
-
-Required screenshots:
-
-1. `/medziagos` full page or key above-the-fold screenshot
-2. homepage materials section where `materials.jpg` appears
-3. homepage hero as tone reference
-4. `/paminklu-graviravimas` as tone reference
-5. `/kapavieciu-restauravimas` as tone reference
-6. `/didmenine-prekyba-paminklais` if easy to capture
-7. `/kapavieciu-projektavimas` if easy to capture
-
-Use clear filenames, for example:
-
-- `medziagos-page.png`
-- `home-materials-section.png`
-- `home-hero-tone-reference.png`
-- `graviravimas-tone-reference.png`
-- `restauravimas-tone-reference.png`
-- `didmenine-current.png`
-- `projektavimas-current.png`
-
-If screenshot export is not possible in the environment, still create `materials-brief.md` and document the limitation clearly in `docs/AI_CHANGELOG.md`.
-
-## Required reference images
-
-Copy reference image files into:
-
-- `docs/image-generation/references/`
-
-Include:
-
-1. current `src/assets/materials.jpg`
-2. current homepage hero final image
-3. current graviravimas image
-4. current restauravimas image
-5. one or two other current real images that best represent the desired tone, if useful
-
-Use clear filenames, for example:
-
-- `current-materials.jpg`
-- `reference-home-hero.webp`
-- `reference-graviravimas.jpg`
-- `reference-restauravimas.jpg`
-
-Do not move or delete original production assets. Only copy references into the handoff folder.
-
-## Important visual principles
-
-The generated materials image should feel:
-
-- realistic
-- premium but not glossy luxury-ad style
-- calm
-- tactile
-- grounded
-- suitable for Lithuanian memorial / cemetery stonework
-- consistent with the current real-image website direction
-
-Avoid:
-
-- fake historical/company imagery
-- fake people
-- fake completed client projects
-- readable gravestone names or dates
-- CGI or render look
-- floating objects
-- overly perfect symmetry
-- purple/blue color casts
-- dramatic cinematic contrast
-- generic stock-photo feeling
-- hyper-glossy showroom look
-
-## Update `docs/AI_CHANGELOG.md`
-
-Add a new entry with:
-
-- summary of created visual handoff package
-- exact paths to `materials-brief.md`
-- exact paths to screenshots created
-- exact paths to reference images copied
-- any screenshot/export limitations
-- recommendation that ChatGPT should first generate 2-3 `materials` candidates before touching secondary slots
+- where the new materials image is used
+- whether crop adjustments were needed
+- whether the logo overlay experiment succeeded or failed
+- which version is currently active
+- responsive QA notes
+- whether the generated image improved the realism/trust/premium balance
 
 ## Validation
 
-No website code changes are expected.
+Run:
 
-If only docs and copied reference/screenshot assets are changed, no lint/test/build is required. If any website code is accidentally changed, revert it or run the standard checks and document why.
+- lint
+- tests if available
+- production build
+
+Document results in `docs/AI_CHANGELOG.md`.
 
 ## Priority
 
