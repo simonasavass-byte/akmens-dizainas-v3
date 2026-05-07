@@ -54,6 +54,64 @@ Open questions / next steps:
 
 ### 2026-05-06
 What changed:
+- Pulled the latest `main` and created a visual handoff package for ChatGPT image generation focused on the weak `materials.jpg` slot
+- Added a self-contained generation brief at `docs/image-generation/materials-brief.md`
+- Exported local site screenshots into `docs/image-generation/screenshots/` so ChatGPT can review the current website context without manual uploads
+- Copied the current production reference images into `docs/image-generation/references/` for tone and realism guidance
+- Kept this as a handoff-only pass: no website code changed, no images generated, and no website assets replaced
+
+Files changed:
+- docs/AI_CHANGELOG.md
+- docs/image-generation/materials-brief.md
+- docs/image-generation/screenshots/medziagos-page.png
+- docs/image-generation/screenshots/home-materials-section.png
+- docs/image-generation/screenshots/home-hero-tone-reference.png
+- docs/image-generation/screenshots/graviravimas-tone-reference.png
+- docs/image-generation/screenshots/restauravimas-tone-reference.png
+- docs/image-generation/screenshots/didmenine-current.png
+- docs/image-generation/screenshots/projektavimas-current.png
+- docs/image-generation/references/current-materials.jpg
+- docs/image-generation/references/reference-home-hero.webp
+- docs/image-generation/references/reference-graviravimas.jpg
+- docs/image-generation/references/reference-restauravimas.jpg
+- docs/image-generation/references/reference-values-tulips.jpg
+- docs/image-generation/references/reference-paminklai-hero.webp
+
+Notes:
+- Exact handoff brief path:
+- `docs/image-generation/materials-brief.md`
+- Primary screenshots created:
+- `docs/image-generation/screenshots/medziagos-page.png`
+- `docs/image-generation/screenshots/home-materials-section.png`
+- `docs/image-generation/screenshots/home-hero-tone-reference.png`
+- `docs/image-generation/screenshots/graviravimas-tone-reference.png`
+- `docs/image-generation/screenshots/restauravimas-tone-reference.png`
+- `docs/image-generation/screenshots/didmenine-current.png`
+- `docs/image-generation/screenshots/projektavimas-current.png`
+- Reference images copied:
+- `docs/image-generation/references/current-materials.jpg`
+- `docs/image-generation/references/reference-home-hero.webp`
+- `docs/image-generation/references/reference-graviravimas.jpg`
+- `docs/image-generation/references/reference-restauravimas.jpg`
+- `docs/image-generation/references/reference-values-tulips.jpg`
+- `docs/image-generation/references/reference-paminklai-hero.webp`
+- Screenshot/export notes:
+- Screenshot export was possible in this environment
+- The in-app browser full-page capture behaved unreliably on the homepage by repeating the viewport, so the handoff uses stable viewport/key-section screenshots instead of relying on broken full-page exports
+- Recommendation for ChatGPT:
+- Generate 2 to 3 `materials` candidates first
+- Do not touch secondary slots until the materials slot is reviewed against the current live site context
+- Secondary notes for `/didmenine-prekyba-paminklais`, `/kapavieciu-projektavimas`, and the first gallery image were included in `materials-brief.md`, but they remain lower priority than the materials image
+- This was a docs/reference/screenshot pass only, so no lint/test/build was required
+
+Open questions / next steps:
+- Use `docs/image-generation/materials-brief.md` as the first ChatGPT image-generation handoff
+- After 2 to 3 materials candidates are generated, compare them directly against the saved screenshots and current real production references before replacing any website asset
+
+---
+
+### 2026-05-06
+What changed:
 - Pulled the latest `main` and completed a planning-only pass to define image-generation briefs for the remaining weak or missing image slots
 - Used the previous real-image replacement notes plus the visual QA findings to rank which slots genuinely need generated/support imagery and which should stay real-only
 - Wrote copy-ready English prompts for later ChatGPT / image-generation use without modifying website code or replacing any live assets
