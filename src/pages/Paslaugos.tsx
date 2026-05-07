@@ -9,12 +9,12 @@ export default function Paslaugos() {
     <>
       <SEO
         title="Paslaugos: paminklai, dengimas, restauravimas | Akmens Darbai"
-        description="Septynios akmens studijos paslaugos: paminklų gamyba, kapaviečių projektavimas, dengimas plokštėmis, restauravimas, graviravimas, autoriniai sprendimai ir didmena."
+        description="Paminklų gamyba, kapaviečių projektavimas, kapų dengimas plokštėmis, restauravimas, graviravimas, autoriniai paminklai ir didmena."
       />
       <PageHero
         eyebrow="Paslaugos"
         h1="Visos akmens darbų paslaugos."
-        intro="Nuo vieno paminklo iki pilnai sutvarkytos kapavietės. Pasirinkite paslaugą — pamatysite, ką ji apima ir kada ji aktuali."
+        intro="Paminklų gamyba, graviravimas, kapų dengimas plokštėmis, restauravimas ir kiti akmens darbai."
         crumbs={[{ label: "Pradžia", to: "/" }, { label: "Paslaugos" }]}
       />
 

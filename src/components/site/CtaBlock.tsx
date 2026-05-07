@@ -6,8 +6,8 @@ type Props = {
 };
 
 export default function CtaBlock({
-  title = "Pasikalbėkime apie jūsų darbą",
-  text = "Susisiekite telefonu arba el. paštu — aptarsime jūsų užklausą ir darbų galimybes.",
+  title = "Susisiekite",
+  text = "Parašykite arba paskambinkite. Aptarsime, kokių darbų reikia jūsų kapavietei.",
 }: Props) {
   return (
     <section className="py-20 md:py-28 bg-surface">
@@ -28,7 +28,7 @@ export default function CtaBlock({
               to="/kontaktai"
               className="text-[12px] uppercase tracking-[0.22em] px-6 py-4 bg-foreground text-background hover:bg-foreground/90 transition-colors"
             >
-              Prašyti sąmatos
+              Susisiekti
             </Link>
             <a href="tel:+37069870380" className="text-[13px] link-underline">
               +370 698 70380

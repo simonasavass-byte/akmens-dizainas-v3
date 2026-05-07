@@ -4,23 +4,23 @@ import CtaBlock from "@/components/site/CtaBlock";
 import materialsImg from "@/assets/materials-editorial-granite.webp";
 
 const stones = [
-  { name: "Juodas granitas", origin: "Absolute Black · IND", note: "Gilus, vientisas tonas. Geriausiai tinka klasikiniams paminklams." },
-  { name: "Šiltas pilkas", origin: "Bohus · SWE", note: "Subtili tekstūra, šiltas atspalvis. Tinka šviesesnėms kompozicijoms." },
-  { name: "Tamsiai raudonas", origin: "Vanga · UKR", note: "Sodri kristalinė struktūra, ramus blizgesys." },
-  { name: "Šviesus pilkas", origin: "Kashmir White · IND", note: "Lengvas, šviesus paviršius. Tinka dangoms ir minimalistiniams sprendimams." },
+  { name: "Juodas granitas", origin: "Absolute Black · IND", note: "Dažnas pasirinkimas paminklams." },
+  { name: "Šiltas pilkas", origin: "Bohus · SWE", note: "Tinka paminklams ir kapaviečių apdailai." },
+  { name: "Tamsiai raudonas", origin: "Vanga · UKR", note: "Ryškesnio tono granitas." },
+  { name: "Šviesus pilkas", origin: "Kashmir White · IND", note: "Tinka dangoms ir šviesesniems sprendimams." },
 ];
 
 export default function Medziagos() {
   return (
     <>
       <SEO
-        title="Granitas paminklams: medžiagų biblioteka | Akmens Darbai"
-        description="Dirbame su patikrinto granito atmainomis. Juodas, pilkas, raudonas — kiekvieną akmenį matome prieš pradėdami darbą."
+        title="Granitas paminklams ir dangoms | Akmens Darbai"
+        description="Granitas paminklams ir dangoms. Pavyzdžius galite pamatyti studijoje Vilniuje arba Elektrėnuose."
       />
       <PageHero
         eyebrow="Medžiagos"
         h1="Granitas paminklams ir dangoms."
-        intro="Dirbame su patikrintų tiekėjų granitu iš Indijos, Švedijos ir Ukrainos. Žemiau — pagrindinės atmainos, kurias dažniausiai siūlome."
+        intro="Dirbame su keliomis granito rūšimis. Dažniausiai naudojamus akmens pavyzdžius galite pamatyti studijoje."
         crumbs={[{ label: "Pradžia", to: "/" }, { label: "Medžiagos" }]}
       />
 
@@ -61,13 +61,13 @@ export default function Medziagos() {
           </ul>
 
           <p className="mt-10 max-w-2xl text-[14px] text-muted-foreground reveal">
-            Asortimentas platesnis nei sąrašas. Į studiją Vilniuje arba Elektrėnuose galite
-            užsukti pamatyti pavyzdžių gyvai — paskambinkite ir suderinkime laiką.
+            Asortimentas platesnis nei šis sąrašas. Jei norite, pavyzdžius galite apžiūrėti
+            studijoje Vilniuje arba Elektrėnuose.
           </p>
         </div>
       </section>
 
-      <CtaBlock title="Norite pamatyti pavyzdžius gyvai?" text="Atvykite į studiją arba paprašykite, kad atsiųstume nuotraukas pagal jūsų idėją." />
+      <CtaBlock title="Norite pamatyti pavyzdžius?" text="Susisiekite ir suderinsime laiką studijoje." />
     </>
   );
 }

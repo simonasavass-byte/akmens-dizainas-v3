@@ -7,21 +7,20 @@ export default function Hero() {
       <div className="container-editorial">
         <div className="grid grid-cols-12 gap-x-6 gap-y-10 items-end">
           <div className="col-span-12 lg:col-span-7">
-            <p className="eyebrow mb-6 reveal">Akmens studija · Vilnius ir Elektrėnai</p>
+            <p className="eyebrow mb-6 reveal">Paminklų gamyba · Vilnius ir Elektrėnai</p>
             <h1 className="font-display text-[44px] sm:text-[60px] md:text-[78px] lg:text-[92px] leading-[1.02] tracking-[-0.02em] text-foreground reveal">
               Granito paminklai
               <br />
-              ir <span className="italic text-foreground/85">kapaviečių</span> sprendimai.
+              ir <span className="italic text-foreground/85">kiti akmens</span> darbai.
             </h1>
           </div>
 
           <div className="col-span-12 lg:col-span-4 lg:col-start-9 lg:pb-3">
             <div className="rule mb-6 reveal" />
             <p className="text-[15px] leading-relaxed text-muted-foreground max-w-sm reveal">
-              Gaminame paminklus, dengiame kapavietes granito plokštėmis,
-              graviruojame užrašus ir restauruojame seniau statytus darbus.
-              Viską suderiname su Jumis — nuo pirmo eskizo iki sumontuoto
-              paminklo vietoje.
+              Projektuojame, gaminame ir statome granito paminklus.
+              Atliekame paminklų graviravimo darbus, dengiame kapus
+              plokštėmis ir restauruojame paminklus.
             </p>
             <div className="mt-8 flex items-center gap-6 reveal">
               <Link
@@ -50,7 +49,7 @@ export default function Hero() {
             />
           </div>
           <figcaption className="mt-4 flex justify-between items-end text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-            <span>Paminklas iš juodo granito · individualus projektas</span>
+            <span>Granito paminklas</span>
             <span className="hidden md:inline">Vilnius · 2024</span>
           </figcaption>
         </figure>

@@ -18,10 +18,11 @@ export default function Trust() {
             <p className="eyebrow mb-4 reveal">Apie studiją</p>
             <div className="rule mb-8 reveal" />
             <h2 className="font-display text-[34px] md:text-[52px] leading-[1.05] tracking-[-0.015em] reveal">
-              Akmens darbais užsiimame nuo 1991-ųjų.
+              Akmens darbai nuo 1991 metų.
             </h2>
             <p className="mt-6 text-[15px] leading-relaxed text-muted-foreground max-w-md reveal">
-              Dabartinį UAB „Akmens darbai“ pavadinimą įmonė turi nuo 2003 metų.
+              Akmens darbais ir paminklų gamyba užsiimame nuo 1991 m.
+              Dabartinį UAB „Akmens darbai“ pavadinimą įmonė turi nuo 2003 m.
               Studija Vilniuje, dirbtuvės Elektrėnuose.
             </p>
 

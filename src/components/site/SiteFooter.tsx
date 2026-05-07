@@ -11,7 +11,8 @@ export default function SiteFooter() {
               Akmens<span className="text-accent">·</span>Darbai
             </Link>
             <p className="mt-4 text-[14px] max-w-sm leading-relaxed">
-              Akmens studija memorialinėms erdvėms. Vilnius, Elektrėnai, visa Lietuva.
+              Paminklų gamyba, graviravimas ir kapų dengimas plokštėmis.
+              Vilnius, Elektrėnai.
             </p>
           </div>
 
@@ -40,7 +41,7 @@ export default function SiteFooter() {
               to="/kontaktai"
               className="mt-6 inline-block text-[12px] uppercase tracking-[0.22em] px-5 py-3 border border-background/40 hover:bg-background hover:text-foreground transition-colors"
             >
-              Gauti konsultaciją
+              Kontaktai
             </Link>
           </div>
         </div>

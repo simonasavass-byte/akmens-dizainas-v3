@@ -22,8 +22,8 @@ export default function Materials() {
           </div>
           <div className="col-span-12 md:col-span-6 md:col-start-7">
             <p className="text-[15px] leading-relaxed text-muted-foreground reveal">
-              Naudojame patikrintų tiekėjų granitą iš Indijos, Švedijos ir
-              Ukrainos. Pavyzdžius pamatysite gyvai studijoje prieš darbų pradžią.
+              Dirbame su keliomis granito rūšimis. Pavyzdžius galite
+              pamatyti studijoje Vilniuje arba Elektrėnuose.
             </p>
           </div>
         </div>

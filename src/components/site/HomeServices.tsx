@@ -12,11 +12,11 @@ export default function HomeServices() {
           </div>
           <div className="col-span-12 md:col-span-8 mt-6 md:mt-0">
             <h2 className="font-display text-[34px] md:text-[52px] leading-[1.05] tracking-[-0.015em] reveal">
-              Ką darome akmens studijoje.
+              Pagrindinės paslaugos.
             </h2>
             <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-muted-foreground reveal">
-              Septynios paslaugos vienoje vietoje: paminklai, projektai, dangos,
-              graviravimas ir restauravimas. Vilnius ir Elektrėnai.
+              Paminklų gamyba, graviravimas, kapų dengimas plokštėmis,
+              restauravimas, projektavimas ir didmena.
             </p>
           </div>
         </div>

@@ -19,6 +19,66 @@ Open questions / next steps:
 
 ### 2026-05-07
 What changed:
+- Pulled the latest `main` and completed Phase 2 visible copy rewrite for the most exposed production copy surfaces
+- Rewrote the homepage hero/support text, homepage services intro, services index intro, contact page hero/helper text, footer summary, materials page copy, and the service data copy in `src/lib/services.ts`
+- Kept the existing layout, routes, imagery, spacing, typography, and section structure intact; this was a language pass only
+- Simplified the static homepage SEO title in `index.html` from a broader service phrasing to a more direct `granito paminklai` anchor
+
+Files changed:
+- index.html
+- src/components/site/CtaBlock.tsx
+- src/components/site/Hero.tsx
+- src/components/site/HomeServices.tsx
+- src/components/site/SiteFooter.tsx
+- src/components/site/Trust.tsx
+- src/lib/services.ts
+- src/pages/Kontaktai.tsx
+- src/pages/Medziagos.tsx
+- src/pages/Paslaugos.tsx
+- docs/AI_CHANGELOG.md
+
+Notes:
+- Main rewrite approach:
+- shortened copy instead of replacing structure
+- removed overly editorial/process-heavy wording
+- kept service names and SEO anchors visible
+- preferred plain Lithuanian business phrasing over polished campaign language
+- Sections simplified most heavily:
+- homepage hero now states the real service categories directly instead of framing them as a design/process journey
+- homepage service intro now lists literal work categories instead of abstract studio-style wording
+- service-page `short`, `intro`, `accent`, `whenRelevant`, and `process` text was simplified across all services
+- materials-page text was reduced to grounded descriptions without adding more technical/catalog language
+- contact/footer CTA wording was softened from lead-generation language to simple contact language
+- Sections intentionally left mostly unchanged:
+- overall service-page structure
+- visible contact facts and locations
+- current imagery and image system
+- service hierarchy and routing
+- materials stone names and origins were preserved as-is because they may reflect real company data, but the surrounding descriptive text was simplified
+- SEO notes:
+- homepage static title / OG / Twitter title now use `granito paminklai`
+- service and materials page descriptions remain service-driven and location-grounded, but are less inflated and more human-readable
+- no keyword stuffing was added
+- Remaining quality notes:
+- `src/lib/services.ts` is much less AI-like now, but it is still the largest copy surface in the project and could be simplified one more step later if the owner wants an even plainer tone
+- `autoriniai paminklai` and `didmeninė prekyba` remain the hardest services to make extremely plain without losing useful distinction, so those two still carry slightly more shaped phrasing than the strongest pages
+- the materials page is safer than before, but the factual uncertainty about stone names/origins still remains outside this rewrite task
+- Validation results:
+- `npm run lint` passed
+- `npm test` passed
+- `npm run build` passed
+- Build still reports the same pre-existing non-blocking warnings:
+- outdated Browserslist data
+- ambiguous Tailwind class `duration-[1200ms]`
+
+Open questions / next steps:
+- If a Phase 3 pass is needed, the best next target is a final owner-led review of service wording for `autoriniai paminklai`, `didmeninė prekyba`, and the materials facts
+- If the owner wants the tone even closer to the old site, the next pass should remove one more layer of shaped wording from `src/lib/services.ts` rather than changing any layout or structure
+
+---
+
+### 2026-05-07
+What changed:
 - Pulled the latest `main` and completed Phase 1 copy correction: factual fixes and source-grounded SEO cleanup
 - Replaced placeholder contact details with original-source contact facts where confirmed
 - Removed or neutralized the clearest unsupported claims: placeholder phone number, unsupported response-time/free-estimate language, unsupported counts/guarantee wording, English 404 copy, and several explicit service-page timeframe/variant claims

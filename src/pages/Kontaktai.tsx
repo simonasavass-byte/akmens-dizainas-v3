@@ -19,8 +19,8 @@ export default function Kontaktai() {
       />
       <PageHero
         eyebrow="Kontaktai"
-        h1="Susisiekime."
-        intro="Parašykite trumpą žinutę arba paskambinkite. Studija Vilniuje, dirbtuvės Elektrėnuose."
+        h1="Kontaktai"
+        intro="Studija Vilniuje, dirbtuvės Elektrėnuose. Parašykite arba paskambinkite."
         crumbs={[{ label: "Pradžia", to: "/" }, { label: "Kontaktai" }]}
       />
 
@@ -77,7 +77,7 @@ export default function Kontaktai() {
 
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-2">
                     <p className="text-[12px] text-muted-foreground max-w-xs">
-                      Pateikdami formą sutinkate, kad susisieksime dėl jūsų užklausos.
+                      Jei patogiau, susisiekite telefonu arba el. paštu.
                     </p>
                     <button
                       type="submit"
