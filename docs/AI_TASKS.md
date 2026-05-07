@@ -2,175 +2,261 @@
 
 ## Current task
 
-Perform Phase 1 copy correction: factual fixes and source-grounded SEO cleanup before any full tone rewrite.
+Perform Phase 2 visible copy rewrite: simplify and ground the website copy using the original Akmens Darbai website tone.
 
 ## Goal
 
-Use the completed copy audit to fix the most important factual and unsupported-copy issues in the current Akmens Darbai v3 website.
+Rewrite the most visible homepage, service, contact, footer, and SEO-facing copy so the website sounds:
 
-This is not a full rewrite yet. This is a controlled factual correction pass.
+- human
+- grounded
+- Lithuanian
+- trustworthy
+- calm
+- professional
+- realistic for a real memorial / stonework company
 
-The goal is to remove or correct invented / placeholder / unsupported claims first, while preserving the current layout and overall visual direction.
+The previous audit identified that many sections currently sound:
+
+- AI-generated
+- over-polished
+- too editorial
+- too startup/agency-like
+- too abstract
+- too process-heavy
+
+The goal of this phase is NOT to make the site more marketing-heavy.
+
+The goal is to simplify and humanize the copy while preserving:
+
+- SEO clarity
+- current layout structure
+- current visual design
+- current service structure
+- current information hierarchy
+
+## Core writing rule
+
+Write like a real Lithuanian stonework company.
+
+Do NOT write like:
+
+- a design agency
+- a luxury brand campaign
+- a startup landing page
+- AI-generated SEO content
+- emotional memorial poetry
+
+Preferred tone:
+
+- direct
+- calm
+- factual
+- human
+- confident without hype
+- specific without overselling
 
 ## Source materials
 
-Use these as source context:
+Use:
 
 - `docs/copy-audit/current-site-copy.md`
 - `docs/copy-audit/original-site-copy.md`
 - `docs/copy-audit/copy-audit.md`
-- original website URL: `https://akmensdarbai.lt/`
+- original website:
+  - `https://akmensdarbai.lt/`
 
-Before changing copy, briefly verify whether the original-site extraction in `docs/copy-audit/original-site-copy.md` looks complete enough for factual correction. If key facts are missing or uncertain, do not invent. Document uncertainty in `docs/AI_CHANGELOG.md`.
+The rewrite should stay grounded in the original website’s factual/service tone, but improve readability and structure where appropriate.
 
-## Phase 1 priorities
+## SEO guidance
 
-Fix only high-confidence factual or obviously wrong copy issues first.
+Yes, continue thinking about SEO during the rewrite.
 
-### 1. Contact details and working hours
+But SEO should be:
 
-Replace placeholder / invented details with original-source details where confirmed.
+- natural
+- service-driven
+- location-grounded
+- readable by humans first
 
-The copy audit identified these likely placeholder/current values:
+Good keyword/service anchors:
 
-- `+370 600 00 000`
-- `telephone: +37060000000`
-- `I–V 9:00–18:00 · VI 10:00–14:00`
+- paminklų gamyba
+- granito paminklai
+- paminklų graviravimas
+- kapų dengimas plokštėmis
+- paminklų restauravimas
+- kapaviečių projektavimas
+- didmeninė prekyba paminklais
+- Vilnius
+- Elektrėnai
 
-The original-source details captured by the audit include:
+Avoid:
 
-- `Telefonai: +370 5 2752628, +370 698 70380`
-- `Kalvarijų g. 125, Vilnius, LT-08221`
-- `Rungos g. 18, Elektrėnai`
-- `Darbo laikas: I-V 8.00-17.00`
-- `VI-VII nedirbame`
+- keyword stuffing
+- fake locality spam
+- over-optimized repetitive phrasing
+- abstract branding language replacing real service words
 
-Apply these only where they are confirmed in the extracted original-source file. Keep formatting clean and modern, but do not change the facts.
+## Main rewrite priorities
 
-### 2. Remove or neutralize unsupported claims
+### 1. Homepage hero and support copy
 
-Remove or rewrite unsupported numbers/promises unless the original source clearly supports them.
+Current homepage copy is cleaner than the original site but still too editorial/process-oriented.
 
-High-risk claims identified by audit:
+Rewrite it into:
 
-- `1200+ atliktų darbų`
-- `10 m. garantija granitui`
-- `10 metų granitui`
-- specific service timelines such as `4–8 sav.`, `1–2 sav.`, `2–4 sav.`, `3–10 d.`, `2–4 mėn.`
-- `Atsakome per vieną darbo dieną`
-- `Konsultacija ir preliminari sąmata — be mokesčio`
-- precise process promises such as visualizations, exact estimates, staged updates, supply schedules, unless supported by source
+- shorter
+- more direct
+- less “journey/process” language
+- more grounded in actual services
 
-Preferred approach:
+Keep the homepage visually calm.
 
-- delete unsupported claim if it is not needed
-- or replace it with calmer, factual, non-promissory wording
-- do not add new claims to compensate
+Avoid:
 
-### 3. Correct company history wording
+- dramatic emotional language
+- abstract memorial language
+- startup-style “solutions” wording
 
-The audit found that the current about/history copy may blur two different facts:
+### 2. Homepage service intro
 
-- work/activity in stonework from `1991 m.`
-- company/name milestone from `2003 m.`
+Current service-intro language sounds too abstract/brand-like.
 
-Rewrite only the factual framing around this distinction, using the original source wording if possible.
+Rewrite it closer to:
 
-Do not invent a new emotional brand story.
+- direct service naming
+- real work categories
+- literal service clarity
 
-### 4. Wrong company name cleanup
+## 3. Service page copy simplification
 
-Find and fix remaining wrong-company-name instances where appropriate:
+This is the largest rewrite surface.
 
-- visible UI
-- metadata
-- alt text
-- source SVG metadata if relevant
-- docs if they are active workflow context
+Current service pages contain:
 
-Correct company name:
+- too many process blocks
+- too many polished subclaims
+- unsupported operational detail
+- AI-expanded explanations
 
-- `Akmens Darbai`
+Do NOT redesign service-page structure.
 
-Wrong name to remove/avoid:
+Instead:
 
-- `Akmens Dizainas`
+- simplify intros
+- simplify descriptions
+- simplify process language
+- reduce excessive detail
+- reduce artificial “premium” wording
+- keep useful service clarity
 
-Do not make broad unrelated doc rewrites just to clean historical workflow notes unless those notes are actively used as current context.
+If some structured sections become too empty after simplification:
 
-### 5. Lithuanian 404 page
+- shorten them
+- do not refill them with invented marketing copy
 
-Replace English 404 copy with simple Lithuanian copy.
+## 4. Contact page rewrite
 
-Do not redesign the 404 page.
+Keep:
 
-Example direction:
+- real contact details
+- working hours
+- locations
 
-- `Puslapis nerastas`
-- `Grįžti į pradžią`
+Reduce:
 
-### 6. SEO cleanup in this phase
+- lead-generation tone
+- artificial responsiveness language
+- unnecessary CTA pressure
 
-Yes, keep SEO in mind now, but do not do aggressive SEO rewriting yet.
+## 5. Footer rewrite
 
-For Phase 1:
+Current footer still feels too design-agency/editorial.
 
-- remove unsupported SEO claims
-- keep real service keywords visible
-- keep real location keywords where supported: Vilnius, Elektrėnai
-- prefer direct source-like phrases such as `paminklų gamyba`, `paminklų graviravimas`, `kapų dengimas plokštėmis`, `paminklų restauravimas`, `granito paminklai`
-- avoid overly editorial phrases if they replace clearer service keywords
+Rewrite it into:
 
-Do not keyword-stuff.
-Do not add fake locality/service claims.
-Do not invent pages or services for SEO.
+- simple
+- factual
+- calm
+- business-grounded Lithuanian
 
-## What not to do in this task
+## 6. Materials copy
 
-Do not perform the full tone rewrite yet.
+Be careful.
 
-Do not broadly rewrite:
+The audit identified uncertainty about whether the current granite names/origins are real company data.
 
-- all homepage copy
-- all service-page intros
-- all process blocks
-- all materials copy
-- all gallery copy
+Do NOT invent or expand materials catalog language.
 
-unless the current text is clearly factually wrong or unsupported.
+If the current copy feels too catalog-marketing-like:
 
-Do not redesign layout, typography, spacing, colors, image system, routing, or visual style.
+- simplify it
+- make it more grounded
+- avoid fake technical detail
+
+But do not delete useful material information if it appears credible.
+
+## Important rules
+
+- Do not invent facts.
+- Do not invent guarantees.
+- Do not invent timelines.
+- Do not invent company history.
+- Do not invent operational promises.
+- Do not add fake expertise language.
+- Do not add emotional grief/memorial storytelling.
+- Do not redesign layout or typography.
+- Do not change routing or structure unless a section becomes obviously broken.
+- Preserve current image system.
+- Preserve current service hierarchy.
+
+## Rewrite style examples
+
+Prefer:
+
+- `Projektuojame, gaminame ir statome granito paminklus.`
+- `Atliekame paminklų graviravimo darbus.`
+- `Kapų dengimas plokštėmis palengvina kapavietės priežiūrą.`
+
+Avoid:
+
+- `Kuriame ilgaamžius memorialinius sprendimus.`
+- `Nuo pirmos idėjos iki galutinio įgyvendinimo.`
+- `Subalansuojame estetiką ir funkcionalumą.`
+- `Padedame įprasminti atminimą.`
+- generic AI-premium language
 
 ## Files likely involved
 
-Inspect and update only as needed:
-
 - `src/pages/Index.tsx`
 - `src/pages/Kontaktai.tsx`
-- `src/pages/NotFound.tsx`
-- `src/components/site/CtaBlock.tsx`
-- `src/components/site/SiteHeader.tsx`
+- `src/components/site/Hero.tsx`
+- `src/components/site/HomeServices.tsx`
 - `src/components/site/SiteFooter.tsx`
-- `src/components/site/Trust.tsx`
 - `src/components/site/Materials.tsx`
-- `src/pages/Medziagos.tsx`
+- `src/components/site/Trust.tsx`
 - `src/lib/services.ts`
-- SEO/meta helper files and page metadata files if they contain unsupported/wrong text
-- any structured data / schema files if they contain placeholder phone, address, hours, or wrong company name
+- relevant SEO/meta files
+- any visible CTA/service summary files
 
 ## Deliverable
 
-Update `docs/AI_CHANGELOG.md` with:
+Update:
 
-- factual corrections made
-- unsupported claims removed or neutralized
-- contact details corrected
-- history wording corrected
-- 404 localization result
-- SEO/meta corrections made
-- source files changed
-- any facts left uncertain and needing owner confirmation
-- recommended next task for Phase 2 visible copy rewrite
+- visible website copy
+- SEO/meta copy where appropriate
+- `docs/AI_CHANGELOG.md`
+
+In `docs/AI_CHANGELOG.md` include:
+
+- which sections were rewritten
+- which sections were intentionally left mostly unchanged
+- which phrases were simplified most heavily
+- whether any sections still feel too AI-like
+- whether any service pages still need future simplification
+- SEO notes
+- validation results
 
 ## Validation
 
