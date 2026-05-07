@@ -2,13 +2,13 @@
 
 ## Current task
 
-Create a test implementation of the selected generated materials image candidate.
+Create a test implementation of the selected generated materials image candidate from the real uploaded file.
 
 ## Goal
 
-Test how the selected generated materials image behaves inside the real Akmens Dizainas v3 website.
+Test how the selected generated materials image behaves inside the real Akmens Darbai website.
 
-This is a controlled review pass, not a final permanent redesign.
+This is a controlled review pass, not a redesign.
 
 The selected candidate should replace the current `src/assets/materials.jpg` only for review/testing purposes so the user can evaluate:
 
@@ -25,9 +25,19 @@ The first authentic real-image replacement pass was successful overall.
 
 The main remaining visual mismatch identified during expert QA was the current `materials.jpg` image used on `/medziagos` and in the homepage materials section.
 
-ChatGPT generated several replacement candidates.
+ChatGPT generated several replacement candidates. The user selected the grounded editorial granite-sample composition without fake branding.
 
-The currently selected candidate is the grounded editorial granite-sample composition without fake branding.
+The actual selected image file has now been added locally under:
+
+- `incoming-images/generated/granitas`
+
+Important: this may be an image file without an obvious extension because it was renamed in Finder. Inspect the file type directly and handle it accordingly.
+
+Do not use the old placeholder file:
+
+- `docs/image-generation/generated-candidates/materials-selected-candidate.webp.base64.txt`
+
+That file previously contained only `BASE64_PLACEHOLDER` and must be ignored for this task.
 
 Historical/company/founder/workshop imagery must remain real-only.
 
@@ -43,41 +53,46 @@ This task only affects the materials image slot.
 - Do not add global filters or grain.
 - Keep the current calm Lithuanian memorial/stonework tone.
 - Preserve the existing responsive behavior.
+- Company name is `Akmens Darbai`, not `Akmens Dizainas`.
+- Do not create AI-generated text or AI-generated logo inside the image.
 
 ## Candidate image handoff
 
-The selected image candidate is provided as base64:
+Use this actual uploaded candidate file:
 
-- `docs/image-generation/generated-candidates/materials-selected-candidate.webp.base64.txt`
+- `incoming-images/generated/granitas`
 
-Decode this file into a real image asset.
+Inspect its real image type. Convert/export it as needed into the production asset structure.
 
-Recommended output:
+Recommended production output:
 
 - `src/assets/materials-editorial-granite.webp`
 
 ## Instructions for Codex
 
 1. Pull latest changes.
-2. Decode the provided base64 candidate image into a production-ready `.webp` asset.
-3. Add the decoded image into the existing project asset structure.
-4. Replace only the current materials image usage with the selected candidate.
-5. Preserve existing responsive crop behavior unless tiny object-position adjustments are needed.
-6. Review `/medziagos` and homepage materials section on desktop/tablet/mobile.
-7. If needed, make minimal safe crop/object-position adjustments only.
+2. Verify that `incoming-images/generated/granitas` exists.
+3. Inspect its actual file type and dimensions.
+4. Convert/export it into a production-ready `.webp` asset if needed.
+5. Add the final asset into the existing project asset structure.
+6. Replace only the current materials image usage with the selected candidate.
+7. Preserve existing responsive crop behavior unless tiny object-position adjustments are needed.
+8. Review `/medziagos` and homepage materials section on desktop/tablet/mobile.
+9. If needed, make minimal safe crop/object-position adjustments only.
 
 ## Optional logo overlay experiment
 
 After the clean no-logo version works:
 
-Create ONE optional secondary experiment version using the REAL existing Akmens darbai SVG logo.
+Create ONE optional secondary experiment version using the REAL existing Akmens Darbai SVG logo from the project assets.
 
 Rules:
 
 - Use the real SVG logo only.
 - Do not recreate the logo with AI.
+- Do not use the wrong name `Akmens Dizainas`.
 - Keep the overlay subtle.
-- The logo should feel etched/engraved or lightly printed on the upper-right dark stone sample.
+- The logo should feel etched/engraved or lightly printed on the upper-right dark stone sample if that placement works naturally.
 - Very low contrast.
 - Small scale.
 - Premium and believable.
@@ -95,12 +110,15 @@ Update:
 
 In `docs/AI_CHANGELOG.md` include:
 
+- source file used: `incoming-images/generated/granitas`
+- final production asset path
 - where the new materials image is used
 - whether crop adjustments were needed
 - whether the logo overlay experiment succeeded or failed
 - which version is currently active
 - responsive QA notes
 - whether the generated image improved the realism/trust/premium balance
+- validation results
 
 ## Validation
 
