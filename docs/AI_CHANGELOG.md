@@ -19,6 +19,58 @@ Open questions / next steps:
 
 ### 2026-05-07
 What changed:
+- Performed a contact-detail source verification pass focused on the previously adopted address, phone, and working-hours facts
+- Re-checked the original-site extraction notes in `docs/copy-audit/original-site-copy.md`
+- Re-checked the current production `https://akmensdarbai.lt/` homepage, contact page, and about page as reachable in this environment
+- Documented that the currently used Vilnius address and older phone/hour set are not clearly confirmed by the currently reachable original-site page content
+
+Files changed:
+- docs/AI_CHANGELOG.md
+
+Notes:
+- Verification target reviewed:
+- `Kalvarijų g. 125, Vilnius, LT-08221`
+- `Rungos g. 18, Elektrėnai`
+- `+370 5 2752628`
+- `+370 698 70380`
+- `I–V 8:00–17:00`
+- `VI–VII nedirbame`
+- Current finding on source quality:
+- the earlier `docs/copy-audit/original-site-copy.md` entry for these details is labeled as captured from `search/page result`
+- after re-checking the live reachable original pages, I could not confirm `Kalvarijų g. 125, Vilnius, LT-08221` from visible page content, footer, contact page, about page, or the fetched page text
+- I also could not confirm `+370 5 2752628`, `+370 698 70380`, `I–V 8:00–17:00`, or `VI–VII nedirbame` from the visible current original-site pages opened in this environment
+- What the currently reachable original site shows instead:
+- homepage and contact/about pages show `+370 602 38031`
+- email shown is `akmensdarbai@inbox.lt`
+- visible address shown is `Ekspozicijos adresas: Rungos g. 8, Elektrėnai, 26109 Elektrėnų sav.`
+- visible working hours shown are `Pr – Pn: 08:30 – 19:00 val` and `Š: 09:00 – 15:00 val`
+- Evidence from the reachable original site:
+- homepage contact block: `Rungos g. 8, Elektrėnai` and `08:30 – 19:00 / 09:00 – 15:00`
+- `/kontaktai/` page: same `+370 602 38031`, `akmensdarbai@inbox.lt`, `Rungos g. 8`, and hours
+- `/akmens-darbai/` page footer/contact area: same `+370 602 38031`, `Rungos g. 8`, and hours
+- Negative findings:
+- no `Kalvarijų` match found on the opened homepage, contact page, or about page
+- no `2752628` or `69870380` match found on the opened homepage text
+- no visible `LT-08221` match found on the opened original pages reviewed
+- Conclusion on probable origin:
+- the earlier `Kalvarijų g. 125, Vilnius, LT-08221` / `Rungos g. 18` / `+370 5 2752628` / `+370 698 70380` / `I–V 8:00–17:00` set now looks more likely to have come from stale or contaminated search-result / business-listing data, not clearly from visible original `akmensdarbai.lt` page content
+- there is also a known external contamination risk around `Rungos g. 18, Elektrėnai`, because that address strongly matches Elektrėnų profesinio mokymo centro listings in search results
+- Verification status to carry forward:
+- `Kalvarijų g. 125, Vilnius, LT-08221` -> not clearly confirmed from original-site page content; owner verification required
+- `Rungos g. 18, Elektrėnai` -> not clearly confirmed from original-site page content; owner verification required
+- `+370 5 2752628` -> not clearly confirmed from original-site page content; owner verification required
+- `+370 698 70380` -> not clearly confirmed from original-site page content; owner verification required
+- `I–V 8:00–17:00` / `VI–VII nedirbame` -> not clearly confirmed from original-site page content; owner verification required
+- `+370 602 38031`, `akmensdarbai@inbox.lt`, `Rungos g. 8, Elektrėnai`, and `Pr – Pn: 08:30 – 19:00 / Š: 09:00 – 15:00` are what the currently reachable original site visibly shows today, but those too should still be treated carefully if the original site itself is outdated or inconsistent
+
+Open questions / next steps:
+- The current repo contact facts should be owner-verified before any further factual copy cleanup or final launch decisions
+- Best next step: ask the owner which contact/address/hours set is actually correct for the business, then do one focused factual correction pass in code
+
+---
+
+### 2026-05-07
+What changed:
 - Pulled the latest `main` and completed Phase 2 visible copy rewrite for the most exposed production copy surfaces
 - Rewrote the homepage hero/support text, homepage services intro, services index intro, contact page hero/helper text, footer summary, materials page copy, and the service data copy in `src/lib/services.ts`
 - Kept the existing layout, routes, imagery, spacing, typography, and section structure intact; this was a language pass only
