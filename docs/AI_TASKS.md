@@ -2,133 +2,135 @@
 
 ## Current task
 
-Create a test implementation of the selected generated materials image candidate from the real uploaded file.
+Perform a final visual QA and image-caption/content consistency pass after the materials image replacement.
 
 ## Goal
 
-Test how the selected generated materials image behaves inside the real Akmens Darbai website.
+Review the current Akmens Darbai website after the real-image replacement pass and the new materials image implementation.
 
-This is a controlled review pass, not a redesign.
+This is primarily a QA / review task. Do not redesign by default.
 
-The selected candidate should replace the current `src/assets/materials.jpg` only for review/testing purposes so the user can evaluate:
-
-- realism
-- trust feeling
-- premium tone
-- crop quality
-- consistency with the existing real-image website direction
-- whether optional logo overlay improves or weakens the result
+The user specifically wants to verify whether the images have correct text/captions/descriptions near or below them, because screenshots cannot be manually reviewed in ChatGPT right now.
 
 ## Context
 
-The first authentic real-image replacement pass was successful overall.
+The website has already gone through:
 
-The main remaining visual mismatch identified during expert QA was the current `materials.jpg` image used on `/medziagos` and in the homepage materials section.
+- favicon implementation
+- technical/responsive inspection
+- service detail routing fix
+- SEO helper improvement
+- navigation/accessibility improvement
+- first real original-image replacement pass
+- visual QA after real-image replacement
+- generated materials image candidate handoff
+- materials image implementation using `src/assets/materials-editorial-granite.webp`
 
-ChatGPT generated several replacement candidates. The user selected the grounded editorial granite-sample composition without fake branding.
+The materials image now appears to work well visually. The active version should remain the clean no-logo version unless a clear issue is found.
 
-The actual selected image file has now been added locally under:
+The current task is to check final image fit, captions/text around images, alt text, and any remaining weak visual areas before launch/polish.
 
-- `incoming-images/generated/granitas`
-
-Important: this may be an image file without an obvious extension because it was renamed in Finder. Inspect the file type directly and handle it accordingly.
-
-Do not use the old placeholder file:
-
-- `docs/image-generation/generated-candidates/materials-selected-candidate.webp.base64.txt`
-
-That file previously contained only `BASE64_PLACEHOLDER` and must be ignored for this task.
-
-Historical/company/founder/workshop imagery must remain real-only.
-
-This task only affects the materials image slot.
-
-## Important rules
+## Important design rules
 
 - Do not redesign the website.
-- Do not modify unrelated pages.
-- Do not replace any other images.
-- Do not change typography.
-- Do not change layout.
-- Do not add global filters or grain.
-- Keep the current calm Lithuanian memorial/stonework tone.
-- Preserve the existing responsive behavior.
+- Do not change layout, typography, spacing, colors, routing, or unrelated logic unless there is a clearly broken issue.
+- Do not add global grain/filter/color treatment.
+- Preserve the calm, premium, trustworthy Lithuanian memorial / stonework direction.
+- Historical/founder/company archive photos must remain real and must not be replaced.
+- Generated imagery should remain limited to the materials slot unless a later approved task says otherwise.
 - Company name is `Akmens Darbai`, not `Akmens Dizainas`.
-- Do not create AI-generated text or AI-generated logo inside the image.
 
-## Candidate image handoff
+## Review scope
 
-Use this actual uploaded candidate file:
+Review at minimum:
 
-- `incoming-images/generated/granitas`
+- `/`
+- `/medziagos`
+- `/galerija`
+- `/paslaugos`
+- `/paminklu-gamyba`
+- `/kapavieciu-projektavimas`
+- `/kapu-dengimas-plokstemis`
+- `/kapavieciu-restauravimas`
+- `/paminklu-graviravimas`
+- `/autoriniai-paminklai`
+- `/didmenine-prekyba-paminklais`
+- `/kontaktai`
 
-Inspect its real image type. Convert/export it as needed into the production asset structure.
+Check desktop/tablet/mobile where practical.
 
-Recommended production output:
+## Image and caption/content QA
 
-- `src/assets/materials-editorial-granite.webp`
+For every visible image slot or image-driven card/section, check:
 
-## Instructions for Codex
+- Does the nearby heading/caption/label match the actual image?
+- Does the service card image match the service title?
+- Does the service detail hero image match the service page topic?
+- Do gallery captions, labels, or surrounding copy imply something inaccurate?
+- Does the materials image still match the text about granite and supplier materials?
+- Do alt texts describe the actual visible image, not the old placeholder image?
+- Are any images misleading, e.g. appearing like a completed real client project when they are generated/support imagery?
+- Are any images visually strong but semantically mismatched?
+- Are there any remaining `Akmens Dizainas` strings or wrong-company-name text in image-related content, alt text, metadata, docs shown in the website, or visible UI?
 
-1. Pull latest changes.
-2. Verify that `incoming-images/generated/granitas` exists.
-3. Inspect its actual file type and dimensions.
-4. Convert/export it into a production-ready `.webp` asset if needed.
-5. Add the final asset into the existing project asset structure.
-6. Replace only the current materials image usage with the selected candidate.
-7. Preserve existing responsive crop behavior unless tiny object-position adjustments are needed.
-8. Review `/medziagos` and homepage materials section on desktop/tablet/mobile.
-9. If needed, make minimal safe crop/object-position adjustments only.
+If a caption/alt text is clearly wrong, make a small safe correction.
 
-## Optional logo overlay experiment
+If an image looks visually acceptable but the caption is questionable, document the concern in `docs/AI_CHANGELOG.md` and only change it if the correction is obvious and low-risk.
 
-After the clean no-logo version works:
+## Final visual QA
 
-Create ONE optional secondary experiment version using the REAL existing Akmens Darbai SVG logo from the project assets.
+Also check:
 
-Rules:
+- `/medziagos` with the new materials image
+- homepage materials section with the new materials image
+- whether `/didmenine-prekyba-paminklais` still feels like an outlier
+- whether `/kapavieciu-projektavimas` still feels like an outlier
+- whether the first gallery image is still too bright / flare-heavy
+- whether any crop fails on mobile
+- whether any image feels too fake, too glossy, too casual, or too far from the rest of the site
 
-- Use the real SVG logo only.
-- Do not recreate the logo with AI.
-- Do not use the wrong name `Akmens Dizainas`.
-- Keep the overlay subtle.
-- The logo should feel etched/engraved or lightly printed on the upper-right dark stone sample if that placement works naturally.
-- Very low contrast.
-- Small scale.
-- Premium and believable.
-- If it looks fake, forced, commercial, or reduces realism, discard the overlay version and keep the clean version only.
+## Allowed changes
 
-Do not replace the clean version automatically if the overlay version is worse.
+Allowed only if needed:
 
-## Deliverables
+- fix incorrect captions/labels/nearby image text
+- fix incorrect image alt text
+- fix wrong company name if found
+- tiny image `object-position` adjustment if a crop is clearly broken
+- update `docs/AI_CHANGELOG.md`
 
-Update:
+Not allowed:
 
-- the actual materials image implementation
-- optional overlay experiment version if successful
-- `docs/AI_CHANGELOG.md`
+- replacing images unless there is a clearly broken or clearly mismatched asset and the fix is obvious
+- redesigning sections
+- changing content strategy broadly
+- changing typography/colors/layout
+- adding generated images to new slots
+- changing unrelated files
 
-In `docs/AI_CHANGELOG.md` include:
+## Deliverable
 
-- source file used: `incoming-images/generated/granitas`
-- final production asset path
-- where the new materials image is used
-- whether crop adjustments were needed
-- whether the logo overlay experiment succeeded or failed
-- which version is currently active
-- responsive QA notes
-- whether the generated image improved the realism/trust/premium balance
+Update `docs/AI_CHANGELOG.md` with:
+
+- pages reviewed
+- image/caption/alt-text consistency findings
+- any small fixes made
+- any remaining visual risks before launch
+- whether `/didmenine-prekyba-paminklais` still needs future work
+- whether `/kapavieciu-projektavimas` still needs future work
+- whether the first gallery image should remain or be reconsidered later
+- final verdict on the new materials image
 - validation results
 
 ## Validation
 
-Run:
+If code/content changes are made, run:
 
 - lint
 - tests if available
 - production build
 
-Document results in `docs/AI_CHANGELOG.md`.
+If no code/content changes are made, document that this was a review-only pass and explain why checks were or were not run.
 
 ## Priority
 
