@@ -19,6 +19,58 @@ Open questions / next steps:
 
 ### 2026-05-07
 What changed:
+- Pulled the latest `main` and completed a docs-only generated-image variant planning pass
+- Inspected current image usage across homepage, gallery, service cards, related services, service detail heroes, trust section, and materials section
+- Created a slot-by-slot generated variant handoff file at `docs/image-generation/generated-variant-plan.md`
+- Kept the current real-image direction untouched and documented the generated variant strictly as an experiment
+
+Files changed:
+- docs/image-generation/generated-variant-plan.md
+- docs/AI_CHANGELOG.md
+
+Notes:
+- Current slot groups reviewed:
+- homepage hero
+- trust/about images
+- materials image
+- homepage gallery
+- full gallery page
+- service card images
+- related service images
+- service detail hero images
+- Images explicitly excluded from generation:
+- `src/assets/about-history-archive.jpg`
+- `src/assets/about-values-tulips.jpg`
+- `src/assets/materials-editorial-granite.webp`
+- any archive/founder/history/company-context imagery
+- Main planning conclusions:
+- the strongest generated-image experiment candidates are:
+- homepage hero
+- `kapavieciu-projektavimas`
+- `didmenine-prekyba-paminklais`
+- `paminklu-graviravimas`
+- several current service assets should use separate generated `card` and `hero` files instead of forcing one image to do both
+- the current real gallery and several current real memorial/service photos are likely stronger than a fully generated replacement set, so gallery replacement was intentionally ranked low priority
+- Safe implementation recommendation documented in the plan:
+- use a separate branch
+- create separate generated filenames
+- do not overwrite current real assets
+- compare both versions visually before deciding anything
+- Recommended next step for ChatGPT/image generation:
+- generate only the first batch:
+- homepage hero
+- `kapavieciu-projektavimas` card + hero
+- `didmenine-prekyba-paminklais` card + hero
+- if that batch does not feel grounded enough, stop the experiment and keep the real-image baseline
+
+Open questions / next steps:
+- The generated variant only makes sense if the first batch stays realistic and does not reduce trust
+- If the user proceeds, the next implementation pass should happen on a separate experiment branch and should not overwrite the current real-image files
+
+---
+
+### 2026-05-07
+What changed:
 - Performed a contact-detail source verification pass focused on the previously adopted address, phone, and working-hours facts
 - Re-checked the original-site extraction notes in `docs/copy-audit/original-site-copy.md`
 - Re-checked the current production `https://akmensdarbai.lt/` homepage, contact page, and about page as reachable in this environment
