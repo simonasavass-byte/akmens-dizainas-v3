@@ -1,7 +1,7 @@
 import SEO from "@/components/SEO";
 import PageHero from "@/components/site/PageHero";
 import CtaBlock from "@/components/site/CtaBlock";
-import materialsImg from "@/assets/materials.jpg";
+import materialsImg from "@/assets/materials-editorial-granite.webp";
 
 const stones = [
   { name: "Juodas granitas", origin: "Absolute Black · IND", note: "Gilus, vientisas tonas. Geriausiai tinka klasikiniams paminklams." },
@@ -30,7 +30,7 @@ export default function Medziagos() {
             <div className="aspect-[16/8] overflow-hidden bg-muted">
               <img
                 src={materialsImg}
-                alt="Granito pavyzdžiai: juodas, pilkas, tamsiai raudonas"
+                alt="Granito pavyzdžiai: juodas, pilkas, šviesus ir tamsiai raudonas akmuo"
                 loading="eager"
                 decoding="async"
                 className="w-full h-full object-cover"

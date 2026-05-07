@@ -54,6 +54,69 @@ Open questions / next steps:
 
 ### 2026-05-06
 What changed:
+- Pulled the latest `main` and completed a controlled test implementation of the selected generated materials image candidate
+- Verified and used the real uploaded source file `incoming-images/generated/granitas .png`
+- Exported the selected candidate into a production-ready WebP asset at `src/assets/materials-editorial-granite.webp`
+- Replaced only the materials image usage in `src/components/site/Materials.tsx` and `src/pages/Medziagos.tsx`
+- Tested one optional real-logo overlay experiment and rejected it as the weaker version
+
+Files changed:
+- src/components/site/Materials.tsx
+- src/pages/Medziagos.tsx
+- src/assets/materials-editorial-granite.webp
+- src/assets/materials-editorial-granite-logo-experiment.webp
+- docs/AI_CHANGELOG.md
+
+Notes:
+- Source file used:
+- `incoming-images/generated/granitas .png`
+- Source file inspection:
+- type: PNG
+- dimensions: `1672x941`
+- Final production asset path:
+- `src/assets/materials-editorial-granite.webp`
+- Where the new materials image is used:
+- `src/components/site/Materials.tsx`
+- `src/pages/Medziagos.tsx`
+- Implementation details:
+- The active implementation now imports `@/assets/materials-editorial-granite.webp` instead of `@/assets/materials.jpg`
+- Alt text was updated slightly to reflect the broader sample range visible in the new image
+- Crop adjustments:
+- No `object-position` or layout adjustments were needed
+- The existing centered `object-cover` behavior already suits the new composition well
+- Responsive QA notes:
+- Mobile in-app browser review on `/medziagos` and the homepage materials section looked stable
+- The new image reads clearly at the current mobile viewport and keeps the stone samples legible without awkward edge crops
+- Desktop/tablet crop risk remains low because the composition is already wide, centered, and tolerant of both current usage ratios: `16:9` on the homepage section and `16:8` on `/medziagos`
+- Realism / trust / premium verdict:
+- The generated materials candidate is a clear improvement over the old `materials.jpg`
+- It feels more tactile, grounded, and credible within the current site direction
+- It still has a polished editorial quality, but it no longer reads like an obvious showroom mockup/render in the same way the previous image did
+- It fits better with the existing real-image website direction than the previous materials image
+- Optional logo overlay experiment:
+- Experiment asset created at `src/assets/materials-editorial-granite-logo-experiment.webp`
+- Result: failed / rejected
+- Reason:
+- even at very low contrast and small scale, the logo treatment read more like a dark printed patch than a believable etched or naturally marked stone surface
+- it weakened realism and felt more commercial/forced than the clean no-logo image
+- Active version:
+- the clean no-logo version is currently active
+- Validation results:
+- `npm run lint` passed
+- `npm test` passed
+- `npm run build` passed
+- Build still reports the same pre-existing non-blocking warnings:
+- outdated Browserslist data
+- ambiguous Tailwind class `duration-[1200ms]`
+
+Open questions / next steps:
+- If the user wants a final decision, compare this clean generated implementation directly against the old `src/assets/materials.jpg` in the live site and decide whether to keep the generated version permanently
+- No further logo-overlay work is recommended for this slot unless a much more subtle, stone-native marking approach is available
+
+---
+
+### 2026-05-06
+What changed:
 - Pulled the latest `main` and attempted to execute the test implementation task for the selected generated materials image candidate
 - Verified the current task context, current materials image usage, and the generated-candidate handoff file
 - Stopped before modifying website code because the provided candidate file does not contain a real base64-encoded image payload

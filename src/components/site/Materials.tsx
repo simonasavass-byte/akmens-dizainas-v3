@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import materialsImg from "@/assets/materials.jpg";
+import materialsImg from "@/assets/materials-editorial-granite.webp";
 
 const stones = [
   { name: "Juodas granitas", origin: "Absolute Black · IND" },
@@ -33,7 +33,7 @@ export default function Materials() {
             <div className="aspect-[16/9] overflow-hidden bg-muted">
               <img
                 src={materialsImg}
-                alt="Trys granito pavyzdžiai: juodas, pilkas ir tamsiai raudonas"
+                alt="Keli granito pavyzdžiai: juodas, pilkas, šviesus ir tamsiai raudonas akmuo"
                 loading="lazy"
                 decoding="async"
                 width={1920}
