@@ -15,12 +15,12 @@ export default function Kontaktai() {
     <>
       <SEO
         title="Kontaktai: studija Vilniuje ir Elektrėnuose | Akmens Darbai"
-        description="Susisiekite dėl konsultacijos ar sąmatos. Studijos Vilniuje (Kalvarijų g. 125) ir Elektrėnuose (Rungos g. 18). Atsakome per vieną darbo dieną."
+        description="Kontaktai: Kalvarijų g. 125, Vilnius, LT-08221 ir Rungos g. 18, Elektrėnai. Telefonai +370 5 2752628 ir +370 698 70380."
       />
       <PageHero
         eyebrow="Kontaktai"
         h1="Susisiekime."
-        intro="Parašykite trumpą žinutę arba paskambinkite. Atsakome per vieną darbo dieną. Konsultacija ir preliminari sąmata — be mokesčio."
+        intro="Parašykite trumpą žinutę arba paskambinkite. Studija Vilniuje, dirbtuvės Elektrėnuose."
         crumbs={[{ label: "Pradžia", to: "/" }, { label: "Kontaktai" }]}
       />
 
@@ -32,7 +32,7 @@ export default function Kontaktai() {
                 <div>
                   <dt className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">Vilnius</dt>
                   <dd className="mt-2 font-display text-xl">Studija ir ekspozicija</dd>
-                  <dd className="text-muted-foreground mt-1">Kalvarijų g. 125, Vilnius</dd>
+                  <dd className="text-muted-foreground mt-1">Kalvarijų g. 125, Vilnius, LT-08221</dd>
                 </div>
                 <div>
                   <dt className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">Elektrėnai</dt>
@@ -40,9 +40,10 @@ export default function Kontaktai() {
                   <dd className="text-muted-foreground mt-1">Rungos g. 18, Elektrėnai</dd>
                 </div>
                 <div className="pt-4 border-t border-border space-y-1">
-                  <a href="tel:+37060000000" className="block link-underline">+370 600 00 000</a>
+                  <a href="tel:+37052752628" className="block link-underline">+370 5 275 2628</a>
+                  <a href="tel:+37069870380" className="block link-underline">+370 698 70380</a>
                   <a href="mailto:info@akmensdarbai.lt" className="block link-underline">info@akmensdarbai.lt</a>
-                  <p className="text-muted-foreground text-[13px] mt-2">I–V 9:00–18:00 · VI 10:00–14:00</p>
+                  <p className="text-muted-foreground text-[13px] mt-2">I–V 8:00–17:00 · VI–VII nedirbame</p>
                 </div>
                 <div className="pt-4 border-t border-border">
                   <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground mb-2">Aptarnavimo zona</p>
@@ -57,9 +58,9 @@ export default function Kontaktai() {
               {sent ? (
                 <div className="border border-border p-10">
                   <p className="eyebrow mb-4">Ačiū</p>
-                  <p className="font-display text-3xl">Žinutė gauta.</p>
+                  <p className="font-display text-3xl">Susisiekite tiesiogiai.</p>
                   <p className="mt-3 text-muted-foreground">
-                    Susisieksime per vieną darbo dieną.
+                    Dėl užklausos galite susisiekti telefonu arba el. paštu.
                   </p>
                 </div>
               ) : (

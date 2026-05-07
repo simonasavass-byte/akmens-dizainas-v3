@@ -3,10 +3,10 @@ import bw from "@/assets/about-history-archive.jpg";
 import modern from "@/assets/about-values-tulips.jpg";
 
 const stats = [
-  { n: "20+", l: "metų patirties" },
-  { n: "1200+", l: "atliktų darbų" },
-  { n: "10 m.", l: "garantija granitui" },
-  { n: "2", l: "studijos: Vilnius, Elektrėnai" },
+  { n: "1991", l: "dirbame nuo" },
+  { n: "2003", l: "dabartinis įmonės pavadinimas" },
+  { n: "Vilnius", l: "studija" },
+  { n: "Elektrėnai", l: "dirbtuvės" },
 ];
 
 export default function Trust() {
@@ -18,12 +18,11 @@ export default function Trust() {
             <p className="eyebrow mb-4 reveal">Apie studiją</p>
             <div className="rule mb-8 reveal" />
             <h2 className="font-display text-[34px] md:text-[52px] leading-[1.05] tracking-[-0.015em] reveal">
-              Akmens dirbtuvės nuo 2003-ųjų.
+              Akmens darbais užsiimame nuo 1991-ųjų.
             </h2>
             <p className="mt-6 text-[15px] leading-relaxed text-muted-foreground max-w-md reveal">
-              Dirbame su granitu daugiau nei dvidešimt metų. Studija Vilniuje,
-              dirbtuvės Elektrėnuose. Visus etapus — pjovimą, poliravimą,
-              graviravimą ir montavimą — atliekame patys.
+              Dabartinį UAB „Akmens darbai“ pavadinimą įmonė turi nuo 2003 metų.
+              Studija Vilniuje, dirbtuvės Elektrėnuose.
             </p>
 
             <dl className="mt-12 grid grid-cols-2 gap-y-8 gap-x-6">

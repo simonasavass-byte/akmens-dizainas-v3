@@ -19,6 +19,81 @@ Open questions / next steps:
 
 ### 2026-05-07
 What changed:
+- Pulled the latest `main` and completed Phase 1 copy correction: factual fixes and source-grounded SEO cleanup
+- Replaced placeholder contact details with original-source contact facts where confirmed
+- Removed or neutralized the clearest unsupported claims: placeholder phone number, unsupported response-time/free-estimate language, unsupported counts/guarantee wording, English 404 copy, and several explicit service-page timeframe/variant claims
+- Corrected the about/history section so it now distinguishes stonework activity from `1991` and the current company-name milestone from `2003`
+- Cleaned remaining wrong-company-name instances in active workflow context and favicon-source metadata
+
+Files changed:
+- index.html
+- src/pages/Index.tsx
+- src/pages/Kontaktai.tsx
+- src/pages/NotFound.tsx
+- src/components/site/CtaBlock.tsx
+- src/components/site/SiteHeader.tsx
+- src/components/site/SiteFooter.tsx
+- src/components/site/Trust.tsx
+- src/lib/services.ts
+- public/favicon-source.svg
+- docs/AI_CONTEXT.md
+- docs/AI_CHANGELOG.md
+
+Notes:
+- Original-site extraction was still partial, but complete enough for this factual correction pass:
+- contact details and working hours were supported by the captured original source
+- history wording around `1991` and `2003` was supported by the captured original source
+- direct service phrasing for `paminklų gamyba`, `paminklų graviravimas`, `kapų dengimas plokštėmis`, and didmena was sufficient for light SEO/claim cleanup
+- Factual corrections made:
+- structured data phone changed from placeholder `+37060000000` to both confirmed numbers: `+37052752628` and `+37069870380`
+- Vilnius address now includes the confirmed postal code `LT-08221`
+- visible contact details now use:
+- `+370 5 275 2628`
+- `+370 698 70380`
+- `Kalvarijų g. 125, Vilnius, LT-08221`
+- `Rungos g. 18, Elektrėnai`
+- working hours now use confirmed source facts:
+- `I–V 8:00–17:00`
+- `VI–VII nedirbame`
+- Unsupported claims removed or neutralized:
+- removed placeholder CTA/contact response-time promise
+- removed free-estimate / `be mokesčio` language
+- removed unsupported `1200+ atliktų darbų`
+- removed unsupported `10 m. garantija granitui` / `10 metų granitui`
+- removed explicit service-page timeframe fields like `4–8 sav.`, `1–2 sav.`, `2–4 sav.`, `3–10 d.`, `2–4 mėn.`
+- removed explicit unsupported `1–2 variantai` / `3D vizualizacija` wording where it was being presented as factual service detail
+- History wording corrected:
+- homepage/about factual anchor now uses `1991`
+- current-company-name milestone now uses `2003`
+- 404 localization result:
+- `Puslapis nerastas`
+- `Grįžti į pradžią`
+- SEO/meta corrections made in this phase:
+- static `index.html` title/description and OG/Twitter text were simplified toward direct source-like service phrasing
+- homepage structured data description was simplified toward source-like service phrasing
+- contact-page meta description now uses real contact/location data instead of unsupported response-time copy
+- some service meta/service summary fields were simplified where the original audit showed the current wording was too promissory or clearly unsupported
+- Facts left uncertain / needing owner confirmation:
+- whether one phone number should be treated as the single primary CTA number everywhere, or whether both should appear in more places
+- whether the current materials page stone-name/origin list is real company data or provisional copy
+- whether some still-existing service-page structure text such as detailed process steps should be further simplified in Phase 2
+- whether the company director line from the original site should be restored visibly on the website or left out
+- Validation results:
+- `npm run lint` passed
+- `npm test` passed
+- `npm run build` passed
+- Build still reports the same pre-existing non-blocking warnings:
+- outdated Browserslist data
+- ambiguous Tailwind class `duration-[1200ms]`
+
+Open questions / next steps:
+- Recommended next task: Phase 2 visible copy rewrite
+- Focus next on simplifying homepage/service/contact/footer copy into more human, source-grounded Lithuanian without reintroducing unsupported promises
+
+---
+
+### 2026-05-07
+What changed:
 - Pulled the latest `main` and completed a docs-first copy audit against the original `https://akmensdarbai.lt/` website
 - Extracted the current repo’s visible and SEO copy into `docs/copy-audit/current-site-copy.md`
 - Collected partial original-site wording and business facts into `docs/copy-audit/original-site-copy.md`

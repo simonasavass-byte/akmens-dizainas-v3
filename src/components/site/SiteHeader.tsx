@@ -126,8 +126,8 @@ export default function SiteHeader() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-6">
-          <a href="tel:+37060000000" className="text-[13px] text-muted-foreground hover:text-foreground transition-colors">
-            +370 600 00 000
+          <a href="tel:+37069870380" className="text-[13px] text-muted-foreground hover:text-foreground transition-colors">
+            +370 698 70380
           </a>
           <Link
             to="/kontaktai"

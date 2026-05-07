@@ -40,18 +40,18 @@ export const services: Service[] = [
     h1: "Granito paminklų gamyba",
     metaTitle: "Paminklų gamyba iš granito | Akmens Darbai · Vilnius, Elektrėnai",
     metaDescription:
-      "Gaminame granito paminklus Vilniuje ir Elektrėnuose. Klasikinės ir šiuolaikinės formos, aiški kaina, montavimas visoje Lietuvoje.",
+      "Paminklų gamyba Vilniuje ir Elektrėnuose. Projektuojame, gaminame ir statome granito paminklus.",
     short: "Klasikiniai ir šiuolaikiški granito paminklai pagal jūsų pageidavimus.",
     intro:
       "Gaminame granito paminklus nuo eskizo iki sumontavimo kapavietėje. Dirbame Vilniuje ir Elektrėnuose, montuojame visoje Lietuvoje.",
     accent: "Klasikinė ir moderni forma. Vienam, dvigubam ar šeimos kapui.",
     scope: [
-      { label: "Terminas", value: "4–8 sav." },
-      { label: "Garantija", value: "10 metų granitui" },
+      { label: "Paslauga", value: "Granito paminklai" },
+      { label: "Darbai", value: "Gamyba ir montavimas" },
       { label: "Vieta", value: "Vilnius, Elektrėnai, visa LT" },
     ],
     includes: [
-      "Paminklo eskizas ir 3D vizualizacija",
+      "Paminklo eskizas",
       "Granito parinkimas iš patikrintų tiekėjų",
       "Pjaustymas, šlifavimas ir poliravimas studijoje",
       "Užrašai, datos, ornamentai ir portretai",
@@ -85,15 +85,15 @@ export const services: Service[] = [
     short: "Vientisas kapavietės sprendimas — nuo proporcijų iki medžiagų.",
     intro:
       "Projektuojame kapavietę kaip visumą: paminklą, dangą, bordiūrą ir aplinką. Pamatote, kaip viskas atrodys, dar prieš pradedant darbus.",
-    accent: "Pirmiausia vizualizacija — tik tada gamyba ir pinigai.",
+    accent: "Pirmiausia projektas, tada gamyba.",
     scope: [
-      { label: "Terminas", value: "1–2 sav. projektui" },
-      { label: "Apima", value: "Eskizai, 3D, sąmata" },
-      { label: "Vizualizacijos", value: "1–2 variantai" },
+      { label: "Paslauga", value: "Kapavietės projektas" },
+      { label: "Apima", value: "Eskizas ir sąmata" },
+      { label: "Vieta", value: "Vilnius, Elektrėnai, LT" },
     ],
     includes: [
       "Kapavietės matavimai ir įvertinimas vietoje",
-      "Kelių variantų eskizai ir 3D vizualizacijos",
+      "Kapavietės eskizas",
       "Medžiagų ir spalvų parinkimas",
       "Tiksli darbų ir medžiagų sąmata",
       "Suderinimas su kapinių administracija, jei reikia",
@@ -105,7 +105,7 @@ export const services: Service[] = [
     ],
     process: [
       { step: "Apžiūra", text: "Atvykstame į kapavietę arba dirbame pagal jūsų matmenis ir nuotraukas." },
-      { step: "Variantai", text: "Pateikiame 1–2 vizualizacijas, aptariame, ką keisti." },
+      { step: "Projektas", text: "Parengiame kapavietės projektą ir aptariame, ką keisti." },
       { step: "Galutinis projektas", text: "Patvirtinus — fiksuojame medžiagas, kainą ir terminus." },
       { step: "Įgyvendinimas", text: "Pagaminame ir sumontuojame pagal projektą." },
     ],
@@ -128,9 +128,9 @@ export const services: Service[] = [
       "Padengiame kapavietę granito plokštėmis taip, kad paviršius nesusės ir nesutrūkinės. Skiriame laiko pamatui — tai svarbiausia ilgaamžiškumui.",
     accent: "Mažiau priežiūros. Be žolės, be smėlio, be pelijančios dangos.",
     scope: [
-      { label: "Terminas", value: "2–4 sav." },
+      { label: "Paslauga", value: "Kapų dengimas plokštėmis" },
       { label: "Pamatas", value: "Drenažas + pasluoksnis" },
-      { label: "Plokščių storis", value: "3 cm standartas" },
+      { label: "Vieta", value: "Vilnius, Elektrėnai, LT" },
     ],
     includes: [
       "Senos dangos demontavimas",
@@ -169,7 +169,7 @@ export const services: Service[] = [
       "Atstatome senus paminklus, skulptūras ir kapavietes — pagarbiai originaliai medžiagai. Pirmiausia išsaugome tai, kas yra; tik tada keičiame, ko nebegalima išgelbėti.",
     accent: "Pirmenybė — originalui. Keičiame tik tai, ko išgelbėti nebegalima.",
     scope: [
-      { label: "Apžiūra", value: "Vietoje, nemokama" },
+      { label: "Apžiūra", value: "Vietoje" },
       { label: "Atliekama", value: "Studijoje + kapinėse" },
       { label: "Tinka", value: "Akmuo, betonas, skulptūra" },
     ],
@@ -210,7 +210,7 @@ export const services: Service[] = [
       "Graviruojame ant naujų ir jau pastatytų paminklų. Dirbame ir studijoje, ir vietoje kapinėse — kai paminklo nuimti negalima.",
     accent: "Datos, portretai, ornamentai — taip pat ir ant jau pastatyto paminklo.",
     scope: [
-      { label: "Terminas", value: "3–10 d." },
+      { label: "Paslauga", value: "Raidės, datos, portretai" },
       { label: "Vieta", value: "Studija arba kapavietė" },
       { label: "Apdaila", value: "Auksavimas, dažymas" },
     ],
@@ -228,7 +228,7 @@ export const services: Service[] = [
     ],
     process: [
       { step: "Tekstas ir motyvas", text: "Sutariame, kas bus graviruojama ir kokiu šriftu." },
-      { step: "Maketas", text: "Atsiunčiame tikslų išdėstymą patvirtinimui." },
+      { step: "Maketas", text: "Suderiname užrašo ar ornamento išdėstymą." },
       { step: "Graviravimas", text: "Atliekame studijoje arba atvykstame į kapavietę." },
       { step: "Apdaila", text: "Auksuojame arba dažome, jei reikia." },
     ],
@@ -249,8 +249,8 @@ export const services: Service[] = [
       "Kai standartinis sprendimas netinka — kuriame paminklą iš naujo. Skulptūrinės formos, neįprasti pjūviai, derinami poliruoto ir natūralaus akmens paviršiai.",
     accent: "Vienetinis projektas. Ne katalogo forma, o jūsų istorija akmenyje.",
     scope: [
-      { label: "Terminas", value: "2–4 mėn." },
-      { label: "Eskizai", value: "2–3 variantai" },
+      { label: "Paslauga", value: "Individualus paminklas" },
+      { label: "Eskizai", value: "Projektas pagal idėją" },
       { label: "Medžiagos", value: "Granitas, bronza, metalas" },
     ],
     includes: [
@@ -267,8 +267,8 @@ export const services: Service[] = [
     ],
     process: [
       { step: "Idėja", text: "Išklausome, ką norite išreikšti per formą ir medžiagą." },
-      { step: "Eskizai", text: "Pateikiame kelis variantus, derinime detales." },
-      { step: "Maketas", text: "Pagaminame mažo mastelio maketą arba 3D modelį." },
+      { step: "Eskizai", text: "Parengiame projektą ir suderiname detales." },
+      { step: "Maketas", text: "Paruošiame sprendinį gamybai." },
       { step: "Gamyba", text: "Realizuojame studijoje ir montuojame vietoje." },
     ],
     img: autoriniai,
@@ -282,11 +282,11 @@ export const services: Service[] = [
     h1: "Didmeninė prekyba paminklais",
     metaTitle: "Didmeninė prekyba paminklais | Akmens Darbai",
     metaDescription:
-      "Tiekiame paminklus ir granito ruošinius partneriams Lietuvoje. Stabili kokybė, sutartos sąlygos, sklandus tiekimas.",
+      "Paminklų gamyba ir pardavimas partneriams Lietuvoje. Tiekiame paminklus ir granito ruošinius.",
     short: "Tiekiame paminklus ir ruošinius partneriams Lietuvoje.",
     intro:
-      "Dirbame su kitomis kapaviečių tvarkymo įmonėmis ir akmens dirbtuvėmis. Tiekiame standartinius paminklus, ruošinius ir plokštes pagal sutartą grafiką.",
-    accent: "B2B partnerystė: stabili kokybė, sutartos kainos, aiškūs terminai.",
+      "Dirbame su kapaviečių tvarkymo įmonėmis ir akmens dirbtuvėmis. Tiekiame paminklus, ruošinius ir plokštes pagal užsakymą.",
+    accent: "Paminklų gamyba ir pardavimas partneriams Lietuvoje.",
     scope: [
       { label: "Forma", value: "B2B sutartis" },
       { label: "Tiekimas", value: "Visa Lietuva" },

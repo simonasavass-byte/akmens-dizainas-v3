@@ -7,7 +7,7 @@ type Props = {
 
 export default function CtaBlock({
   title = "Pasikalbėkime apie jūsų darbą",
-  text = "Atsakome per vieną darbo dieną. Konsultacija ir preliminari sąmata — be mokesčio.",
+  text = "Susisiekite telefonu arba el. paštu — aptarsime jūsų užklausą ir darbų galimybes.",
 }: Props) {
   return (
     <section className="py-20 md:py-28 bg-surface">
@@ -30,8 +30,8 @@ export default function CtaBlock({
             >
               Prašyti sąmatos
             </Link>
-            <a href="tel:+37060000000" className="text-[13px] link-underline">
-              +370 600 00 000
+            <a href="tel:+37069870380" className="text-[13px] link-underline">
+              +370 698 70380
             </a>
           </div>
         </div>

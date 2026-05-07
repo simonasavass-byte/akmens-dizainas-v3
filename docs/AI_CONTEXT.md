@@ -2,7 +2,7 @@
 
 ## Project
 
-Akmens Dizainas website.
+Akmens Darbai website.
 
 ## Repository
 
