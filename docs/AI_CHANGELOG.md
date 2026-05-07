@@ -19,6 +19,48 @@ Open questions / next steps:
 
 ### 2026-05-07
 What changed:
+- Pulled the latest `main` and completed a docs-first copy audit against the original `https://akmensdarbai.lt/` website
+- Extracted the current repo’s visible and SEO copy into `docs/copy-audit/current-site-copy.md`
+- Collected partial original-site wording and business facts into `docs/copy-audit/original-site-copy.md`
+- Wrote a structured risk audit and rewrite plan in `docs/copy-audit/copy-audit.md`
+- Kept this task as an audit/planning pass only; no website code or content was changed
+
+Files changed:
+- docs/copy-audit/current-site-copy.md
+- docs/copy-audit/original-site-copy.md
+- docs/copy-audit/copy-audit.md
+- docs/AI_CHANGELOG.md
+
+Notes:
+- Original website extraction status:
+- partial but usable
+- reliable source material was captured for homepage/service wording patterns, about/company history, wholesale wording, and contact details
+- some original pages were only accessible through partial fetch/search-result visibility, so not every page could be fully exported
+- Current website copy extraction status:
+- complete enough for rewrite planning across the main visible site
+- extracted from `index.html`, `src/pages/*.tsx`, `src/components/site/*.tsx`, and `src/lib/services.ts`
+- Main copy risks found:
+- placeholder phone number and working hours in the current site
+- unsupported business metrics and guarantee claims
+- unsupported operational promises such as response-time and free-estimate language
+- service-page copy expanded far beyond the original site’s factual/direct wording
+- materials copy may also be partially invented and should be verified before keeping detailed stone/spec language
+- remaining English `404` copy
+- Whether code/content changes were made:
+- no website code changes
+- no production copy rewrite yet
+- Recommended next task:
+- do a focused rewrite pass beginning with factual corrections first, then homepage/service/contact/SEO copy simplification based on `docs/copy-audit/copy-audit.md`
+
+Open questions / next steps:
+- Verify with the owner which original contact details, hours, and legal/company facts should remain exactly as on the old site
+- Confirm whether the current materials list and stone-origin details are real company data or only provisional copy
+- Use the new copy-audit docs as the source brief for the actual rewrite pass
+
+---
+
+### 2026-05-07
+What changed:
 - Pulled the latest `main` and completed the final visual QA / image-caption consistency pass after the materials image replacement
 - Reviewed the new human reference screenshots in `incoming-images/review-screenshots/` alongside the live local site and current image assets
 - Fixed one clear gallery caption/title mismatch where the visible image no longer matched the current label
