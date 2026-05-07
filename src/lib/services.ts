@@ -28,6 +28,7 @@ export type Service = {
   img: string;
   heroImg?: string;
   alt: string;
+  heroAlt?: string;
 };
 
 export const services: Service[] = [
@@ -70,6 +71,7 @@ export const services: Service[] = [
     img: paminklai,
     heroImg: paminklaiHero,
     alt: "Juodo granito paminklo detalė su švelniai išlenkta viršūne",
+    heroAlt: "Šviesaus granito dviejų dalių paminklas su širdies formos išpjova ramioje kapinių aplinkoje",
   },
   {
     slug: "kapavieciu-projektavimas",
@@ -110,6 +112,7 @@ export const services: Service[] = [
     img: projektavimas,
     heroImg: projektavimasHero,
     alt: "Juodo ir pilko granito paminklo detalė su reljefine šakele ir kryžiumi",
+    heroAlt: "Sutvarkyta kapavietė su juodo granito paminklu, juoda skalda ir lotoso formos akmens akcentu",
   },
   {
     slug: "kapu-dengimas-plokstemis",
@@ -150,6 +153,7 @@ export const services: Service[] = [
     img: dengimas,
     heroImg: dengimasHero,
     alt: "Kapavietės danga su tamsaus granito plokštėmis ir šviesia skalda",
+    heroAlt: "Poliruota juodo granito kapavietės danga su paminklais ir gėlių vazonais",
   },
   {
     slug: "kapavieciu-restauravimas",
@@ -190,6 +194,7 @@ export const services: Service[] = [
     img: restauravimas,
     heroImg: restauravimasHero,
     alt: "Atnaujinta kapavietė su restauruotu paminklu ir kryžiumi",
+    heroAlt: "Atnaujinta kapavietė su juodo granito danga ir restauruotu šeimos paminklu",
   },
   {
     slug: "paminklu-graviravimas",

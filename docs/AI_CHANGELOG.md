@@ -17,6 +17,69 @@ Open questions / next steps:
 
 ---
 
+### 2026-05-07
+What changed:
+- Pulled the latest `main` and completed the final visual QA / image-caption consistency pass after the materials image replacement
+- Reviewed the new human reference screenshots in `incoming-images/review-screenshots/` alongside the live local site and current image assets
+- Fixed one clear gallery caption/title mismatch where the visible image no longer matched the current label
+- Fixed service detail hero alt-text mismatches caused by separate hero images reusing card-image alt text
+- Corrected one remaining wrong company-name string in the served favicon SVG metadata
+
+Files changed:
+- src/lib/services.ts
+- src/pages/ServicePage.tsx
+- src/components/site/Gallery.tsx
+- src/pages/Galerija.tsx
+- public/favicon.svg
+- docs/AI_CHANGELOG.md
+
+Notes:
+- Pages reviewed:
+- `/`
+- `/medziagos`
+- `/galerija`
+- `/paslaugos`
+- `/paminklu-gamyba`
+- `/kapavieciu-projektavimas`
+- `/kapu-dengimas-plokstemis`
+- `/kapavieciu-restauravimas`
+- `/paminklu-graviravimas`
+- `/autoriniai-paminklai`
+- `/didmenine-prekyba-paminklais`
+- `/kontaktai`
+- Additional review references used:
+- `incoming-images/review-screenshots/Screenshot 2026-05-07 at 12.59.39.png`
+- `incoming-images/review-screenshots/Screenshot 2026-05-07 at 12.59.45.png`
+- `incoming-images/review-screenshots/Screenshot 2026-05-07 at 12.59.57.png`
+- `incoming-images/review-screenshots/Screenshot 2026-05-07 at 13.00.07.png`
+- Small fixes made:
+- homepage/gallery page item `gallery-memorial-04.webp` now uses `Pilna kapavietės danga` instead of `Klasikinis kryžius su pilna danga`
+- service detail pages now use `heroAlt` when a dedicated hero image differs from the card image
+- corrected the served favicon SVG aria-label from `Akmens Dizainas` to `Akmens Darbai`
+- Image / caption / alt-text consistency findings:
+- the new materials image still matches the surrounding granite/materials text well on both the homepage materials block and `/medziagos`
+- the homepage/gallery captions now read more honestly against the currently visible image set
+- service cards and related-service cards were already using the correct card-image alt text
+- the actual semantic issue was limited to service detail hero images that had separate hero assets but still inherited the card alt description
+- Remaining visual risks before launch:
+- `/didmenine-prekyba-paminklais` still feels like a visual outlier semantically; the current image is credible and not broken, but it still reads more like a finished memorial/work example than unmistakable B2B wholesale supply imagery
+- `/kapavieciu-projektavimas` still feels slightly weaker semantically than the strongest pages; the current hero shows a designed completed composition rather than an explicit planning / visualization moment, but it is still acceptable and more grounded than the older synthetic-looking option
+- the first gallery image `gallery-memorial-01.webp` is still the brightest / most flare-heavy image in the current set; it can remain for now, but it is still the first gallery candidate I would reconsider later if a calmer replacement appears
+- mobile crop review did not reveal a clearly broken crop that justified changing `object-position`
+- Final verdict on the new materials image:
+- keep it
+- it still reads as the right editorial/generated exception for this site and remains more believable than the old materials image
+- Validation note:
+- this pass included focused live QA plus semantic/content fixes, so full checks were rerun after edits
+
+Open questions / next steps:
+- `npm run lint`
+- `npm test`
+- `npm run build`
+- If there is time for one more content/image polish pass before launch, the highest-value future work remains a better dedicated image for `/didmenine-prekyba-paminklais`
+
+---
+
 ### 2026-05-04
 What changed:
 - Created an external Meta-ad asset set based on the user's Canva concept `4 klaidos renkantis paminklą`

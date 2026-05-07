@@ -34,7 +34,7 @@ export default function ServicePage({ slug: routeSlug }: { slug?: string }) {
             <div className="aspect-[16/9] md:aspect-[16/8] overflow-hidden bg-muted">
               <img
                 src={service.heroImg ?? service.img}
-                alt={service.alt}
+                alt={service.heroAlt ?? service.alt}
                 loading="eager"
                 decoding="async"
                 className="w-full h-full object-cover"

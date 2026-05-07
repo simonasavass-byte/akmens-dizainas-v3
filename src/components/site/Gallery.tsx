@@ -8,7 +8,7 @@ const works = [
   { img: g1, title: "Vientisas juodo granito paminklas", meta: "Vilnius · 2024", span: "md:col-span-5" },
   { img: g2, title: "Šeimos paminklas, dvigubas", meta: "Elektrėnai · 2024", span: "md:col-span-7" },
   { img: g3, title: "Minimalus horizontalus sprendimas", meta: "Vilnius · 2023", span: "md:col-span-7" },
-  { img: g4, title: "Klasikinis kryžius su pilna danga", meta: "Trakų r. · 2023", span: "md:col-span-5" },
+  { img: g4, title: "Pilna kapavietės danga", meta: "Trakų r. · 2023", span: "md:col-span-5" },
 ];
 
 export default function Gallery() {

@@ -16,7 +16,7 @@ const works = [
   { img: paminklai, title: "Klasikinis kryžius", meta: "Vilnius · 2024" },
   { img: g3, title: "Minimalus horizontalus sprendimas", meta: "Vilnius · 2023" },
   { img: dengimas, title: "Pilna kapavietės danga", meta: "Trakų r. · 2023" },
-  { img: g4, title: "Klasikinis kryžius su pilna danga", meta: "Trakų r. · 2023" },
+  { img: g4, title: "Pilna kapavietės danga", meta: "Trakų r. · 2023" },
   { img: autoriniai, title: "Autorinis skulptūrinis paminklas", meta: "Vilnius · 2023" },
   { img: restauravimas, title: "Restauruota angelo skulptūra", meta: "Elektrėnai · 2022" },
 ];
