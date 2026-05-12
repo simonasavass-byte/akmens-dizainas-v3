@@ -23,6 +23,8 @@ What changed:
 - Added the four user-selected gallery images into `src/assets/generated/` with separate filenames and wired them into the homepage `Pastarųjų metų darbai` section in the exact required order
 - Removed visible `Vilnius` references from the surfaced website UI and service/location copy so the site now focuses on `Elektrėnai`
 - Removed the final period from the homepage intro paragraph ending with `restauruojame paminklus`
+- Removed the redundant `2003 / dabartinis įmonės pavadinimas` block from the company/history section
+- Completed a focused mobile-width polish pass for the affected homepage and service-page sections
 
 Files changed:
 - src/assets/generated/gallery-selected-work-1.png
@@ -58,14 +60,19 @@ Notes:
 - homepage selected-works intro now references `Elektrėnai` only
 - homepage selected-works captions/meta labels were updated to neutral `Elektrėnai` labels
 - duplicated `Elektrėnai / studija` and `Elektrėnai / dirbtuvės` info blocks in the company/history section were merged into one clean `Elektrėnai / studija ir dirbtuvės` block
+- the history stats now keep only `1991 / dirbame nuo` and `Elektrėnai / studija ir dirbtuvės`
 - full gallery page visible `Vilnius` labels and page copy were updated to `Elektrėnai`
 - visible service/location references and SEO-facing service metadata in `src/lib/services.ts` were updated away from `Vilnius`
 - materials, trust, homepage SEO, structured data service-area wording, and the service-page location note were also updated so `Vilnius` no longer appears in surfaced site copy
 - Notes on extensions:
 - kept the selected gallery images as `.png` because conversion to `.webp` was not necessary to complete this task cleanly in the current environment
+- Mobile inspection:
+- checked the homepage and `/kapavietes-irengimo-darbai` at approximately `390px` and `375px` widths with local Brave headless captures
+- found cramped mobile rows in the hero actions, gallery captions, related-services header, footer columns, and history/image layout, plus oversized service-page headings
+- applied only small responsive class fixes: wrapped the hero CTA row, stacked gallery captions on mobile, reduced mobile heading sizes in `Hero`, `PageHero`, `Trust`, and the service-process heading, stacked the trust-image grid on small screens, stacked the trust stat grid to one column on mobile, stacked related-services header items on mobile, and made footer columns full-width on the smallest breakpoint
 
 Open questions / next steps:
-- The homepage selected-works section is updated, but a quick manual browser pass is still worth doing to confirm the four new images feel balanced at desktop and mobile breakpoints
+- The homepage selected-works section is updated and the mobile-width overflow points were polished, but a final human browser pass is still worth doing to confirm the four new images feel balanced at desktop and mobile breakpoints
 - The full gallery page still uses the older gallery image set; that was left intact apart from visible location-text cleanup because this task targeted the homepage selected works section specifically
 
 ---

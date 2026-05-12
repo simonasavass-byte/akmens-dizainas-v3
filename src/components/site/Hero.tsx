@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="grid grid-cols-12 gap-x-6 gap-y-10 items-end">
           <div className="col-span-12 lg:col-span-7">
             <p className="eyebrow mb-6 reveal">Paminklų gamyba · Elektrėnai</p>
-            <h1 className="font-display text-[44px] sm:text-[60px] md:text-[78px] lg:text-[92px] leading-[1.02] tracking-[-0.02em] text-foreground reveal">
+            <h1 className="font-display text-[38px] sm:text-[60px] md:text-[78px] lg:text-[92px] leading-[1.02] tracking-[-0.02em] text-foreground reveal">
               Granito paminklai
               <br />
               ir <span className="italic text-foreground/85">kiti akmens</span> darbai
@@ -22,7 +22,7 @@ export default function Hero() {
               Atliekame paminklų graviravimo darbus, dengiame kapus
               plokštėmis ir restauruojame paminklus
             </p>
-            <div className="mt-8 flex items-center gap-6 reveal">
+            <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-6 reveal">
               <Link
                 to="/kontaktai"
                 className="text-[12px] uppercase tracking-[0.22em] px-6 py-4 bg-foreground text-background hover:bg-foreground/90 transition-colors"

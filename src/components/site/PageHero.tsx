@@ -32,7 +32,7 @@ export default function PageHero({ eyebrow, h1, intro, crumbs }: Props) {
         <p className="eyebrow mb-4 reveal">{eyebrow}</p>
         <div className="rule mb-8 reveal" />
         <div className="grid grid-cols-12 gap-6 md:gap-10 items-end">
-          <h1 className="col-span-12 md:col-span-8 font-display text-[40px] md:text-[68px] leading-[1.04] tracking-[-0.018em] reveal">
+          <h1 className="col-span-12 md:col-span-8 font-display text-[32px] sm:text-[40px] md:text-[68px] leading-[1.04] tracking-[-0.018em] reveal">
             {h1}
           </h1>
           {intro && (

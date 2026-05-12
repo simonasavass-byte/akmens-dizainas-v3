@@ -6,7 +6,7 @@ export default function RelatedServices({ excludeSlug }: { excludeSlug?: string 
   return (
     <section className="py-20 md:py-28">
       <div className="container-editorial">
-        <div className="flex items-end justify-between mb-10 md:mb-14">
+        <div className="flex flex-col items-start gap-4 md:flex-row md:items-end md:justify-between mb-10 md:mb-14">
           <div>
             <p className="eyebrow mb-4 reveal">Susijusios paslaugos</p>
             <div className="rule reveal" />

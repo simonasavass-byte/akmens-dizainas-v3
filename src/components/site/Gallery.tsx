@@ -44,7 +44,7 @@ export default function Gallery() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <figcaption className="mt-4 flex items-baseline justify-between gap-4">
+              <figcaption className="mt-4 flex flex-col items-start gap-2 md:flex-row md:items-baseline md:justify-between md:gap-4">
                 <p className="font-display text-lg md:text-xl">{w.title}</p>
                 <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground whitespace-nowrap">
                   {w.meta}

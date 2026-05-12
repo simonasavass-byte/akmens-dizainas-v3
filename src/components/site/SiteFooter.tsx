@@ -15,7 +15,7 @@ export default function SiteFooter() {
             </p>
           </div>
 
-          <div className="col-span-6 md:col-span-4">
+          <div className="col-span-12 sm:col-span-6 md:col-span-4">
             <p className="text-[11px] uppercase tracking-[0.22em] text-background/50 mb-4">Paslaugos</p>
             <ul className="space-y-2 text-[14px]">
               {services.map((s) => (
@@ -26,7 +26,7 @@ export default function SiteFooter() {
             </ul>
           </div>
 
-          <div className="col-span-6 md:col-span-4">
+          <div className="col-span-12 sm:col-span-6 md:col-span-4">
             <p className="text-[11px] uppercase tracking-[0.22em] text-background/50 mb-4">Susisiekti</p>
             <ul className="space-y-2 text-[14px]">
               <li><a href="tel:+37060238031" className="link-underline">+370 602 38031</a></li>

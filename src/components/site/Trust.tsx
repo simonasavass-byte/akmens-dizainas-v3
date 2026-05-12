@@ -15,7 +15,7 @@ export default function Trust() {
           <div className="col-span-12 md:col-span-5">
             <p className="eyebrow mb-4 reveal">Apie studiją</p>
             <div className="rule mb-8 reveal" />
-            <h2 className="font-display text-[34px] md:text-[52px] leading-[1.05] tracking-[-0.015em] reveal">
+            <h2 className="font-display text-[30px] sm:text-[34px] md:text-[52px] leading-[1.05] tracking-[-0.015em] reveal">
               Akmens darbai nuo 1991 metų.
             </h2>
             <p className="mt-6 text-[15px] leading-relaxed text-muted-foreground max-w-md reveal">
@@ -23,7 +23,7 @@ export default function Trust() {
               Studija ir dirbtuvės Elektrėnuose.
             </p>
 
-            <dl className="mt-12 grid grid-cols-2 gap-y-8 gap-x-6">
+            <dl className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-6">
               {stats.map((s) => (
                 <div key={s.l} className="reveal">
                   <dt className="font-display text-3xl md:text-4xl tracking-tight">{s.n}</dt>
@@ -44,8 +44,8 @@ export default function Trust() {
             </div>
           </div>
 
-          <div className="col-span-12 md:col-span-7 grid grid-cols-2 gap-4 md:gap-6">
-            <figure className="reveal mt-12">
+          <div className="col-span-12 md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+            <figure className="reveal sm:mt-12">
               <div className="aspect-[4/5] overflow-hidden bg-muted">
                 <img
                   src={bw}
