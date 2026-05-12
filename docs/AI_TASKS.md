@@ -2,149 +2,71 @@
 
 ## Current task
 
-Create a generated-image variant plan for the Akmens Darbai website without replacing images yet.
+Update verified Akmens Darbai contact information across the website.
 
 ## Goal
 
-Prepare a controlled alternative visual direction where most current website images could be replaced with ChatGPT-generated support images for comparison.
+Replace placeholder, incomplete, or incorrect contact information with the verified business details from the provided reference screenshot.
 
-This is a planning and handoff task only.
+This is a focused website content task. Do not redesign the site.
 
-Do not generate images.
-Do not replace website images.
-Do not change production code.
-Do not overwrite the current real-image direction.
+## Verified contact information
 
-The current real-image version should remain the safer launch baseline. The generated-image version should be treated as an experiment / alternate variant, not as the default final direction.
+Use the following details exactly and consistently across the website:
 
-## Context
+- Company name: UAB „Akmens darbai“
+- Phone: +370 602 38031
+- Email: akmensdarbai@inbox.lt
+- Exhibition address: Rungos g. 8, Elektrėnai, 26109 Elektrėnų sav.
+- Working hours:
+  - Pr - Pn: 08:30 - 19:00 val
+  - Š: 09:00 - 15:00 val
+- Facebook visible label: AkmensDarbaiElektrenai
 
-The current website now has:
+## Important scope rules
 
-- real original images implemented across most sections
-- two important historical/about images that must remain real
-- a generated materials image already implemented and accepted visually
-- a mostly stable visual direction
+- Work only on the current branch.
+- Do not redesign the footer, contact section, header, hero, or page layouts.
+- Preserve the current visual style, typography, spacing, colors, and responsive behavior as much as possible.
+- Do not change homepage hero images.
+- Do not change gallery image layout.
+- Do not overwrite existing image assets.
+- Do not add generated images in this task.
+- Do not invent additional company facts.
+- Do not invent a Facebook URL unless a real URL already exists in the codebase.
 
-The user now wants to explore a second version where every replaceable image is generated, while keeping:
+## Tasks
 
-- the two real history/about images
-- the already generated materials image
+1. Inspect the current footer/contact components and any contact page or contact section.
+2. Replace any placeholder / lorem ipsum / incorrect contact text with the verified contact details above.
+3. Remove any remaining lorem ipsum or obviously fake placeholder text from the footer/contact areas.
+4. Make phone and email clickable where appropriate:
+   - phone link: `tel:+37060238031`
+   - email link: `mailto:akmensdarbai@inbox.lt`
+5. If Facebook is shown as a link and a Facebook URL already exists in the codebase, keep that URL and update the visible label to `AkmensDarbaiElektrenai`.
+6. If no Facebook URL exists, show only the visible label or leave the existing non-linked structure, but do not invent a URL.
+7. Make sure the same contact details are used consistently wherever contact information appears.
+8. Keep Lithuanian formatting natural and professional.
+9. Update `docs/AI_CHANGELOG.md` with a short summary of the changes.
 
-This should be done carefully because a fully generated image set can easily reduce trust if it looks fake, too glossy, too symmetrical, or too generic.
+## Quality expectations
 
-## Must-keep images
+The final footer/contact information should feel like a real Lithuanian local business website:
 
-Do not replace or propose replacement for:
-
-1. the two history/about/trust images that show real company/history/human context
-2. `src/assets/materials-editorial-granite.webp`
-3. any image that represents authentic archive/company history or real founder/family/workshop material
-
-These should remain real or already accepted.
-
-## Generated variant principles
-
-Generated images may be considered for:
-
-- homepage hero
-- service cards
-- service detail hero images
-- gallery-style supporting visuals
-- wholesale/support pages
-- project/design/restoration/engraving imagery
-
-But the prompts must avoid fake proof claims.
-
-Do not create images that pretend to be specific real completed client projects unless clearly framed as atmospheric/support imagery.
-
-Generated images should feel:
-
-- realistic
-- grounded
-- calm
-- Lithuanian cemetery / memorial / granite stonework appropriate
-- visually consistent with the current site tone
-- not glossy stock
-- not fantasy cemetery
-- not overcinematic
-- not overly symmetrical
-- not AI-perfect
-
-## Instructions for Codex
-
-1. Pull latest changes.
-2. Inspect current image usage across the site.
-3. Identify every image slot that could be part of a generated-image variant.
-4. Exclude the must-keep images listed above.
-5. Create a slot-by-slot generated-image plan.
-6. For each replaceable slot, write a precise image generation brief and a copy-ready English prompt.
-7. Include crop/aspect requirements for each slot.
-8. Identify which generated images would need portrait, landscape, or separate card/hero variants.
-9. Recommend a safe order for generating images, starting with the highest-impact slots.
-10. Do not change code or replace images in this task.
-
-## Required output
-
-Create:
-
-- `docs/image-generation/generated-variant-plan.md`
-
-The plan should include:
-
-- current image slot / file path
-- page/component usage
-- whether it should be replaced in the generated variant
-- whether it must remain real
-- recommended generated subject
-- visual tone
-- crop/aspect ratio
-- final filename suggestion
-- copy-ready image generation prompt
-- avoid list
-- priority level
-
-## Special attention areas
-
-Give extra attention to:
-
-- homepage hero
-- service page hero images
-- service card images
-- `/didmenine-prekyba-paminklais`
-- `/kapavieciu-projektavimas`
-- gallery images
-
-But keep the plan honest: if a real image is stronger than a generated alternative would likely be, say that clearly.
-
-## Variant safety recommendation
-
-At the end of the plan, recommend how to implement the generated-image variant safely later:
-
-- whether to use a branch
-- whether to use separate generated asset filenames
-- whether to keep the real-image version untouched
-- how to compare both versions visually
-
-Preferred later implementation direction:
-
-- create generated assets with separate filenames
-- wire them in a controlled branch/experiment
-- do not overwrite the current real-image assets
-- compare live preview before deciding anything final
-
-## Update changelog
-
-Update `docs/AI_CHANGELOG.md` with:
-
-- summary of generated-variant planning
-- path to the new plan file
-- which images are excluded from generation
-- recommended next step for ChatGPT/image generation
+- clear
+- trustworthy
+- not overdesigned
+- no placeholder text
+- no fake information
+- no unnecessary copy
 
 ## Validation
 
-Docs-only task. No lint/test/build required unless code is changed.
+After changes:
+
+1. Run the available project validation command if it exists, for example lint/build/typecheck.
+2. If no validation command is available or if it is not appropriate, say so in the handoff.
+3. Check that the site still compiles if a build command is available.
 
 ## ChatGPT handoff summary requirement
 
@@ -153,10 +75,10 @@ At the end of the task, provide a short ChatGPT handoff summary that includes:
 - whether the task was completed
 - whether changes were committed and pushed
 - latest commit hash if available
-- all important created/updated file paths
-- whether the task was docs-only or included production code changes
-- whether lint/test/build was run or not needed
-- any blockers, uncertainties, or recommended next step
+- all important changed file paths
+- whether production code was changed
+- whether lint/test/build was run and the result
+- any blockers or uncertainties
 
 Keep the handoff concise and optimized for copy-pasting back into ChatGPT.
 
