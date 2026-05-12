@@ -19,6 +19,30 @@ Open questions / next steps:
 
 ### 2026-05-12
 What changed:
+- Pulled the latest changes on `generated-image-variant` and completed the current footer/company-description text update task
+- Replaced only the short intro text under the Akmens Darbai logo in the footer with the verified company description
+- Kept the existing footer structure, layout, styling, and contact details unchanged
+
+Files changed:
+- src/components/site/SiteFooter.tsx
+- docs/AI_CHANGELOG.md
+
+Notes:
+- Replaced the old short line:
+- `Paminklų gamyba, graviravimas ir kapų dengimas plokštėmis. Vilnius, Elektrėnai.`
+- With the verified copy:
+- `UAB „Akmens darbai“ specializuojasi akmens dirbinių gamyboje ir kapaviečių priežiūroje, siūlydami platų paslaugų pasirinkimą ir aukštą kokybę.`
+- Used Lithuanian quotes to match the surrounding copy style
+- No other footer sections or contact details were changed in this task
+
+Open questions / next steps:
+- No blocker from this task
+- If needed later, the new longer footer sentence can be visually reviewed on small mobile widths, but no structural change was made here
+
+---
+
+### 2026-05-12
+What changed:
 - Pulled the latest changes on `generated-image-variant` and completed the current verified-contact-information update task
 - Replaced the old incorrect phone numbers, email, addresses, and working-hours text in the footer, contact page, header CTA phone, shared CTA block, and homepage structured data
 - Kept the existing layouts and visual design intact while removing the last clearly wrong Vilnius-specific contact details from the visible contact surfaces

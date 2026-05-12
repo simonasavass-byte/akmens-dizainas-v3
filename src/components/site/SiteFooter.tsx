@@ -11,8 +11,9 @@ export default function SiteFooter() {
               Akmens<span className="text-accent">·</span>Darbai
             </Link>
             <p className="mt-4 text-[14px] max-w-sm leading-relaxed">
-              Paminklų gamyba, graviravimas ir kapų dengimas plokštėmis.
-              Vilnius, Elektrėnai.
+              UAB „Akmens darbai“ specializuojasi akmens dirbinių gamyboje ir
+              kapaviečių priežiūroje, siūlydami platų paslaugų pasirinkimą ir
+              aukštą kokybę.
             </p>
           </div>
 
