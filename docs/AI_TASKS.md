@@ -10,6 +10,8 @@ Update the homepage selected works/gallery section so it uses the four user-sele
 
 Also remove `Vilnius` references from the visible website copy so the business presence is focused on `Elektrėnai` only.
 
+Additionally simplify duplicated `Elektrėnai` information blocks in the company/history section.
+
 This is a focused image and copy integration task. Do not redesign the site.
 
 ## Important prerequisite
@@ -84,6 +86,22 @@ Examples:
 
 Do not remove `Vilnius` from non-visible developer notes or old changelog entries unless they are directly surfaced in the website UI.
 
+3. In the company/history section there are currently two separate `Elektrėnai` blocks:
+
+- `Elektrėnai / STUDIJA`
+- `Elektrėnai / DIRBTUVĖS`
+
+This is redundant.
+
+Remove one of the duplicated blocks and merge them into a single clean block:
+
+`Elektrėnai`
+`STUDIJA IR DIRBTUVĖS`
+
+Keep the visual style consistent with the existing section.
+Do not redesign the entire section.
+Only simplify the duplicated information.
+
 ## Important scope rules
 
 - Work only on the current branch.
@@ -108,8 +126,9 @@ Do not remove `Vilnius` from non-visible developer notes or old changelog entrie
 6. Make sure image alt text remains descriptive and not misleading.
 7. Remove visible `Vilnius` references across the website and keep location wording focused on `Elektrėnai`.
 8. Remove the final period from the homepage intro paragraph ending with `restauruojame paminklus.`
-9. Do not change the section layout.
-10. Update `docs/AI_CHANGELOG.md` with a short summary of the change.
+9. Merge the duplicated `Elektrėnai` blocks into one clean `Elektrėnai / STUDIJA IR DIRBTUVĖS` block.
+10. Do not change the section layout.
+11. Update `docs/AI_CHANGELOG.md` with a short summary of the change.
 
 ## Validation
 
