@@ -2,7 +2,7 @@
 
 ## Current task
 
-Replace the 4 images in the homepage `Pastarųjų metų darbai` section and clean up location/copy text.
+Replace the 4 images in the homepage `Pastarųjų metų darbai` section, clean up location/copy text, and inspect mobile layout.
 
 ## Goal
 
@@ -12,7 +12,9 @@ Also remove `Vilnius` references from the visible website copy so the business p
 
 Additionally simplify duplicated and redundant company/history information blocks.
 
-This is a focused image and copy integration task. Do not redesign the site.
+After the changes, inspect the site on mobile viewport sizes and fix any obvious layout/text/image issues caused by these updates.
+
+This is a focused image, copy, and responsive QA task. Do not redesign the site.
 
 ## Important prerequisite
 
@@ -114,6 +116,30 @@ After cleanup, the section should keep only:
 Do not redesign the section layout completely.
 Just simplify the content structure and remove the unnecessary block.
 
+## Mobile inspection requirement
+
+After implementing the content/image changes, inspect the site in mobile viewport sizes, especially around 375px and 390px width.
+
+Check at minimum:
+
+- homepage hero headline and intro paragraph
+- homepage `Pastarųjų metų darbai` gallery section with the new 4 images
+- company/history section after removing the `2003` block and merging the `Elektrėnai` block
+- footer/contact section
+- navigation/menu if any visible wording changed
+- the new `/kapavietes-irengimo-darbai` service page if it exists in the branch
+
+Fix only obvious mobile problems introduced or revealed by this task, such as:
+
+- text overflowing horizontally
+- images breaking aspect ratio or causing awkward cropping
+- captions overlapping or becoming unreadable
+- excessive empty gaps caused by removed stats blocks
+- duplicated or cramped location text
+- horizontal scrolling
+
+Do not redesign mobile layouts globally. Keep fixes minimal and consistent with the existing responsive system.
+
 ## Important scope rules
 
 - Work only on the current branch.
@@ -127,6 +153,7 @@ Just simplify the content structure and remove the unnecessary block.
 - Do not remove existing images from the repo.
 - Do not add the unused `2g` front-view image to this homepage section.
 - Do not rewrite unrelated copy except for removing `Vilnius` references and the exact period cleanup above.
+- Do not make broad responsive redesigns. Mobile fixes should be small and targeted.
 
 ## Tasks
 
@@ -140,8 +167,9 @@ Just simplify the content structure and remove the unnecessary block.
 8. Remove the final period from the homepage intro paragraph ending with `restauruojame paminklus.`
 9. Merge the duplicated `Elektrėnai` blocks into one clean `Elektrėnai / STUDIJA IR DIRBTUVĖS` block.
 10. Remove the redundant `2003 / DABARTINIS ĮMONĖS PAVADINIMAS` block.
-11. Do not change the section layout.
-12. Update `docs/AI_CHANGELOG.md` with a short summary of the change.
+11. Inspect the affected pages/sections at mobile viewport sizes and apply only necessary small fixes.
+12. Do not change the section layout beyond minimal mobile fixes.
+13. Update `docs/AI_CHANGELOG.md` with a short summary of the change, including mobile inspection/fixes.
 
 ## Validation
 
@@ -150,6 +178,7 @@ After changes:
 1. Run the available project validation command if it exists, for example lint/build/typecheck.
 2. If no validation command is available or if it is not appropriate, say so in the handoff.
 3. Check that the site still compiles if a build command is available.
+4. Include the mobile viewport sizes inspected in the handoff summary.
 
 ## ChatGPT handoff summary requirement
 
@@ -161,6 +190,7 @@ At the end of the task, provide a short ChatGPT handoff summary that includes:
 - all important changed file paths
 - whether production code was changed
 - whether lint/test/build was run and the result
+- mobile viewport sizes inspected and any mobile fixes made
 - any blockers or uncertainties, especially if image files were missing
 
 Keep the handoff concise and optimized for copy-pasting back into ChatGPT.
