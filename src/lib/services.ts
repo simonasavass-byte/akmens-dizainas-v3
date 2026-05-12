@@ -115,8 +115,49 @@ export const services: Service[] = [
     heroAlt: "Sutvarkyta kapavietė su juodo granito paminklu, juoda skalda ir lotoso formos akmens akcentu",
   },
   {
-    slug: "kapu-dengimas-plokstemis",
+    slug: "kapavietes-irengimo-darbai",
     num: "03",
+    nav: "Kapaviečių įrengimas",
+    title: "Kapaviečių įrengimas",
+    h1: "Kapavietės įrengimo darbai",
+    metaTitle: "Kapavietės įrengimo darbai | Akmens Darbai",
+    metaDescription:
+      "Kapavietės įrengimo darbai Vilniuje ir Elektrėnuose. Paruošiame pagrindą, montuojame paminklą, bortelius, plokštes ir kitus akmens elementus.",
+    short: "Įrengiame kapavietes nuo pagrindo paruošimo iki galutinio montavimo.",
+    intro:
+      "Įrengiame kapavietes nuo sprendimo suderinimo iki galutinio montavimo: paruošiame pagrindą, montuojame paminklus, granito bortelius, plokštes ir kitus akmens elementus.",
+    accent: "Kapavietės sutvarkymas iki galutinio rezultato.",
+    scope: [
+      { label: "Paslauga", value: "Kapavietės įrengimo darbai" },
+      { label: "Apima", value: "Pagrindas, montavimas, akmens elementai" },
+      { label: "Vieta", value: "Vilnius, Elektrėnai, LT" },
+    ],
+    includes: [
+      "Kapavietės projekto ir medžiagų suderinimas",
+      "Pagrindo paruošimas ir montavimo darbai",
+      "Granito plokščių, bortelių ir paminklo montavimas",
+      "Skaldos, akmens apdailos ir kitų detalių pritaikymas",
+      "Kapavietės sutvarkymas po darbų",
+    ],
+    whenRelevant: [
+      "Norite įrengti naują kapavietę",
+      "Tvarkote kapavietę iki galutinio rezultato",
+      "Reikia vienoje vietoje suderinti paminklą, dangą ir montavimo darbus",
+    ],
+    process: [
+      { step: "Suderinimas", text: "Aptariame kapavietės sprendimą, medžiagas ir darbus." },
+      { step: "Paruošimas", text: "Paruošiame pagrindą ir montavimo vietą." },
+      { step: "Montavimas", text: "Sumontuojame paminklą, bortelius, plokštes ir kitus akmens elementus." },
+      { step: "Užbaigimas", text: "Sutvarkome kapavietę ir perduodame užbaigtą rezultatą." },
+    ],
+    img: dengimas,
+    heroImg: dengimasHero,
+    alt: "Tvarkinga kapavietė su granito danga, borteliais ir paminklu",
+    heroAlt: "Pilnai įrengta kapavietė su juodo granito plokštėmis, paminklu ir gėlių vazonais",
+  },
+  {
+    slug: "kapu-dengimas-plokstemis",
+    num: "04",
     nav: "Kapų dengimas plokštėmis",
     title: "Kapų dengimas plokštėmis",
     h1: "Kapų dengimas granito plokštėmis",
@@ -157,7 +198,7 @@ export const services: Service[] = [
   },
   {
     slug: "kapavieciu-restauravimas",
-    num: "04",
+    num: "05",
     nav: "Kapaviečių restauravimas",
     title: "Kapaviečių restauravimas",
     h1: "Kapaviečių ir paminklų restauravimas",
@@ -198,7 +239,7 @@ export const services: Service[] = [
   },
   {
     slug: "paminklu-graviravimas",
-    num: "05",
+    num: "06",
     nav: "Paminklų graviravimas",
     title: "Paminklų graviravimas",
     h1: "Paminklų graviravimas",
@@ -237,7 +278,7 @@ export const services: Service[] = [
   },
   {
     slug: "autoriniai-paminklai",
-    num: "06",
+    num: "07",
     nav: "Autoriniai paminklai",
     title: "Autoriniai paminklai",
     h1: "Autoriniai paminklai",
@@ -276,7 +317,7 @@ export const services: Service[] = [
   },
   {
     slug: "didmenine-prekyba-paminklais",
-    num: "07",
+    num: "08",
     nav: "Didmeninė prekyba",
     title: "Didmeninė prekyba paminklais",
     h1: "Didmeninė prekyba paminklais",

@@ -15,8 +15,8 @@ export default function HomeServices() {
               Pagrindinės paslaugos.
             </h2>
             <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-muted-foreground reveal">
-              Paminklų gamyba, graviravimas, kapų dengimas plokštėmis,
-              restauravimas, projektavimas ir didmena.
+              Paminklų gamyba, kapaviečių įrengimas, graviravimas, kapų
+              dengimas plokštėmis, restauravimas, projektavimas ir didmena.
             </p>
           </div>
         </div>

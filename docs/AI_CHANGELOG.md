@@ -19,6 +19,44 @@ Open questions / next steps:
 
 ### 2026-05-12
 What changed:
+- Pulled the latest changes on `generated-image-variant` and added the missing service `Kapavietės įrengimo darbai`
+- Added the new service to the shared service data source so it now appears in the service dropdown/menu, service lists, related services, and contact-form service options
+- Created the dedicated route at `/kapavietes-irengimo-darbai` through the existing service-page routing pattern, without adding a separate one-off page component
+- Reused an existing suitable kapavietė image asset instead of adding new files
+
+Files changed:
+- src/lib/services.ts
+- src/pages/Paslaugos.tsx
+- src/components/site/HomeServices.tsx
+- docs/AI_CHANGELOG.md
+
+Notes:
+- New service added:
+- route: `/kapavietes-irengimo-darbai`
+- nav/card label: `Kapaviečių įrengimas`
+- page title: `Kapavietės įrengimo darbai`
+- Content approach:
+- kept the same concise Lithuanian tone as the current service pages
+- described full capstone installation work: pagrindo paruošimas, paminklo ir akmens elementų montavimas, plokštės, borteliai, skalda, galutinis sutvarkymas
+- did not add unsupported guarantees, technical promises, or new business claims
+- Image handling:
+- reused existing `service-dengimas` card/hero assets because they are the closest current visual match for a fully įrengta kapavietė
+- did not add or overwrite image files
+- Structural behavior:
+- the app already generates service detail routes from `src/lib/services.ts`, so adding the new service there was enough to create a working dedicated page and navigation entry
+- Also updated surrounding service-overview copy where relevant so the new service is reflected in the services overview text and SEO description
+- Renumbering:
+- inserted the new service as `03`
+- shifted the later service numbers so the sequence remains coherent
+
+Open questions / next steps:
+- The reused image is suitable for now, but if the owner later wants a more specific visual for full kapavietės įrengimo darbai, that can be swapped in without changing the page structure
+- A quick manual browser pass on the new route would still be useful after the validation checks
+
+---
+
+### 2026-05-12
+What changed:
 - Pulled the latest changes on `generated-image-variant` and completed the current footer/company-description text update task
 - Replaced only the short intro text under the Akmens Darbai logo in the footer with the verified company description
 - Kept the existing footer structure, layout, styling, and contact details unchanged
