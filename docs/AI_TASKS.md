@@ -10,7 +10,7 @@ Update the homepage selected works/gallery section so it uses the four user-sele
 
 Also remove `Vilnius` references from the visible website copy so the business presence is focused on `Elektrėnai` only.
 
-Additionally simplify duplicated `Elektrėnai` information blocks in the company/history section.
+Additionally simplify duplicated and redundant company/history information blocks.
 
 This is a focused image and copy integration task. Do not redesign the site.
 
@@ -102,6 +102,18 @@ Keep the visual style consistent with the existing section.
 Do not redesign the entire section.
 Only simplify the duplicated information.
 
+4. Remove the redundant `2003 / DABARTINIS ĮMONĖS PAVADINIMAS` information block from the same history/company section.
+
+This information currently feels unnecessary and visually overloaded.
+
+After cleanup, the section should keep only:
+
+- `1991 / DIRBAME NUO`
+- `Elektrėnai / STUDIJA IR DIRBTUVĖS`
+
+Do not redesign the section layout completely.
+Just simplify the content structure and remove the unnecessary block.
+
 ## Important scope rules
 
 - Work only on the current branch.
@@ -127,8 +139,9 @@ Only simplify the duplicated information.
 7. Remove visible `Vilnius` references across the website and keep location wording focused on `Elektrėnai`.
 8. Remove the final period from the homepage intro paragraph ending with `restauruojame paminklus.`
 9. Merge the duplicated `Elektrėnai` blocks into one clean `Elektrėnai / STUDIJA IR DIRBTUVĖS` block.
-10. Do not change the section layout.
-11. Update `docs/AI_CHANGELOG.md` with a short summary of the change.
+10. Remove the redundant `2003 / DABARTINIS ĮMONĖS PAVADINIMAS` block.
+11. Do not change the section layout.
+12. Update `docs/AI_CHANGELOG.md` with a short summary of the change.
 
 ## Validation
 
