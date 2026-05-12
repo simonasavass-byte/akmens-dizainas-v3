@@ -11,9 +11,7 @@ export default function SiteFooter() {
               Akmens<span className="text-accent">·</span>Darbai
             </Link>
             <p className="mt-4 text-[14px] max-w-sm leading-relaxed">
-              UAB „Akmens darbai“ specializuojasi akmens dirbinių gamyboje ir
-              kapaviečių priežiūroje, siūlydami platų paslaugų pasirinkimą ir
-              aukštą kokybę.
+              Paminklų gamyba, graviravimas ir kapų dengimas plokštėmis.
             </p>
           </div>
 

@@ -19,6 +19,27 @@ Open questions / next steps:
 
 ### 2026-05-12
 What changed:
+- Applied one final footer/company-intro text refinement on `generated-image-variant`
+- Replaced the longer footer company description with the shorter requested sentence
+- Kept the footer layout, styling, and all other footer content unchanged
+
+Files changed:
+- src/components/site/SiteFooter.tsx
+- docs/AI_CHANGELOG.md
+
+Notes:
+- Footer intro now reads:
+- `Paminklų gamyba, graviravimas ir kapų dengimas plokštėmis.`
+- Removed the longer company-description variant from the visible footer intro
+- No location ending remains in that sentence
+
+Open questions / next steps:
+- No blocker from this small text refinement
+
+---
+
+### 2026-05-12
+What changed:
 - Pulled the latest changes on `generated-image-variant` and added the missing service `Kapavietės įrengimo darbai`
 - Added the new service to the shared service data source so it now appears in the service dropdown/menu, service lists, related services, and contact-form service options
 - Created the dedicated route at `/kapavietes-irengimo-darbai` through the existing service-page routing pattern, without adding a separate one-off page component
