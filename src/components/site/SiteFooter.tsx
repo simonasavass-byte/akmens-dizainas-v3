@@ -30,12 +30,11 @@ export default function SiteFooter() {
           <div className="col-span-6 md:col-span-4">
             <p className="text-[11px] uppercase tracking-[0.22em] text-background/50 mb-4">Susisiekti</p>
             <ul className="space-y-2 text-[14px]">
-              <li><a href="tel:+37052752628" className="link-underline">+370 5 275 2628</a></li>
-              <li><a href="tel:+37069870380" className="link-underline">+370 698 70380</a></li>
-              <li><a href="mailto:info@akmensdarbai.lt" className="link-underline">info@akmensdarbai.lt</a></li>
-              <li className="text-background/60 pt-2">Kalvarijų g. 125, Vilnius, LT-08221</li>
-              <li className="text-background/60">Rungos g. 18, Elektrėnai</li>
-              <li className="text-background/60 pt-2">I–V 8:00–17:00 · VI–VII nedirbame</li>
+              <li><a href="tel:+37060238031" className="link-underline">+370 602 38031</a></li>
+              <li><a href="mailto:akmensdarbai@inbox.lt" className="link-underline">akmensdarbai@inbox.lt</a></li>
+              <li className="text-background/60 pt-2">Rungos g. 8, Elektrėnai, 26109 Elektrėnų sav.</li>
+              <li className="text-background/60 pt-2">Pr - Pn: 08:30 - 19:00 val</li>
+              <li className="text-background/60">Š: 09:00 - 15:00 val</li>
             </ul>
             <Link
               to="/kontaktai"

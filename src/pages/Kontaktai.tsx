@@ -14,13 +14,13 @@ export default function Kontaktai() {
   return (
     <>
       <SEO
-        title="Kontaktai: studija Vilniuje ir Elektrėnuose | Akmens Darbai"
-        description="Kontaktai: Kalvarijų g. 125, Vilnius, LT-08221 ir Rungos g. 18, Elektrėnai. Telefonai +370 5 2752628 ir +370 698 70380."
+        title="Kontaktai | UAB „Akmens darbai“"
+        description="Kontaktai: Rungos g. 8, Elektrėnai, 26109 Elektrėnų sav. Telefonas +370 602 38031, el. paštas akmensdarbai@inbox.lt."
       />
       <PageHero
         eyebrow="Kontaktai"
         h1="Kontaktai"
-        intro="Studija Vilniuje, dirbtuvės Elektrėnuose. Parašykite arba paskambinkite."
+        intro="UAB „Akmens darbai“. Parašykite arba paskambinkite."
         crumbs={[{ label: "Pradžia", to: "/" }, { label: "Kontaktai" }]}
       />
 
@@ -30,26 +30,20 @@ export default function Kontaktai() {
             <div className="col-span-12 md:col-span-5">
               <dl className="space-y-8 text-[14px]">
                 <div>
-                  <dt className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">Vilnius</dt>
-                  <dd className="mt-2 font-display text-xl">Studija ir ekspozicija</dd>
-                  <dd className="text-muted-foreground mt-1">Kalvarijų g. 125, Vilnius, LT-08221</dd>
-                </div>
-                <div>
-                  <dt className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">Elektrėnai</dt>
-                  <dd className="mt-2 font-display text-xl">Dirbtuvės</dd>
-                  <dd className="text-muted-foreground mt-1">Rungos g. 18, Elektrėnai</dd>
+                  <dt className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">Įmonė</dt>
+                  <dd className="mt-2 font-display text-xl">UAB „Akmens darbai“</dd>
+                  <dd className="text-muted-foreground mt-1">Ekspozicijos adresas</dd>
+                  <dd className="text-muted-foreground">Rungos g. 8, Elektrėnai, 26109 Elektrėnų sav.</dd>
                 </div>
                 <div className="pt-4 border-t border-border space-y-1">
-                  <a href="tel:+37052752628" className="block link-underline">+370 5 275 2628</a>
-                  <a href="tel:+37069870380" className="block link-underline">+370 698 70380</a>
-                  <a href="mailto:info@akmensdarbai.lt" className="block link-underline">info@akmensdarbai.lt</a>
-                  <p className="text-muted-foreground text-[13px] mt-2">I–V 8:00–17:00 · VI–VII nedirbame</p>
+                  <a href="tel:+37060238031" className="block link-underline">+370 602 38031</a>
+                  <a href="mailto:akmensdarbai@inbox.lt" className="block link-underline">akmensdarbai@inbox.lt</a>
+                  <p className="text-muted-foreground text-[13px] mt-2">Pr - Pn: 08:30 - 19:00 val</p>
+                  <p className="text-muted-foreground text-[13px]">Š: 09:00 - 15:00 val</p>
                 </div>
                 <div className="pt-4 border-t border-border">
-                  <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground mb-2">Aptarnavimo zona</p>
-                  <p className="text-muted-foreground">
-                    Vilnius, Elektrėnai ir aplinkiniai rajonai. Kitus Lietuvos miestus aptariame individualiai.
-                  </p>
+                  <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground mb-2">Facebook</p>
+                  <p className="text-muted-foreground">AkmensDarbaiElektrenai</p>
                 </div>
               </dl>
             </div>

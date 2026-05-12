@@ -17,6 +17,47 @@ Open questions / next steps:
 
 ---
 
+### 2026-05-12
+What changed:
+- Pulled the latest changes on `generated-image-variant` and completed the current verified-contact-information update task
+- Replaced the old incorrect phone numbers, email, addresses, and working-hours text in the footer, contact page, header CTA phone, shared CTA block, and homepage structured data
+- Kept the existing layouts and visual design intact while removing the last clearly wrong Vilnius-specific contact details from the visible contact surfaces
+
+Files changed:
+- src/components/site/SiteFooter.tsx
+- src/components/site/SiteHeader.tsx
+- src/components/site/CtaBlock.tsx
+- src/pages/Kontaktai.tsx
+- src/pages/Index.tsx
+- docs/AI_CHANGELOG.md
+
+Notes:
+- Verified details applied exactly from `docs/AI_TASKS.md`:
+- company name: `UAB „Akmens darbai“`
+- phone: `+370 602 38031`
+- email: `akmensdarbai@inbox.lt`
+- exhibition address: `Rungos g. 8, Elektrėnai, 26109 Elektrėnų sav.`
+- working hours:
+- `Pr - Pn: 08:30 - 19:00 val`
+- `Š: 09:00 - 15:00 val`
+- Facebook visible label: `AkmensDarbaiElektrenai`
+- Contact-surface updates made:
+- footer now shows one verified phone number, the verified email, the verified exhibition address, and the verified hours
+- contact page SEO description and visible info block now use the verified details
+- contact page no longer shows the old Vilnius / `Rungos g. 18` split
+- homepage structured data now uses one verified Elektrėnai address, one verified phone number, and the verified email
+- shared CTA and desktop header phone now use the verified phone number
+- Facebook handling:
+- no existing Facebook URL was found in the codebase
+- because of that, no new Facebook link was invented
+- the verified label `AkmensDarbaiElektrenai` is shown as plain text on the contact page
+
+Open questions / next steps:
+- The footer still contains a broader brand/location summary line (`Vilnius, Elektrėnai`) outside the factual contact list; it was left unchanged because this task was focused on verified contact data rather than broader service-area copy
+- If needed later, a follow-up pass can align broader location wording with the final owner-approved service-area positioning
+
+---
+
 ### 2026-05-07
 What changed:
 - Pulled the latest `main` and completed a docs-only generated-image variant planning pass

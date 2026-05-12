@@ -30,8 +30,8 @@ export default function CtaBlock({
             >
               Susisiekti
             </Link>
-            <a href="tel:+37069870380" className="text-[13px] link-underline">
-              +370 698 70380
+            <a href="tel:+37060238031" className="text-[13px] link-underline">
+              +370 602 38031
             </a>
           </div>
         </div>

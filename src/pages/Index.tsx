@@ -9,16 +9,20 @@ import CtaBlock from "@/components/site/CtaBlock";
 const ld = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Akmens Darbai",
+  name: "UAB „Akmens darbai“",
   description:
     "Paminklų gamyba, paminklų graviravimas ir kapų dengimas plokštėmis Vilniuje ir Elektrėnuose.",
   areaServed: ["Vilnius", "Elektrėnai", "Lietuva"],
-  address: [
-    { "@type": "PostalAddress", streetAddress: "Kalvarijų g. 125", postalCode: "LT-08221", addressLocality: "Vilnius", addressCountry: "LT" },
-    { "@type": "PostalAddress", streetAddress: "Rungos g. 18", addressLocality: "Elektrėnai", addressCountry: "LT" },
-  ],
-  telephone: ["+37052752628", "+37069870380"],
-  email: "info@akmensdarbai.lt",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Rungos g. 8",
+    postalCode: "26109",
+    addressLocality: "Elektrėnai",
+    addressRegion: "Elektrėnų sav.",
+    addressCountry: "LT",
+  },
+  telephone: "+37060238031",
+  email: "akmensdarbai@inbox.lt",
 };
 
 const Index = () => {
