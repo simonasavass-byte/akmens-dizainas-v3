@@ -57,6 +57,7 @@ Notes:
 - homepage hero support paragraph no longer ends with a final period
 - homepage selected-works intro now references `Elektrėnai` only
 - homepage selected-works captions/meta labels were updated to neutral `Elektrėnai` labels
+- duplicated `Elektrėnai / studija` and `Elektrėnai / dirbtuvės` info blocks in the company/history section were merged into one clean `Elektrėnai / studija ir dirbtuvės` block
 - full gallery page visible `Vilnius` labels and page copy were updated to `Elektrėnai`
 - visible service/location references and SEO-facing service metadata in `src/lib/services.ts` were updated away from `Vilnius`
 - materials, trust, homepage SEO, structured data service-area wording, and the service-page location note were also updated so `Vilnius` no longer appears in surfaced site copy

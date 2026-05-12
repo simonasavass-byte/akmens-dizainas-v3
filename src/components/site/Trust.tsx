@@ -5,8 +5,7 @@ import modern from "@/assets/about-values-tulips.jpg";
 const stats = [
   { n: "1991", l: "dirbame nuo" },
   { n: "2003", l: "dabartinis įmonės pavadinimas" },
-  { n: "Elektrėnai", l: "studija" },
-  { n: "Elektrėnai", l: "dirbtuvės" },
+  { n: "Elektrėnai", l: "studija ir dirbtuvės" },
 ];
 
 export default function Trust() {
