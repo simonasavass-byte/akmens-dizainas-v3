@@ -2,48 +2,95 @@
 
 ## Current task
 
-Update the footer/company description text in the Akmens Darbai website.
+Add the missing service: `Kapavietės įrengimo darbai`.
 
 ## Goal
 
-Replace the short footer/company intro text under the Akmens Darbai logo with the verified company description provided by the user.
+The new Akmens Darbai website is missing one service that exists on the original website: `Kapavietės įrengimo darbai`.
 
-This is a focused website content task. Do not redesign the site.
+Add this service to the services list/navigation and create a dedicated service page for it, matching the current website design system and page structure.
 
-## Exact text to use
+This is a focused content and routing task. Do not redesign the site.
 
-Find the footer/company intro area that currently shows text similar to:
+## Service to add
 
-`Paminklų gamyba, graviravimas ir kapų dengimas plokštėmis. Vilnius, Elektrėnai.`
+Primary service page title:
 
-Replace that text with:
+`Kapavietės įrengimo darbai`
 
-`UAB “Akmens darbai” specializuojasi akmens dirbinių gamyboje ir kapaviečių priežiūroje, siūlydami platų paslaugų pasirinkimą ir aukštą kokybę.`
+Short service card / menu label may be:
 
-Important: use Lithuanian quotes if the project typography/copy style prefers them:
+`Kapaviečių įrengimas`
 
-`UAB „Akmens darbai“ specializuojasi akmens dirbinių gamyboje ir kapaviečių priežiūroje, siūlydami platų paslaugų pasirinkimą ir aukštą kokybę.`
+Preferred route:
 
-Prefer the Lithuanian quote version if it matches surrounding copy.
+`/kapavietes-irengimo-darbai`
+
+Reference from original website:
+
+`https://akmensdarbai.lt/kapavietes-irengimo-darbai/`
+
+Use the original website only as content/context reference. Do not copy long text verbatim. Rewrite in the current website tone: clear, calm, professional Lithuanian.
+
+## Content direction
+
+This service should communicate full grave plot / cemetery plot installation work, including where appropriate:
+
+- kapavietės įrengimo darbai
+- paminklo ir kapavietės projektavimo sprendimai
+- pamatų paruošimas / betonavimo darbai where already supported by the site structure
+- paminklo montavimas
+- kapavietės dengimas plokštėmis
+- granito borteliai, skalda, plokštės, akmens apdaila
+- kapavietės sutvarkymas iki galutinio rezultato
+
+Do not overpromise. Do not invent certifications, guarantees, years of experience, or exact technical claims unless already present elsewhere in the codebase.
 
 ## Important scope rules
 
 - Work only on the current branch.
-- Do not redesign the footer or any page layout.
-- Preserve the current visual style, typography, spacing, colors, and responsive behavior as much as possible.
-- Do not change images.
-- Do not change gallery layout.
-- Do not change contact details unless required by this exact text replacement.
-- Do not rewrite other copy.
-- Do not invent additional company facts.
+- Do not redesign the website.
+- Preserve current typography, spacing, layout rhythm, colors, components, and responsive behavior.
+- Reuse existing service page patterns/components where possible.
+- Do not change homepage hero.
+- Do not change existing images unless needed to assign an existing suitable service image to this new page.
+- Do not add generated images in this task.
+- Do not overwrite assets.
+- Do not remove existing services.
+- Do not change unrelated copy.
 
 ## Tasks
 
-1. Locate the footer/company intro text under or near the Akmens Darbai logo.
-2. Replace only that intro text with the verified company description above.
-3. Keep the existing footer structure and styling.
-4. Make sure the text wraps naturally and does not break the footer layout on desktop or mobile.
-5. Update `docs/AI_CHANGELOG.md` with a short summary of the change.
+1. Inspect current service data, service cards, navigation/menu links, routes, and service page structure.
+2. Add the new service to the services list using a label like `Kapaviečių įrengimas` or the full title if the current pattern requires it.
+3. Create a dedicated page/route at `/kapavietes-irengimo-darbai`.
+4. Match the structure and design of existing service detail pages.
+5. Write concise Lithuanian copy in the same tone as the current website.
+6. Add this service to any relevant service index/list, dropdown, internal links, or sitemap-like arrays used by the app.
+7. Use an existing suitable image asset if the current service page pattern requires an image. Do not add or generate new image files.
+8. Ensure the route works and navigation links do not break.
+9. Update `docs/AI_CHANGELOG.md` with a short summary of the change.
+
+## Suggested copy seed
+
+Use this as a starting point, but adjust to fit the existing page/component structure:
+
+Headline:
+`Kapavietės įrengimo darbai`
+
+Short description:
+`Įrengiame kapavietes nuo sprendimo suderinimo iki galutinio montavimo: paruošiame pagrindą, montuojame paminklus, granito bortelius, plokštes ir kitus akmens elementus.`
+
+Possible section copy:
+`Padedame suplanuoti kapavietės vaizdą pagal vietą, pasirinktą akmenį ir šeimos poreikius. Darbus atliekame nuosekliai: suderiname sprendimą, paruošiame pagrindą, pagaminame ar pritaikome akmens elementus ir sumontuojame juos kapavietėje.`
+
+Possible bullet points:
+- `Kapavietės projekto ir medžiagų suderinimas`
+- `Pagrindo paruošimas ir montavimo darbai`
+- `Granito plokščių, bortelių ir paminklo montavimas`
+- `Skaldos, akmens apdailos ir kitų detalių pritaikymas`
+
+Avoid salesy language. Keep it grounded and local-business appropriate.
 
 ## Validation
 
