@@ -126,7 +126,7 @@ export default function ServicePage({ slug: routeSlug }: { slug?: string }) {
               <p className="eyebrow mb-4 reveal !text-background/60">Kaip dirbame</p>
               <div className="rule mb-6 reveal !bg-background/40" />
               <h2 className="font-display text-[30px] md:text-[44px] leading-[1.05] tracking-[-0.015em] reveal">
-                Aiškūs žingsniai, be paskubos.
+                Aiškus procesas nuo pirmo pokalbio iki montavimo.
               </h2>
             </div>
             <ol className="col-span-12 md:col-span-7 md:col-start-6">

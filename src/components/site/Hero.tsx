@@ -11,7 +11,7 @@ export default function Hero() {
             <h1 className="font-display text-[44px] sm:text-[60px] md:text-[78px] lg:text-[92px] leading-[1.02] tracking-[-0.02em] text-foreground reveal">
               Granito paminklai
               <br />
-              ir <span className="italic text-foreground/85">kiti akmens</span> darbai.
+              ir <span className="italic text-foreground/85">kiti akmens</span> darbai
             </h1>
           </div>
 
