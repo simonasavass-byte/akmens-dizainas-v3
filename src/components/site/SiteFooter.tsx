@@ -46,7 +46,7 @@ export default function SiteFooter() {
 
         <div className="mt-16 pt-8 border-t border-background/15 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[12px] text-background/55">
           <p>© {new Date().getFullYear()} Akmens Darbai. Visos teisės saugomos.</p>
-          <p className="uppercase tracking-[0.22em]">Vilnius · Elektrėnai · LT</p>
+          <p className="uppercase tracking-[0.22em]">Elektrėnai · LT</p>
         </div>
       </div>
     </footer>

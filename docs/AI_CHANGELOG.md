@@ -19,6 +19,58 @@ Open questions / next steps:
 
 ### 2026-05-12
 What changed:
+- Pulled the latest changes on `generated-image-variant` and completed the homepage selected-works image replacement task
+- Added the four user-selected gallery images into `src/assets/generated/` with separate filenames and wired them into the homepage `Pastarųjų metų darbai` section in the exact required order
+- Removed visible `Vilnius` references from the surfaced website UI and service/location copy so the site now focuses on `Elektrėnai`
+- Removed the final period from the homepage intro paragraph ending with `restauruojame paminklus`
+
+Files changed:
+- src/assets/generated/gallery-selected-work-1.png
+- src/assets/generated/gallery-selected-work-2.png
+- src/assets/generated/gallery-selected-work-3.png
+- src/assets/generated/gallery-selected-work-4.png
+- src/components/site/Gallery.tsx
+- src/components/site/Hero.tsx
+- src/components/site/Materials.tsx
+- src/components/site/SiteFooter.tsx
+- src/components/site/Trust.tsx
+- src/pages/Galerija.tsx
+- src/pages/Index.tsx
+- src/pages/Medziagos.tsx
+- src/pages/ServicePage.tsx
+- src/lib/services.ts
+- docs/AI_CHANGELOG.md
+
+Notes:
+- Exact homepage selected-works image mapping used:
+- `selected-work-1` -> `5g` -> `src/assets/generated/gallery-selected-work-1.png`
+- `selected-work-2` -> `4g` -> `src/assets/generated/gallery-selected-work-2.png`
+- `selected-work-3` -> `3g` -> `src/assets/generated/gallery-selected-work-3.png`
+- `selected-work-4` -> `1g` -> `src/assets/generated/gallery-selected-work-4.png`
+- `2g` was intentionally not used
+- Image integration details:
+- replaced only the homepage `Pastarųjų metų darbai` section image sources
+- kept the section layout, aspect ratios, spacing, and component structure unchanged
+- used separate filenames in `src/assets/generated/` and did not overwrite existing image assets
+- Copy/location cleanup completed:
+- homepage hero eyebrow now points only to `Elektrėnai`
+- homepage hero support paragraph no longer ends with a final period
+- homepage selected-works intro now references `Elektrėnai` only
+- homepage selected-works captions/meta labels were updated to neutral `Elektrėnai` labels
+- full gallery page visible `Vilnius` labels and page copy were updated to `Elektrėnai`
+- visible service/location references and SEO-facing service metadata in `src/lib/services.ts` were updated away from `Vilnius`
+- materials, trust, homepage SEO, structured data service-area wording, and the service-page location note were also updated so `Vilnius` no longer appears in surfaced site copy
+- Notes on extensions:
+- kept the selected gallery images as `.png` because conversion to `.webp` was not necessary to complete this task cleanly in the current environment
+
+Open questions / next steps:
+- The homepage selected-works section is updated, but a quick manual browser pass is still worth doing to confirm the four new images feel balanced at desktop and mobile breakpoints
+- The full gallery page still uses the older gallery image set; that was left intact apart from visible location-text cleanup because this task targeted the homepage selected works section specifically
+
+---
+
+### 2026-05-12
+What changed:
 - Applied one final footer/company-intro text refinement on `generated-image-variant`
 - Replaced the longer footer company description with the shorter requested sentence
 - Kept the footer layout, styling, and all other footer content unchanged

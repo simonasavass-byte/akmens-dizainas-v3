@@ -38,17 +38,17 @@ export const services: Service[] = [
     nav: "Paminklų gamyba",
     title: "Paminklų gamyba",
     h1: "Granito paminklų gamyba",
-    metaTitle: "Paminklų gamyba iš granito | Akmens Darbai · Vilnius, Elektrėnai",
+    metaTitle: "Paminklų gamyba iš granito | Akmens Darbai · Elektrėnai",
     metaDescription:
-      "Paminklų gamyba Vilniuje ir Elektrėnuose. Projektuojame, gaminame ir statome granito paminklus.",
+      "Paminklų gamyba Elektrėnuose. Projektuojame, gaminame ir statome granito paminklus.",
     short: "Projektuojame, gaminame ir statome granito paminklus.",
     intro:
-      "Projektuojame, gaminame ir statome granito paminklus. Dirbame Vilniuje, Elektrėnuose ir kitur Lietuvoje.",
+      "Projektuojame, gaminame ir statome granito paminklus. Dirbame Elektrėnuose ir kitur Lietuvoje.",
     accent: "Klasikiniai ir individualūs paminklai.",
     scope: [
       { label: "Paslauga", value: "Granito paminklai" },
       { label: "Darbai", value: "Gamyba ir montavimas" },
-      { label: "Vieta", value: "Vilnius, Elektrėnai, visa LT" },
+      { label: "Vieta", value: "Elektrėnai, visa LT" },
     ],
     includes: [
       "Paminklo eskizas",
@@ -81,7 +81,7 @@ export const services: Service[] = [
     h1: "Kapaviečių projektavimas",
     metaTitle: "Kapaviečių projektavimas | Akmens Darbai",
     metaDescription:
-      "Kapaviečių projektavimas Vilniuje ir Elektrėnuose. Projektuojame paminklus, dangas ir bendrą kapavietės vaizdą.",
+      "Kapaviečių projektavimas Elektrėnuose. Projektuojame paminklus, dangas ir bendrą kapavietės vaizdą.",
     short: "Projektuojame kapavietes ir paminklus.",
     intro:
       "Projektuojame paminklą, dangą ir bendrą kapavietės vaizdą. Prieš darbus suderiname projektą ir medžiagas.",
@@ -89,7 +89,7 @@ export const services: Service[] = [
     scope: [
       { label: "Paslauga", value: "Kapavietės projektas" },
       { label: "Apima", value: "Eskizas ir sąmata" },
-      { label: "Vieta", value: "Vilnius, Elektrėnai, LT" },
+      { label: "Vieta", value: "Elektrėnai, LT" },
     ],
     includes: [
       "Kapavietės apžiūra ir matavimai",
@@ -122,7 +122,7 @@ export const services: Service[] = [
     h1: "Kapavietės įrengimo darbai",
     metaTitle: "Kapavietės įrengimo darbai | Akmens Darbai",
     metaDescription:
-      "Kapavietės įrengimo darbai Vilniuje ir Elektrėnuose. Paruošiame pagrindą, montuojame paminklą, bortelius, plokštes ir kitus akmens elementus.",
+      "Kapavietės įrengimo darbai Elektrėnuose. Paruošiame pagrindą, montuojame paminklą, bortelius, plokštes ir kitus akmens elementus.",
     short: "Įrengiame kapavietes nuo pagrindo paruošimo iki galutinio montavimo.",
     intro:
       "Įrengiame kapavietes nuo sprendimo suderinimo iki galutinio montavimo: paruošiame pagrindą, montuojame paminklus, granito bortelius, plokštes ir kitus akmens elementus.",
@@ -130,7 +130,7 @@ export const services: Service[] = [
     scope: [
       { label: "Paslauga", value: "Kapavietės įrengimo darbai" },
       { label: "Apima", value: "Pagrindas, montavimas, akmens elementai" },
-      { label: "Vieta", value: "Vilnius, Elektrėnai, LT" },
+      { label: "Vieta", value: "Elektrėnai, LT" },
     ],
     includes: [
       "Kapavietės projekto ir medžiagų suderinimas",
@@ -161,9 +161,9 @@ export const services: Service[] = [
     nav: "Kapų dengimas plokštėmis",
     title: "Kapų dengimas plokštėmis",
     h1: "Kapų dengimas granito plokštėmis",
-    metaTitle: "Kapų dengimas granito plokštėmis | Akmens Darbai · Vilnius",
+    metaTitle: "Kapų dengimas granito plokštėmis | Akmens Darbai · Elektrėnai",
     metaDescription:
-      "Kapų dengimas granito plokštėmis Vilniuje ir Elektrėnuose. Toks sprendimas palengvina kapavietės priežiūrą.",
+      "Kapų dengimas granito plokštėmis Elektrėnuose. Toks sprendimas palengvina kapavietės priežiūrą.",
     short: "Dengiame kapus granito plokštėmis.",
     intro:
       "Kapų dengimas plokštėmis palengvina kapavietės priežiūrą ir suteikia kapavietei tvarkingą vaizdą.",
@@ -171,7 +171,7 @@ export const services: Service[] = [
     scope: [
       { label: "Paslauga", value: "Kapų dengimas plokštėmis" },
       { label: "Pamatas", value: "Drenažas + pasluoksnis" },
-      { label: "Vieta", value: "Vilnius, Elektrėnai, LT" },
+      { label: "Vieta", value: "Elektrėnai, LT" },
     ],
     includes: [
       "Kapavietės matavimai",
@@ -204,7 +204,7 @@ export const services: Service[] = [
     h1: "Kapaviečių ir paminklų restauravimas",
     metaTitle: "Paminklų ir kapaviečių restauravimas | Akmens Darbai",
     metaDescription:
-      "Paminklų ir kapaviečių restauravimas Vilniuje ir Elektrėnuose. Tvarkome susidėvėjusius paminklus, užrašus ir kapavietes.",
+      "Paminklų ir kapaviečių restauravimas Elektrėnuose. Tvarkome susidėvėjusius paminklus, užrašus ir kapavietes.",
     short: "Restauruojame paminklus ir kapavietes.",
     intro:
       "Restauruojame paminklus, skulptūras ir kapavietes. Tvarkome užrašus, paviršius ir konstrukcijas.",
@@ -245,7 +245,7 @@ export const services: Service[] = [
     h1: "Paminklų graviravimas",
     metaTitle: "Paminklų graviravimas: raidės, datos, portretai | Akmens Darbai",
     metaDescription:
-      "Graviruojame raides, datas, ornamentus ir portretus ant esamų paminklų. Vilnius, Elektrėnai, visa Lietuva.",
+      "Graviruojame raides, datas, ornamentus ir portretus ant esamų paminklų. Elektrėnai ir visa Lietuva.",
     short: "Atliekame paminklų graviravimo darbus.",
     intro:
       "Atliekame paminklų graviravimo darbus ant įvairių dydžių ir formų paminklų.",
@@ -284,7 +284,7 @@ export const services: Service[] = [
     h1: "Autoriniai paminklai",
     metaTitle: "Autoriniai, individualūs paminklai | Akmens Darbai",
     metaDescription:
-      "Autoriniai ir individualūs paminklai Vilniuje ir Elektrėnuose. Projektuojame ir gaminame nestandartinius paminklus.",
+      "Autoriniai ir individualūs paminklai Elektrėnuose. Projektuojame ir gaminame nestandartinius paminklus.",
     short: "Projektuojame ir gaminame individualius paminklus.",
     intro:
       "Projektuojame ir gaminame individualius paminklus, kai reikia nestandartinio sprendimo.",

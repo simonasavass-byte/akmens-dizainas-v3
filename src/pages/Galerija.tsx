@@ -11,13 +11,13 @@ import restauravimas from "@/assets/service-restauravimas-card.jpg";
 import autoriniai from "@/assets/service-autoriniai-original.jpg";
 
 const works = [
-  { img: g1, title: "Vientisas juodo granito paminklas", meta: "Vilnius · 2024" },
+  { img: g1, title: "Vientisas juodo granito paminklas", meta: "Elektrėnai · 2024" },
   { img: g2, title: "Šeimos paminklas, dvigubas", meta: "Elektrėnai · 2024" },
-  { img: paminklai, title: "Klasikinis kryžius", meta: "Vilnius · 2024" },
-  { img: g3, title: "Minimalus horizontalus sprendimas", meta: "Vilnius · 2023" },
+  { img: paminklai, title: "Klasikinis kryžius", meta: "Elektrėnai · 2024" },
+  { img: g3, title: "Minimalus horizontalus sprendimas", meta: "Elektrėnai · 2023" },
   { img: dengimas, title: "Pilna kapavietės danga", meta: "Trakų r. · 2023" },
   { img: g4, title: "Pilna kapavietės danga", meta: "Trakų r. · 2023" },
-  { img: autoriniai, title: "Autorinis skulptūrinis paminklas", meta: "Vilnius · 2023" },
+  { img: autoriniai, title: "Autorinis skulptūrinis paminklas", meta: "Elektrėnai · 2023" },
   { img: restauravimas, title: "Restauruota angelo skulptūra", meta: "Elektrėnai · 2022" },
 ];
 
@@ -25,12 +25,12 @@ export default function Galerija() {
   return (
     <>
       <SEO
-        title="Darbų galerija | Akmens Darbai · Vilnius, Elektrėnai"
-        description="Atrinkti pastarųjų metų darbai: paminklai, dangos, restauracijos ir autoriniai sprendimai Vilniuje, Elektrėnuose ir visoje Lietuvoje."
+        title="Darbų galerija | Akmens Darbai · Elektrėnai"
+        description="Atrinkti pastarųjų metų darbai: paminklai, dangos, restauracijos ir autoriniai sprendimai Elektrėnuose ir visoje Lietuvoje."
       />
       <PageHero
         eyebrow="Darbai"
-        h1="Mūsų darbai Vilniuje ir Elektrėnuose."
+        h1="Mūsų darbai Elektrėnuose."
         intro="Pasirinkti pastarųjų metų paminklai, dangos ir restauracijos. Pilną archyvą parodome studijoje arba atsiunčiame el. paštu."
         crumbs={[{ label: "Pradžia", to: "/" }, { label: "Darbai" }]}
       />

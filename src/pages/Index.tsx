@@ -11,8 +11,8 @@ const ld = {
   "@type": "LocalBusiness",
   name: "UAB „Akmens darbai“",
   description:
-    "Paminklų gamyba, paminklų graviravimas ir kapų dengimas plokštėmis Vilniuje ir Elektrėnuose.",
-  areaServed: ["Vilnius", "Elektrėnai", "Lietuva"],
+    "Paminklų gamyba, paminklų graviravimas ir kapų dengimas plokštėmis Elektrėnuose.",
+  areaServed: ["Elektrėnai", "Lietuva"],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Rungos g. 8",
@@ -29,8 +29,8 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="Akmens Darbai — granito paminklai Vilniuje ir Elektrėnuose"
-        description="Paminklų gamyba, paminklų graviravimas ir kapų dengimas plokštėmis Vilniuje ir Elektrėnuose."
+        title="Akmens Darbai — granito paminklai Elektrėnuose"
+        description="Paminklų gamyba, paminklų graviravimas ir kapų dengimas plokštėmis Elektrėnuose."
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
       <Hero />

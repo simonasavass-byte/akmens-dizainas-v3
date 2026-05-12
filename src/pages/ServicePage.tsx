@@ -109,7 +109,7 @@ export default function ServicePage({ slug: routeSlug }: { slug?: string }) {
               </ul>
               <div className="mt-10 p-6 border border-border bg-surface reveal">
                 <p className="text-[13px] text-muted-foreground">
-                  Dirbame Vilniuje, Elektrėnuose ir aplinkiniuose rajonuose. Kitus
+                  Dirbame Elektrėnuose ir aplinkiniuose rajonuose. Kitus
                   miestus aptariame individualiai.
                 </p>
               </div>

@@ -5,7 +5,7 @@ import modern from "@/assets/about-values-tulips.jpg";
 const stats = [
   { n: "1991", l: "dirbame nuo" },
   { n: "2003", l: "dabartinis įmonės pavadinimas" },
-  { n: "Vilnius", l: "studija" },
+  { n: "Elektrėnai", l: "studija" },
   { n: "Elektrėnai", l: "dirbtuvės" },
 ];
 
@@ -23,7 +23,7 @@ export default function Trust() {
             <p className="mt-6 text-[15px] leading-relaxed text-muted-foreground max-w-md reveal">
               Akmens darbais ir paminklų gamyba užsiimame nuo 1991 m.
               Dabartinį UAB „Akmens darbai“ pavadinimą įmonė turi nuo 2003 m.
-              Studija Vilniuje, dirbtuvės Elektrėnuose.
+              Studija ir dirbtuvės Elektrėnuose.
             </p>
 
             <dl className="mt-12 grid grid-cols-2 gap-y-8 gap-x-6">

@@ -15,7 +15,7 @@ export default function Medziagos() {
     <>
       <SEO
         title="Granitas paminklams ir dangoms | Akmens Darbai"
-        description="Granitas paminklams ir dangoms. Pavyzdžius galite pamatyti studijoje Vilniuje arba Elektrėnuose."
+        description="Granitas paminklams ir dangoms. Pavyzdžius galite pamatyti studijoje Elektrėnuose."
       />
       <PageHero
         eyebrow="Medžiagos"
@@ -62,7 +62,7 @@ export default function Medziagos() {
 
           <p className="mt-10 max-w-2xl text-[14px] text-muted-foreground reveal">
             Asortimentas platesnis nei šis sąrašas. Jei norite, pavyzdžius galite apžiūrėti
-            studijoje Vilniuje arba Elektrėnuose.
+            studijoje Elektrėnuose.
           </p>
         </div>
       </section>

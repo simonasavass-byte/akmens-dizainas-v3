@@ -23,7 +23,7 @@ export default function Materials() {
           <div className="col-span-12 md:col-span-6 md:col-start-7">
             <p className="text-[15px] leading-relaxed text-muted-foreground reveal">
               Dirbame su keliomis granito rūšimis. Pavyzdžius galite
-              pamatyti studijoje Vilniuje arba Elektrėnuose.
+              pamatyti studijoje Elektrėnuose.
             </p>
           </div>
         </div>

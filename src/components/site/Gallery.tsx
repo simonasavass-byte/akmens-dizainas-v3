@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import g1 from "@/assets/gallery-memorial-01.webp";
-import g2 from "@/assets/gallery-memorial-02.webp";
-import g3 from "@/assets/gallery-memorial-03.webp";
-import g4 from "@/assets/gallery-memorial-04.webp";
+import g1 from "@/assets/generated/gallery-selected-work-1.png";
+import g2 from "@/assets/generated/gallery-selected-work-2.png";
+import g3 from "@/assets/generated/gallery-selected-work-3.png";
+import g4 from "@/assets/generated/gallery-selected-work-4.png";
 
 const works = [
-  { img: g1, title: "Vientisas juodo granito paminklas", meta: "Vilnius · 2024", span: "md:col-span-5" },
-  { img: g2, title: "Šeimos paminklas, dvigubas", meta: "Elektrėnai · 2024", span: "md:col-span-7" },
-  { img: g3, title: "Minimalus horizontalus sprendimas", meta: "Vilnius · 2023", span: "md:col-span-7" },
-  { img: g4, title: "Pilna kapavietės danga", meta: "Trakų r. · 2023", span: "md:col-span-5" },
+  { img: g1, title: "Juodo granito paminklas su balta skalda", meta: "Elektrėnai", span: "md:col-span-5" },
+  { img: g2, title: "Juodo granito šeimos kapavietė", meta: "Elektrėnai", span: "md:col-span-7" },
+  { img: g3, title: "Minimali horizontali kapavietės kompozicija", meta: "Elektrėnai", span: "md:col-span-7" },
+  { img: g4, title: "Pilna kapavietės danga", meta: "Elektrėnai", span: "md:col-span-5" },
 ];
 
 export default function Gallery() {
@@ -24,7 +24,7 @@ export default function Gallery() {
             </h2>
           </div>
           <p className="max-w-md text-[15px] leading-relaxed text-muted-foreground reveal">
-            Keli darbai iš Vilniaus ir Elektrėnų. Pilną archyvą parodome studijoje
+            Keli darbai iš Elektrėnų. Pilną archyvą parodome studijoje
             arba atsiunčiame el. paštu.
           </p>
         </div>
